@@ -1,6 +1,7 @@
-/*package com.schoolmonitor.security;
+package com.schoolmonitor.security;
 
 import java.util.Base64;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -13,6 +14,14 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
+
+import com.schoolmonitor.exception.SchoolMonitorException;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 
 @Component
 public class JwtTokenProvider {
@@ -60,7 +69,8 @@ public class JwtTokenProvider {
             }
             return true;
         } catch (JwtException | IllegalArgumentException e) {
-            throw new InvalidJwtAuthenticationException("Expired or invalid JWT token");
+           throw new SchoolMonitorException("Expired or invalid JWT token");
+        	
         }
     }
-}*/
+}
