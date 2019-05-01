@@ -2,7 +2,6 @@ package com.schoolmonitor.entities.schools;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.List;
 
 
 /**
@@ -10,20 +9,21 @@ import java.util.List;
  * 
  */
 @Entity
+@Table(name="school")
 @NamedQuery(name="School.findAll", query="SELECT s FROM School s")
 public class School implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
 	private int schoolId;
 
+	@Column(nullable=false, length=255)
 	private String domainForLogin;
 
+	@Column(nullable=false, length=255)
 	private String schoolName;
-
-	//bi-directional many-to-one association to Subscription
-	@OneToMany(mappedBy="school")
-	private List<Subscription> subscriptions;
 
 	public School() {
 	}
@@ -50,28 +50,6 @@ public class School implements Serializable {
 
 	public void setSchoolName(String schoolName) {
 		this.schoolName = schoolName;
-	}
-
-	public List<Subscription> getSubscriptions() {
-		return this.subscriptions;
-	}
-
-	public void setSubscriptions(List<Subscription> subscriptions) {
-		this.subscriptions = subscriptions;
-	}
-
-	public Subscription addSubscription(Subscription subscription) {
-		getSubscriptions().add(subscription);
-		subscription.setSchool(this);
-
-		return subscription;
-	}
-
-	public Subscription removeSubscription(Subscription subscription) {
-		getSubscriptions().remove(subscription);
-		subscription.setSchool(null);
-
-		return subscription;
 	}
 
 }

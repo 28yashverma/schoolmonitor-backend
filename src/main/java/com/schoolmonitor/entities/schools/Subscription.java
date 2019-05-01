@@ -5,30 +5,31 @@ import javax.persistence.*;
 import java.util.Date;
 
 
-/**
- * The persistent class for the subscription database table.
- * 
- */
+
 @Entity
+@Table(name="subscription")
 @NamedQuery(name="Subscription.findAll", query="SELECT s FROM Subscription s")
 public class Subscription implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
 	private int subscriptionId;
 
+	@Column(unique=true,nullable=false)
+	private int schoolId;
+
 	@Temporal(TemporalType.DATE)
+	@Column(nullable=false)
 	private Date subscribedFrom;
 
 	@Temporal(TemporalType.DATE)
+	@Column(nullable=false)
 	private Date subscribedTo;
 
+	@Column(nullable=false, length=255)
 	private String subscriptionMode;
-
-	//bi-directional many-to-one association to School
-	@ManyToOne
-	@JoinColumn(name="schoolId")
-	private School school;
 
 	public Subscription() {
 	}
@@ -39,6 +40,14 @@ public class Subscription implements Serializable {
 
 	public void setSubscriptionId(int subscriptionId) {
 		this.subscriptionId = subscriptionId;
+	}
+
+	public int getSchoolId() {
+		return this.schoolId;
+	}
+
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
 	}
 
 	public Date getSubscribedFrom() {
@@ -63,14 +72,6 @@ public class Subscription implements Serializable {
 
 	public void setSubscriptionMode(String subscriptionMode) {
 		this.subscriptionMode = subscriptionMode;
-	}
-
-	public School getSchool() {
-		return this.school;
-	}
-
-	public void setSchool(School school) {
-		this.school = school;
 	}
 
 }

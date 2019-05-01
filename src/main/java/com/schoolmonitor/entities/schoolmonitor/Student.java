@@ -6,37 +6,46 @@ import java.util.Date;
 import java.util.List;
 
 
-/**
- * The persistent class for the student database table.
- * 
- */
+
 @Entity
+@Table(name="student")
 @NamedQuery(name="Student.findAll", query="SELECT s FROM Student s")
 public class Student implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false, length=255)
 	private String studentId;
 
+	@Column(nullable=false, length=4)
 	private String bloodGroup;
 
 	private int contactNumber;
 
 	@Temporal(TemporalType.DATE)
+	@Column(nullable=false)
 	private Date dateOfBirth;
 
+	@Column(nullable=false, length=255)
 	private String fatherName;
 
+	@Column(nullable=false, length=255)
 	private String firstName;
 
+	@Column(nullable=false, length=255)
 	private String lastName;
 
+	@Column(nullable=false, length=255)
 	private String motherName;
 
+	@Column(nullable=false)
 	private int schoolId;
 
+	@Column(length=255)
 	private String stream;
 
+	@Column(length=255)
 	private String studentEmailId;
 
 	//bi-directional many-to-one association to Credential
@@ -45,12 +54,12 @@ public class Student implements Serializable {
 
 	//bi-directional many-to-one association to Address
 	@ManyToOne
-	@JoinColumn(name="addressId")
+	@JoinColumn(name="addressId", nullable=false)
 	private Address address;
 
 	//bi-directional many-to-one association to Schoolspecific
 	@ManyToOne
-	@JoinColumn(name="schoolSpecificsId")
+	@JoinColumn(name="schoolSpecificsId", nullable=false)
 	private Schoolspecific schoolspecific;
 
 	public Student() {

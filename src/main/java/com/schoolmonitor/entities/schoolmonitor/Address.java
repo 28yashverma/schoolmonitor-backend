@@ -5,22 +5,25 @@ import javax.persistence.*;
 import java.util.List;
 
 
-/**
- * The persistent class for the address database table.
- * 
- */
+
 @Entity
+@Table(name="address")
 @NamedQuery(name="Address.findAll", query="SELECT a FROM Address a")
 public class Address implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
 	private int addressId;
 
+	@Column(length=255)
 	private String city;
 
+	@Column(length=255)
 	private String landmark;
 
+	@Column(length=255)
 	private String pincode;
 
 	//bi-directional many-to-one association to Student

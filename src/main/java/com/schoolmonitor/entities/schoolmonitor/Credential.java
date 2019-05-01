@@ -4,10 +4,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 
-/**
- * The persistent class for the credentials database table.
- * 
- */
+
 @Entity
 @Table(name="credentials")
 @NamedQuery(name="Credential.findAll", query="SELECT c FROM Credential c")
@@ -15,10 +12,14 @@ public class Credential implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
 	private int userId;
 
+	@Column(nullable=false, length=255)
 	private String password;
 
+	@Column(nullable=false, length=255)
 	private String userName;
 
 	//bi-directional many-to-one association to Student

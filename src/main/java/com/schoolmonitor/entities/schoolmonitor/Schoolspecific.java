@@ -5,10 +5,7 @@ import javax.persistence.*;
 import java.util.List;
 
 
-/**
- * The persistent class for the schoolspecifics database table.
- * 
- */
+
 @Entity
 @Table(name="schoolspecifics")
 @NamedQuery(name="Schoolspecific.findAll", query="SELECT s FROM Schoolspecific s")
@@ -16,18 +13,26 @@ public class Schoolspecific implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
 	private int schoolSpecificsId;
 
+	@Column(length=255)
 	private String branchName;
 
+	@Column(nullable=false, length=255)
 	private String district;
 
+	@Column(nullable=false, length=255)
 	private String pincode;
 
+	@Column(nullable=false, length=255)
 	private String schoolAddress;
 
+	@Column(nullable=false)
 	private int schoolContactNumber;
 
+	@Column(length=255)
 	private String schoolEmailId;
 
 	//bi-directional many-to-one association to Student

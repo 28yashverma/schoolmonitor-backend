@@ -1,4 +1,4 @@
-package com.schoolmonitor.security;
+/*package com.schoolmonitor.security;
 
 import java.io.IOException;
 
@@ -27,4 +27,4 @@ public class JwtTokenFilter extends GenericFilterBean {
         }
         filterChain.doFilter(req, res);
     }
-}
+}*/

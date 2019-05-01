@@ -1,4 +1,4 @@
-package com.schoolmonitor.security;
+/*package com.schoolmonitor.security;
 
 import java.util.Base64;
 import java.util.List;
@@ -63,4 +63,4 @@ public class JwtTokenProvider {
             throw new InvalidJwtAuthenticationException("Expired or invalid JWT token");
         }
     }
-}
+}*/

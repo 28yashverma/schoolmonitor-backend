@@ -8,4 +8,5 @@ import com.schoolmonitor.entities.schoolmonitor.Credential;
 @Repository
 public interface CredentialsRepository extends JpaRepository<Credential, Integer> {
 
+	Credential findByUserNameAndPassword(String userName,String password);
 }

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 
-@RestControllerAdvice
+/*@RestControllerAdvice
 @Slf4j
 public class RestExceptionHandler {
 	@ExceptionHandler(value = { SchoolMonitorException.class })
@@ -13,4 +13,4 @@ public class RestExceptionHandler {
 		log.debug("handling SchoolMonitorException..");
 		return notFound().build();
 	}
-}
+}*/

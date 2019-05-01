@@ -5,26 +5,31 @@ import javax.persistence.*;
 import java.util.List;
 
 
-/**
- * The persistent class for the teacher database table.
- * 
- */
+
 @Entity
+@Table(name="teacher")
 @NamedQuery(name="Teacher.findAll", query="SELECT t FROM Teacher t")
 public class Teacher implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false, length=255)
 	private String teacherId;
 
+	@Column(nullable=false, length=255)
 	private String bloodGroup;
 
+	@Column(length=45)
 	private String department;
 
+	@Column(length=45)
 	private String designation;
 
+	@Column(nullable=false, length=255)
 	private String firstName;
 
+	@Column(nullable=false, length=255)
 	private String lastName;
 
 	//bi-directional many-to-one association to Credential
@@ -33,7 +38,7 @@ public class Teacher implements Serializable {
 
 	//bi-directional many-to-one association to Schoolspecific
 	@ManyToOne
-	@JoinColumn(name="schoolSpecificsId")
+	@JoinColumn(name="schoolSpecificsId", nullable=false)
 	private Schoolspecific schoolspecific;
 
 	public Teacher() {
