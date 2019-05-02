@@ -14,7 +14,7 @@ import com.schoolmonitor.repositories.schools.SchoolRepository;
 import com.schoolmonitor.repositories.schools.SubscriptionRepository;
 import com.schoolmonitor.service.LoginService;
 
-@RestController
+@RestController("/schoolmonitor")
 public class LoginController {
 
 	@Autowired
