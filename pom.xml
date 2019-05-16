@@ -20,6 +20,14 @@
 	</properties>
 
 	<dependencies>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework.xd/spring-xd-dirt -->
+<dependency>
+    <groupId>org.springframework.xd</groupId>
+    <artifactId>spring-xd-dirt</artifactId>
+    <version>1.0.4.RELEASE</version>
+</dependency>
+	
 		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
