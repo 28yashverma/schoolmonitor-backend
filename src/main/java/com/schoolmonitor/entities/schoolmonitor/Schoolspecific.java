@@ -2,10 +2,12 @@ package com.schoolmonitor.entities.schoolmonitor;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.List;
 
 
-
+/**
+ * The persistent class for the schoolspecifics database table.
+ * 
+ */
 @Entity
 @Table(name="schoolspecifics")
 @NamedQuery(name="Schoolspecific.findAll", query="SELECT s FROM Schoolspecific s")
@@ -34,14 +36,6 @@ public class Schoolspecific implements Serializable {
 
 	@Column(length=255)
 	private String schoolEmailId;
-
-	//bi-directional many-to-one association to Student
-	@OneToMany(mappedBy="schoolspecific")
-	private List<Student> students;
-
-	//bi-directional many-to-one association to Teacher
-	@OneToMany(mappedBy="schoolspecific")
-	private List<Teacher> teachers;
 
 	public Schoolspecific() {
 	}
@@ -100,50 +94,6 @@ public class Schoolspecific implements Serializable {
 
 	public void setSchoolEmailId(String schoolEmailId) {
 		this.schoolEmailId = schoolEmailId;
-	}
-
-	public List<Student> getStudents() {
-		return this.students;
-	}
-
-	public void setStudents(List<Student> students) {
-		this.students = students;
-	}
-
-	public Student addStudent(Student student) {
-		getStudents().add(student);
-		student.setSchoolspecific(this);
-
-		return student;
-	}
-
-	public Student removeStudent(Student student) {
-		getStudents().remove(student);
-		student.setSchoolspecific(null);
-
-		return student;
-	}
-
-	public List<Teacher> getTeachers() {
-		return this.teachers;
-	}
-
-	public void setTeachers(List<Teacher> teachers) {
-		this.teachers = teachers;
-	}
-
-	public Teacher addTeacher(Teacher teacher) {
-		getTeachers().add(teacher);
-		teacher.setSchoolspecific(this);
-
-		return teacher;
-	}
-
-	public Teacher removeTeacher(Teacher teacher) {
-		getTeachers().remove(teacher);
-		teacher.setSchoolspecific(null);
-
-		return teacher;
 	}
 
 }

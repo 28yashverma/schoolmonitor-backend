@@ -19,7 +19,6 @@ public class LoginController {
 
 	@Autowired
 	LoginService loginService;
-	
 	@PostMapping("/Login")
 	public ResponseEntity<Boolean> Login(@RequestBody LoginCredentials credentials){
 		//return new ResponseEntity<Boolean>()(loginService.Login(credentials));

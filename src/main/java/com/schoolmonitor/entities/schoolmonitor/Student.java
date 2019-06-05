@@ -6,7 +6,10 @@ import java.util.Date;
 import java.util.List;
 
 
-
+/**
+ * The persistent class for the student database table.
+ * 
+ */
 @Entity
 @Table(name="student")
 @NamedQuery(name="Student.findAll", query="SELECT s FROM Student s")
@@ -17,6 +20,9 @@ public class Student implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(unique=true, nullable=false, length=255)
 	private String studentId;
+
+	@Column(nullable=false)
+	private int addressId;
 
 	@Column(nullable=false, length=4)
 	private String bloodGroup;
@@ -42,6 +48,9 @@ public class Student implements Serializable {
 	@Column(nullable=false)
 	private int schoolId;
 
+	@Column(nullable=false)
+	private int schoolSpecificsId;
+
 	@Column(length=255)
 	private String stream;
 
@@ -52,16 +61,6 @@ public class Student implements Serializable {
 	@OneToMany(mappedBy="student")
 	private List<Credential> credentials;
 
-	//bi-directional many-to-one association to Address
-	@ManyToOne
-	@JoinColumn(name="addressId", nullable=false)
-	private Address address;
-
-	//bi-directional many-to-one association to Schoolspecific
-	@ManyToOne
-	@JoinColumn(name="schoolSpecificsId", nullable=false)
-	private Schoolspecific schoolspecific;
-
 	public Student() {
 	}
 
@@ -71,6 +70,14 @@ public class Student implements Serializable {
 
 	public void setStudentId(String studentId) {
 		this.studentId = studentId;
+	}
+
+	public int getAddressId() {
+		return this.addressId;
+	}
+
+	public void setAddressId(int addressId) {
+		this.addressId = addressId;
 	}
 
 	public String getBloodGroup() {
@@ -137,6 +144,14 @@ public class Student implements Serializable {
 		this.schoolId = schoolId;
 	}
 
+	public int getSchoolSpecificsId() {
+		return this.schoolSpecificsId;
+	}
+
+	public void setSchoolSpecificsId(int schoolSpecificsId) {
+		this.schoolSpecificsId = schoolSpecificsId;
+	}
+
 	public String getStream() {
 		return this.stream;
 	}
@@ -173,22 +188,6 @@ public class Student implements Serializable {
 		credential.setStudent(null);
 
 		return credential;
-	}
-
-	public Address getAddress() {
-		return this.address;
-	}
-
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-
-	public Schoolspecific getSchoolspecific() {
-		return this.schoolspecific;
-	}
-
-	public void setSchoolspecific(Schoolspecific schoolspecific) {
-		this.schoolspecific = schoolspecific;
 	}
 
 }

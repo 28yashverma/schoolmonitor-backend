@@ -9,17 +9,23 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 
-
+/**
+ * The persistent class for the credentials database table.
+ * 
+ */
 @Entity
 @Table(name="credentials")
 @NamedQuery(name="Credential.findAll", query="SELECT c FROM Credential c")
 public class Credential implements UserDetails {
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(unique=true, nullable=false)
 	private int userId;
+
+	@Column(nullable=false)
+	private byte isAdmin;
 
 	@Column(nullable=false, length=255)
 	private String password;
@@ -46,6 +52,14 @@ public class Credential implements UserDetails {
 
 	public void setUserId(int userId) {
 		this.userId = userId;
+	}
+
+	public byte getIsAdmin() {
+		return this.isAdmin;
+	}
+
+	public void setIsAdmin(byte isAdmin) {
+		this.isAdmin = isAdmin;
 	}
 
 	public String getPassword() {

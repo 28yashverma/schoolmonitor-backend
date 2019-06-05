@@ -5,7 +5,10 @@ import javax.persistence.*;
 import java.util.List;
 
 
-
+/**
+ * The persistent class for the teacher database table.
+ * 
+ */
 @Entity
 @Table(name="teacher")
 @NamedQuery(name="Teacher.findAll", query="SELECT t FROM Teacher t")
@@ -32,14 +35,12 @@ public class Teacher implements Serializable {
 	@Column(nullable=false, length=255)
 	private String lastName;
 
+	@Column(nullable=false)
+	private int schoolSpecificsId;
+
 	//bi-directional many-to-one association to Credential
 	@OneToMany(mappedBy="teacher")
 	private List<Credential> credentials;
-
-	//bi-directional many-to-one association to Schoolspecific
-	@ManyToOne
-	@JoinColumn(name="schoolSpecificsId", nullable=false)
-	private Schoolspecific schoolspecific;
 
 	public Teacher() {
 	}
@@ -92,6 +93,14 @@ public class Teacher implements Serializable {
 		this.lastName = lastName;
 	}
 
+	public int getSchoolSpecificsId() {
+		return this.schoolSpecificsId;
+	}
+
+	public void setSchoolSpecificsId(int schoolSpecificsId) {
+		this.schoolSpecificsId = schoolSpecificsId;
+	}
+
 	public List<Credential> getCredentials() {
 		return this.credentials;
 	}
@@ -112,14 +121,6 @@ public class Teacher implements Serializable {
 		credential.setTeacher(null);
 
 		return credential;
-	}
-
-	public Schoolspecific getSchoolspecific() {
-		return this.schoolspecific;
-	}
-
-	public void setSchoolspecific(Schoolspecific schoolspecific) {
-		this.schoolspecific = schoolspecific;
 	}
 
 }
