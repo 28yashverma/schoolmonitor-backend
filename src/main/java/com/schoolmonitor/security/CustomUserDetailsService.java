@@ -10,19 +10,15 @@ import com.schoolmonitor.repositories.schoolmonitor.CredentialsRepository;
 
 @Component
 public class CustomUserDetailsService implements UserDetailsService {
-	@Autowired
-	private CredentialsRepository credentials;
+	
 
+	
+	private CredentialsRepository credentials;
+	@Autowired
 	public CustomUserDetailsService(CredentialsRepository credentials) {
 		this.credentials = credentials;
 	}
-	/*
-	 * @Override public UserDetails loadUserByUsername(String username) throws
-	 * UsernameNotFoundException { UserDetails user=(UserDetails)
-	 * this.credentials.findByUserName(username); if (null!=user) return user; else
-	 * throw new UsernameNotFoundException("Username: " + username + " not found");
-	 * }
-	 */
+	
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

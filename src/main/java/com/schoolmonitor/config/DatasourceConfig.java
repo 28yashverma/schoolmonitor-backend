@@ -12,7 +12,7 @@ import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 public class DatasourceConfig {
-	@Bean
+	/*@Bean
 	@Primary
 	@ConfigurationProperties("app.datasource.schoolmonitor")
 	public DataSourceProperties firstDataSourceProperties() {
@@ -38,5 +38,5 @@ public class DatasourceConfig {
 	public DataSource secondDataSource() {
 		return secondDataSourceProperties().initializeDataSourceBuilder()
 				.type(DataSource.class).build();
-	}
+	}*/
 }
