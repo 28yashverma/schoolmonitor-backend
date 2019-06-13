@@ -1,16 +1,10 @@
 package com.schoolmonitor.config;
 
-import javax.sql.DataSource;
-
-import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-
-import com.zaxxer.hikari.HikariDataSource;
-
+import org.springframework.context.annotation.Import;
+import com.schoolmonitor.config.*;
 @Configuration
+@Import(SecurityConfig.class)
 public class DatasourceConfig {
 	/*@Bean
 	@Primary

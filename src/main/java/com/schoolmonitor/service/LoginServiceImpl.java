@@ -12,7 +12,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class LoginServiceImpl implements LoginService {
-	@Autowired
+
+	@Override
+	public boolean Login(LoginCredentials credentials) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	/*@Autowired
 	SchoolRepository schoolRepository;
 	@Autowired
 	CredentialsRepository credentialsRepository;
@@ -32,5 +38,5 @@ public class LoginServiceImpl implements LoginService {
 
 		}
 		return true;
-	}
+	}*/
 }

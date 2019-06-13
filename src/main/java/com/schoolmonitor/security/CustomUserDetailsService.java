@@ -12,17 +12,23 @@ import com.schoolmonitor.repositories.schoolmonitor.CredentialsRepository;
 public class CustomUserDetailsService implements UserDetailsService {
 	
 
-	
-	private CredentialsRepository credentials;
 	@Autowired
-	public CustomUserDetailsService(CredentialsRepository credentials) {
+	private CredentialsRepository credentials;
+	
+	/*public CustomUserDetailsService(CredentialsRepository credentials) {
 		this.credentials = credentials;
-	}
+	}*/
+	
 	
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		return this.credentials.findByUserName(username)
 				.orElseThrow(() -> new UsernameNotFoundException("Username: " + username + " not found"));
+	}
+
+	public CustomUserDetailsService() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 }
