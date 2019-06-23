@@ -15,7 +15,8 @@ import com.schoolmonitor.security.JwtConfigurer;
 import com.schoolmonitor.security.JwtTokenProvider;
 
 @Configuration
-@EnableJpaRepositories
+
+
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	

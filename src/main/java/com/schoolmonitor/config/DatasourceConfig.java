@@ -12,31 +12,10 @@ import com.schoolmonitor.config.*;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
-@EnableJpaRepositories
 @Import(SecurityConfig.class)
 public class DatasourceConfig {
 
-	/*
-	 * In case of Using spring 2,either this additional configuration or
-	 * explicit @EnableAutoConfiguration with JPA provider(Hibernate) dependency is
-	 * needed
-	 * 
-	 * @Bean public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
-	 * //JpaVendorAdapteradapter can be autowired as well if it's configured in
-	 * application properties. HibernateJpaVendorAdapter vendorAdapter = new
-	 * HibernateJpaVendorAdapter(); vendorAdapter.setGenerateDdl(false);
-	 * 
-	 * LocalContainerEntityManagerFactoryBean factory = new
-	 * LocalContainerEntityManagerFactoryBean();
-	 * factory.setJpaVendorAdapter(vendorAdapter); //Add package to scan for
-	 * entities. factory.setPackagesToScan("com.company.domain");
-	 * factory.setDataSource(dataSource); return factory; }
-	 * 
-	 * @Bean public PlatformTransactionManager
-	 * transactionManager(EntityManagerFactory entityManagerFactory) {
-	 * JpaTransactionManager txManager = new JpaTransactionManager();
-	 * txManager.setEntityManagerFactory(entityManagerFactory); return txManager; }
-	 */
+	
 
 	@Bean
 	@Primary
