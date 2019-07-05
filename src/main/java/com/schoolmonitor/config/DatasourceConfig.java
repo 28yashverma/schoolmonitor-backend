@@ -6,39 +6,35 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Primary;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import com.schoolmonitor.config.*;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
-@Import(SecurityConfig.class)
+//@Import(SecurityConfig.class)
 public class DatasourceConfig {
-
-	
 
 	@Bean
 	@Primary
-	@ConfigurationProperties("app.datasource.schoolmonitor")
+	@ConfigurationProperties("spring.datasource.schoolmonitor")
 	public DataSourceProperties firstDataSourceProperties() {
 		return new DataSourceProperties();
 	}
 
 	@Bean
 	@Primary
-	@ConfigurationProperties("app.datasource.schoolmonitor.configuration")
+	@ConfigurationProperties("spring.datasource.schoolmonitor.configuration")
 	public HikariDataSource firstDataSource() {
 		return firstDataSourceProperties().initializeDataSourceBuilder().type(HikariDataSource.class).build();
 	}
 
 	@Bean
-	@ConfigurationProperties("app.datasource.school")
+	@ConfigurationProperties("spring.datasource.school")
 	public DataSourceProperties secondDataSourceProperties() {
 		return new DataSourceProperties();
 	}
 
 	@Bean
-	@ConfigurationProperties("app.datasource.school.configuration")
+	@ConfigurationProperties("spring.datasource.configuration")
 	public HikariDataSource secondDataSource() {
 		return secondDataSourceProperties().initializeDataSourceBuilder().type(HikariDataSource.class).build();
 	}
