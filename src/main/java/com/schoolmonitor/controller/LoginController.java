@@ -6,12 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.schoolmonitor.entities.schools.School;
-import com.schoolmonitor.entities.schools.Subscription;
 import com.schoolmonitor.model.LoginCredentials;
-import com.schoolmonitor.repositories.schoolmonitor.CredentialsRepository;
-import com.schoolmonitor.repositories.schools.SchoolRepository;
-import com.schoolmonitor.repositories.schools.SubscriptionRepository;
 import com.schoolmonitor.service.LoginService;
 
 @RestController("/schoolmonitor")
