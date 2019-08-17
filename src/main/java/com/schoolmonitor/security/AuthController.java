@@ -36,13 +36,12 @@ public class AuthController {
 	CredentialsRepository users;
 
 	@PostMapping("/signin")
-	public ResponseEntity signin(@RequestBody AuthenticationRequest data) {
+	public ResponseEntity<?> signin(@RequestBody AuthenticationRequest data) {
 
 		try {
 			String username = data.getUsername();
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, data.getPassword()));
-			Credential user = this.users.findByUserName(username)
-					.orElseThrow(() -> new UsernameNotFoundException("Username " + username + "not found"));
+			Credential user = this.users.findByUserName(username);
 			List<String> roles = new ArrayList<String>();
 			if (null != user.getStudent())
 				roles.add("studentUser");

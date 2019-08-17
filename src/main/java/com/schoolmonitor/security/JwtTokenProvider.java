@@ -28,12 +28,11 @@ public class JwtTokenProvider {
     private String secretKey = "secret";
     @Value("${security.jwt.token.expire-length:3600000}")
     private long validityInMilliseconds = 3600000; // 1h
-    //@Autowired
+    @Autowired
      private CustomUserDetailsService customUserDetailsService;
     @PostConstruct
     protected void init() {
         secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
-        customUserDetailsService=new CustomUserDetailsService();
     }
     public String createToken(String username, List<String> roles) {
         Claims claims = Jwts.claims().setSubject(username);

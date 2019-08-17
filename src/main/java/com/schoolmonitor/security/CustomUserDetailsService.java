@@ -15,20 +15,16 @@ public class CustomUserDetailsService implements UserDetailsService {
 	@Autowired
 	private CredentialsRepository credentials;
 	
-	/*public CustomUserDetailsService(CredentialsRepository credentials) {
-		this.credentials = credentials;
-	}*/
+	
 	
 	
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		return this.credentials.findByUserName(username)
-				.orElseThrow(() -> new UsernameNotFoundException("Username: " + username + " not found"));
+		return this.credentials.findByUserName(username);
 	}
 
 	public CustomUserDetailsService() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 }
