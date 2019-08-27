@@ -3,81 +3,85 @@ package com.schoolmonitor.entities.schoolmonitor;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
-
 
 /**
  * The persistent class for the student database table.
  * 
  */
+//TODO: AddressId and SchoolSpecificsId Columns are added additionally.
 @Entity
-@Table(name="student")
-@NamedQuery(name="Student.findAll", query="SELECT s FROM Student s")
+@Table(name = "student")
+@NamedQuery(name = "Student.findAll", query = "SELECT s FROM Student s")
 public class Student implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(unique=true, nullable=false, length=255)
-	private String studentId;
-
-	@Column(nullable=false)
-	private int addressId;
-
-	@Column(nullable=false, length=4)
+	@Column(nullable = false, length = 4)
 	private String bloodGroup;
 
 	private int contactNumber;
 
 	@Temporal(TemporalType.DATE)
-	@Column(nullable=false)
+	@Column(nullable = false)
 	private Date dateOfBirth;
 
-	@Column(nullable=false, length=255)
+	@Column(nullable = false, length = 255)
 	private String fatherName;
 
-	@Column(nullable=false, length=255)
+	@Column(nullable = false, length = 255)
 	private String firstName;
 
-	@Column(nullable=false, length=255)
+	@Column(nullable = false, length = 255)
 	private String lastName;
 
-	@Column(nullable=false, length=255)
+	@Column(nullable = false, length = 255)
 	private String motherName;
 
-	@Column(nullable=false)
-	private int schoolId;
-
-	@Column(nullable=false)
-	private int schoolSpecificsId;
-
-	@Column(length=255)
+	@Column(length = 255)
 	private String stream;
 
-	@Column(length=255)
+	@Column(length = 255)
 	private String studentEmailId;
+	@Id
+	@Column(nullable = false, length = 255)
+	private String studentId;
 
-	//bi-directional many-to-one association to Credential
-	@OneToMany(mappedBy="student")
-	private List<Credential> credentials;
+	
+
+	// bi-directional one-to-one association to Credential
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "studentId", referencedColumnName = "linkedStudentId", nullable = false)
+	private Credential credential;
+
+	public int getSchoolSpecificsId() {
+		return schoolSpecificsId;
+	}
+
+	public void setSchoolSpecificsId(int schoolSpecificsId) {
+		this.schoolSpecificsId = schoolSpecificsId;
+	}
+
+	public int getLinkedAddressId() {
+		return linkedAddressId;
+	}
+
+	public void setLinkedAddressId(int linkedAddressId) {
+		this.linkedAddressId = linkedAddressId;
+	}
+
+	// bi-directional many-to-one association to Schoolspecific
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "schoolSpecificsId", referencedColumnName = "schoolSpecificsId", nullable = false)
+	private Schoolspecific schoolspecific;
+	@Column(nullable = false,insertable=false,updatable=false)
+	private int schoolSpecificsId;
+	@Column(unique = true, nullable = false)
+	private int linkedAddressId;
+	// bi-directional one-to-one association to Address
+	@OneToOne(mappedBy = "student", fetch = FetchType.LAZY)
+	@JoinColumn(name = "linkedAddressId", referencedColumnName = "addressId")
+	private Address address;
 
 	public Student() {
-	}
-
-	public String getStudentId() {
-		return this.studentId;
-	}
-
-	public void setStudentId(String studentId) {
-		this.studentId = studentId;
-	}
-
-	public int getAddressId() {
-		return this.addressId;
-	}
-
-	public void setAddressId(int addressId) {
-		this.addressId = addressId;
 	}
 
 	public String getBloodGroup() {
@@ -136,22 +140,6 @@ public class Student implements Serializable {
 		this.motherName = motherName;
 	}
 
-	public int getSchoolId() {
-		return this.schoolId;
-	}
-
-	public void setSchoolId(int schoolId) {
-		this.schoolId = schoolId;
-	}
-
-	public int getSchoolSpecificsId() {
-		return this.schoolSpecificsId;
-	}
-
-	public void setSchoolSpecificsId(int schoolSpecificsId) {
-		this.schoolSpecificsId = schoolSpecificsId;
-	}
-
 	public String getStream() {
 		return this.stream;
 	}
@@ -168,26 +156,38 @@ public class Student implements Serializable {
 		this.studentEmailId = studentEmailId;
 	}
 
-	public List<Credential> getCredentials() {
-		return this.credentials;
+	public String getStudentId() {
+		return this.studentId;
 	}
 
-	public void setCredentials(List<Credential> credentials) {
-		this.credentials = credentials;
+	public void setStudentId(String studentId) {
+		this.studentId = studentId;
 	}
 
-	public Credential addCredential(Credential credential) {
-		getCredentials().add(credential);
-		credential.setStudent(this);
+	
 
-		return credential;
+	public Credential getCredential() {
+		return this.credential;
 	}
 
-	public Credential removeCredential(Credential credential) {
-		getCredentials().remove(credential);
-		credential.setStudent(null);
+	public void setCredential(Credential credential) {
+		this.credential = credential;
+	}
 
-		return credential;
+	public Schoolspecific getSchoolspecific() {
+		return this.schoolspecific;
+	}
+
+	public void setSchoolspecific(Schoolspecific schoolspecific) {
+		this.schoolspecific = schoolspecific;
+	}
+
+	public Address getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 }

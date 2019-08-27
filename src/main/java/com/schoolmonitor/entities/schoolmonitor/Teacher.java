@@ -2,55 +2,81 @@ package com.schoolmonitor.entities.schoolmonitor;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.List;
-
 
 /**
  * The persistent class for the teacher database table.
  * 
  */
 @Entity
-@Table(name="teacher")
-@NamedQuery(name="Teacher.findAll", query="SELECT t FROM Teacher t")
+@Table(name = "teacher")
+@NamedQuery(name = "Teacher.findAll", query = "SELECT t FROM Teacher t")
 public class Teacher implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(unique=true, nullable=false, length=255)
-	private String teacherId;
-
-	@Column(nullable=false, length=255)
+	@Column(nullable = false, length = 255)
 	private String bloodGroup;
 
-	@Column(length=45)
+	@Column(length = 45)
 	private String department;
 
-	@Column(length=45)
+	@Column(length = 45)
 	private String designation;
 
-	@Column(nullable=false, length=255)
+	@Column(nullable = false, length = 255)
 	private String firstName;
 
-	@Column(nullable=false, length=255)
+	@Column(nullable = false, length = 255)
 	private String lastName;
 
-	@Column(nullable=false)
-	private int schoolSpecificsId;
+	
 
-	//bi-directional many-to-one association to Credential
-	@OneToMany(mappedBy="teacher")
-	private List<Credential> credentials;
+	// bi-directional one-to-one association to Credential
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "teacherId", referencedColumnName = "linkedTeacherId", nullable = false)
+	private Credential credential;
+
+	// bi-directional many-to-one association to Schoolspecific
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "schoolSpecificsId", referencedColumnName = "schoolSpecificsId", nullable = false)
+	private Schoolspecific schoolspecific;
+	@Column(nullable = false,updatable=false,insertable=false)
+	private int schoolSpecificsId;
+	// bi-directional one-to-one association to Address
+	@OneToOne(mappedBy = "teacher", fetch = FetchType.LAZY)
+	@JoinColumn(name = "linkedAddressId", referencedColumnName = "addressId", nullable = false)
+	private Address address;
+	@Column(unique = true)
+	private int linkedAddressId;
+
+	public int getSchoolSpecificsId() {
+		return schoolSpecificsId;
+	}
+
+	public void setSchoolSpecificsId(int schoolSpecificsId) {
+		this.schoolSpecificsId = schoolSpecificsId;
+	}
+
+	public int getLinkedAddressId() {
+		return linkedAddressId;
+	}
+
+	public void setLinkedAddressId(int linkedAddressId) {
+		this.linkedAddressId = linkedAddressId;
+	}
+
+	@Id
+	@Column
+	private int teacherId;
+
+	public int getTeacherId() {
+		return teacherId;
+	}
+
+	public void setTeacherId(int teacherId) {
+		this.teacherId = teacherId;
+	}
 
 	public Teacher() {
-	}
-
-	public String getTeacherId() {
-		return this.teacherId;
-	}
-
-	public void setTeacherId(String teacherId) {
-		this.teacherId = teacherId;
 	}
 
 	public String getBloodGroup() {
@@ -93,34 +119,30 @@ public class Teacher implements Serializable {
 		this.lastName = lastName;
 	}
 
-	public int getSchoolSpecificsId() {
-		return this.schoolSpecificsId;
+	
+
+	public Credential getCredential() {
+		return this.credential;
 	}
 
-	public void setSchoolSpecificsId(int schoolSpecificsId) {
-		this.schoolSpecificsId = schoolSpecificsId;
+	public void setCredential(Credential credential) {
+		this.credential = credential;
 	}
 
-	public List<Credential> getCredentials() {
-		return this.credentials;
+	public Schoolspecific getSchoolspecific() {
+		return this.schoolspecific;
 	}
 
-	public void setCredentials(List<Credential> credentials) {
-		this.credentials = credentials;
+	public void setSchoolspecific(Schoolspecific schoolspecific) {
+		this.schoolspecific = schoolspecific;
 	}
 
-	public Credential addCredential(Credential credential) {
-		getCredentials().add(credential);
-		credential.setTeacher(this);
-
-		return credential;
+	public Address getAddress() {
+		return this.address;
 	}
 
-	public Credential removeCredential(Credential credential) {
-		getCredentials().remove(credential);
-		credential.setTeacher(null);
-
-		return credential;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 }
