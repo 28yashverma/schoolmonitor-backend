@@ -1,9 +1,14 @@
 package com.schoolmonitor.entities.schoolmonitor;
 
-import java.io.Serializable;
 import java.util.Collection;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,7 +17,7 @@ import org.springframework.security.core.userdetails.UserDetails;
  * The persistent class for the credentials database table.
  * 
  */
-//TODO : linkedStudentId and linkedTeacherId could be removed from table and entity
+// TODO : linkedStudentId and linkedTeacherId could be removed from table and entity
 @Entity
 @Table(name = "credentials")
 @NamedQuery(name = "Credential.findAll", query = "SELECT c FROM Credential c")
@@ -30,15 +35,13 @@ public class Credential implements UserDetails {
 
 	@Column(nullable = false, length = 255)
 	private String userName;
-    
+
 	@Column(length = 45)
 	private String linkedStudentId;
 
 	@Column(length = 45)
 	private String linkedTeacherId;
 
-	
-	
 	public String getLinkedStudentId() {
 		return linkedStudentId;
 	}

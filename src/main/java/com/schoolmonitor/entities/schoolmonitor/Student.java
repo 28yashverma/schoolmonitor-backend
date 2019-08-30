@@ -43,7 +43,7 @@ public class Student implements Serializable {
 	private String studentEmailId;
 	@Id
 	@Column(nullable = false, length = 255)
-	private String studentId;
+	private int studentId;
 
 	
 
@@ -156,11 +156,11 @@ public class Student implements Serializable {
 		this.studentEmailId = studentEmailId;
 	}
 
-	public String getStudentId() {
+	public int getStudentId() {
 		return this.studentId;
 	}
 
-	public void setStudentId(String studentId) {
+	public void setStudentId(int studentId) {
 		this.studentId = studentId;
 	}
 
