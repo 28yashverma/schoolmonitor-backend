@@ -9,17 +9,20 @@ import org.springframework.web.bind.annotation.RestController;
 import com.schoolmonitor.model.LoginCredentials;
 import com.schoolmonitor.service.LoginService;
 
+/*
+ * @author PrabhjeetS 
+ */
 @RestController("/schoolmonitor")
 public class LoginController {
 
 	@Autowired
 	LoginService loginService;
+
 	@PostMapping("/Login")
-	public ResponseEntity<Boolean> Login(@RequestBody LoginCredentials credentials){
-		//return new ResponseEntity<Boolean>()(loginService.Login(credentials));
+	public ResponseEntity<Boolean> Login(@RequestBody LoginCredentials credentials) {
+		// return new ResponseEntity<Boolean>()(loginService.Login(credentials));
 		return null;
-		
-		
+
 	}
 
 }

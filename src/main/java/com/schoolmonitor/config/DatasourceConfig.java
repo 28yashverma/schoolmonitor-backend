@@ -1,12 +1,12 @@
 package com.schoolmonitor.config;
-
+/*
+ * @author PrabhjeetS 
+ */
 //import org.h2.server.web.WebServlet;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Primary;
 
 import com.zaxxer.hikari.HikariDataSource;

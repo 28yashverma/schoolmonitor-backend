@@ -7,4 +7,6 @@ import com.schoolmonitor.entities.schools.Subscription;
 
 @Repository
 public interface SubscriptionRepository extends JpaRepository<Subscription, Integer> {
+
+
 }
