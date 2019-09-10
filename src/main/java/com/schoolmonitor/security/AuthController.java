@@ -1,5 +1,13 @@
 package com.schoolmonitor.security;
 
+import static org.springframework.http.ResponseEntity.ok;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,7 +17,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,21 +25,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.schoolmonitor.entities.schoolmonitor.Credential;
 import com.schoolmonitor.repositories.schoolmonitor.CredentialsRepository;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Map;
-
-import static org.springframework.http.ResponseEntity.ok;
+import com.schoolmonitor.tenant.TenantContext;
 
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
 
+	@Autowired
+	TenantContext tenantContext;
+	
 	@Autowired
 	AuthenticationManager authenticationManager;
 
@@ -54,7 +55,7 @@ public class AuthController {
 	public ResponseEntity<?> signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
 
 		try {
-
+			//tenantContext.setCurrentTenant(data.getDomain());
 			Credential user = this.users.findByUserNameAndPassword(data.getUsername(), data.getPassword());
 			List<String> roles = new ArrayList<String>();
 			if (null != user.getStudent())

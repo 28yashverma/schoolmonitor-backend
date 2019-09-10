@@ -29,5 +29,12 @@ import java.io.Serializable;
 		private static final long serialVersionUID = 1L;
 		private String username;
 	    private String password;
+	    private String domain;
+		public String getDomain() {
+			return domain;
+		}
+		public void setDomain(String domain) {
+			this.domain = domain;
+		}
 	
 }
