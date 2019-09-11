@@ -7,7 +7,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import com.schoolmonitor.repositories.schoolmonitor.CredentialsRepository;
-
+/**
+ * @author PrabhjeetS
+ * @version 1.0
+ */
 @Component
 public class CustomUserDetailsService implements UserDetailsService {
 	

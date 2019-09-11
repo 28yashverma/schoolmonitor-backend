@@ -1,8 +1,15 @@
-package com.schoolmonitor.tenant;
+package com.schoolmonitor.multitenacy;
 
 import org.slf4j.Logger;
+
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+/**
+ * @author PrabhjeetS
+ * @version 1.0
+ */
+
 @Component
 public class TenantContext {
     private static Logger logger = LoggerFactory.getLogger(TenantContext.class.getName());
@@ -15,6 +22,6 @@ public class TenantContext {
         return currentTenant.get();
     }
     public static void clear() {
-        currentTenant.set(null);
+        currentTenant.remove();
     }
 }

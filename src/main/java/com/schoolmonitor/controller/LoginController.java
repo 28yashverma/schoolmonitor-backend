@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.schoolmonitor.model.LoginCredentials;
 import com.schoolmonitor.service.LoginService;
 
-/*
- * @author PrabhjeetS 
+/**
+ * @author PrabhjeetS
+ * @version 1.0
  */
 @RestController("/schoolmonitor")
 public class LoginController {

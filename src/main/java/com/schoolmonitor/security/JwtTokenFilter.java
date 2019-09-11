@@ -11,7 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.GenericFilterBean;
-
+/**
+ * @author PrabhjeetS
+ * @version 1.0
+ */
 public class JwtTokenFilter extends GenericFilterBean {
     private JwtTokenProvider jwtTokenProvider;
     public JwtTokenFilter(JwtTokenProvider jwtTokenProvider) {

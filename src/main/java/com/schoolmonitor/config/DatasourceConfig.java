@@ -1,7 +1,5 @@
 package com.schoolmonitor.config;
-/*
- * @author PrabhjeetS 
- */
+
 
 //import org.h2.server.web.WebServlet;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
@@ -11,7 +9,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 import com.zaxxer.hikari.HikariDataSource;
-
+/**
+ * @author PrabhjeetS
+ * @version 1.0
+ */
 @Configuration
 //@Import(SecurityConfig.class)
 public class DatasourceConfig {

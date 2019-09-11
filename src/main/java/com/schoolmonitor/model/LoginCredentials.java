@@ -1,6 +1,9 @@
 package com.schoolmonitor.model;
 
-
+/**
+ * @author PrabhjeetS
+ * @version 1.0
+ */
 public class LoginCredentials {
 
 	

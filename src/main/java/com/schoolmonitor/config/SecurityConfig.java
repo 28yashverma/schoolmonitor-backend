@@ -1,8 +1,6 @@
 package com.schoolmonitor.config;
 
-/*
- * @author PrabhjeetS 
- */
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,9 +12,11 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 
 import com.schoolmonitor.security.JwtConfigurer;
 import com.schoolmonitor.security.JwtTokenProvider;
-
+/**
+ * @author PrabhjeetS
+ * @version 1.0
+ */
 @Configuration
-
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired

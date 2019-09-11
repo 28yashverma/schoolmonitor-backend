@@ -21,7 +21,10 @@ import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-
+/**
+ * @author PrabhjeetS
+ * @version 1.0
+ */
 @Component
 public class JwtTokenProvider {
     @Value("${security.jwt.token.secret-key:secret}")

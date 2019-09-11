@@ -1,7 +1,10 @@
 package com.schoolmonitor.security;
 
 import java.io.Serializable;
-
+/**
+ * @author PrabhjeetS
+ * @version 1.0
+ */
 	public class AuthenticationRequest implements Serializable {
 	    public String getUsername() {
 			return username;

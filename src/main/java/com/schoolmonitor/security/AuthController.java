@@ -24,9 +24,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.schoolmonitor.entities.schoolmonitor.Credential;
+import com.schoolmonitor.multitenacy.TenantContext;
 import com.schoolmonitor.repositories.schoolmonitor.CredentialsRepository;
-import com.schoolmonitor.tenant.TenantContext;
-
+/**
+ * @author PrabhjeetS
+ * @version 1.0
+ */
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -55,7 +58,7 @@ public class AuthController {
 	public ResponseEntity<?> signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
 
 		try {
-			//tenantContext.setCurrentTenant(data.getDomain());
+			tenantContext.setCurrentTenant(data.getDomain());
 			Credential user = this.users.findByUserNameAndPassword(data.getUsername(), data.getPassword());
 			List<String> roles = new ArrayList<String>();
 			if (null != user.getStudent())
