@@ -1,6 +1,6 @@
 package com.schoolmonitor.entities.schoolmonitor;
 
-import java.util.Collection;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,9 +10,6 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
 /**
  * The persistent class for the credentials database table.
  * 
@@ -21,7 +18,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Entity
 @Table(name = "credentials")
 @NamedQuery(name = "Credential.findAll", query = "SELECT c FROM Credential c")
-public class Credential implements UserDetails {
+public class Credential  {
 	private static final long serialVersionUID = 1L;
 
 	@Column(nullable = false)
@@ -41,7 +38,53 @@ public class Credential implements UserDetails {
 
 	@Column(length = 45)
 	private String linkedTeacherId;
+	
+	@Column(nullable=false)
+	private Date accountCreationDate;
+	
+	@Column(nullable=true)
+	private Date passwordLastChangedDate;
+	
+	@Column
+	private int numberOfRetry;
+	
+	@Column(nullable=false)
+    private byte isActive;
+	
+	
+	public Date getAccountCreationDate() {
+		return accountCreationDate;
+	}
 
+	public void setAccountCreationDate(Date accountCreationDate) {
+		this.accountCreationDate = accountCreationDate;
+	}
+
+	public Date getPasswordLastChangedDate() {
+		return passwordLastChangedDate;
+	}
+
+	public void setPasswordLastChangedDate(Date passwordLastChangedDate) {
+		this.passwordLastChangedDate = passwordLastChangedDate;
+	}
+
+	public int getNumberOfRetry() {
+		return numberOfRetry;
+	}
+
+	public void setNumberOfRetry(int numberOfRetry) {
+		this.numberOfRetry = numberOfRetry;
+	}
+
+	public byte getIsActive() {
+		return isActive;
+	}
+
+	public void setIsActive(byte isActive) {
+		this.isActive = isActive;
+	}
+
+	
 	public String getLinkedStudentId() {
 		return linkedStudentId;
 	}
@@ -117,40 +160,5 @@ public class Credential implements UserDetails {
 		this.teacher = teacher;
 	}
 
-	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getUsername() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isCredentialsNonExpired() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isEnabled() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
+	
 }

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.schoolmonitor.model.LoginCredentials;
+import com.schoolmonitor.security.AuthenticationRequest;
 import com.schoolmonitor.service.LoginService;
 
 /**
@@ -20,7 +20,7 @@ public class LoginController {
 	LoginService loginService;
 
 	@PostMapping("/Login")
-	public ResponseEntity<Boolean> Login(@RequestBody LoginCredentials credentials) {
+	public ResponseEntity<Boolean> Login(@RequestBody AuthenticationRequest credentials) {
 		// return new ResponseEntity<Boolean>()(loginService.Login(credentials));
 		return null;
 

@@ -1,43 +1,25 @@
 package com.schoolmonitor.security;
 
 import java.io.Serializable;
+import java.util.Collection;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+
 /**
  * @author PrabhjeetS
  * @version 1.0
  */
-	public class AuthenticationRequest implements Serializable {
-	    public String getUsername() {
-			return username;
-		}
-		public void setUsername(String username) {
-			this.username = username;
-		}
-		public String getPassword() {
-			return password;
-		}
-		public void setPassword(String password) {
-			this.password = password;
-		}
-		
-		public AuthenticationRequest() {
-			super();
-			// TODO Auto-generated constructor stub
-		}
-		public AuthenticationRequest(String username, String password) {
-			super();
-			this.username = username;
-			this.password = password;
-		}
+public class AuthenticationRequest extends User implements Serializable {
 
-		private static final long serialVersionUID = 1L;
-		private String username;
-	    private String password;
-	    private String domain;
-		public String getDomain() {
-			return domain;
-		}
-		public void setDomain(String domain) {
-			this.domain = domain;
-		}
-	
+	public String getDomain() {
+		return domain;
+	}
+	private static final long serialVersionUID = 4583870654336178863L;
+	private String domain;
+	public AuthenticationRequest(String username, String password, Collection<? extends GrantedAuthority> authorities,String domain) {
+		super(username, password, authorities);
+		this.domain=domain;
+	}
+
 }
