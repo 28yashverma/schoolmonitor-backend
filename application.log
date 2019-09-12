@@ -1,271 +1,562 @@
-2019-09-10 06:41:28.892  INFO 13044 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 13044 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
-2019-09-10 06:41:28.892  INFO 13044 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
-2019-09-10 06:41:29.094  INFO 13044 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@59767e69: startup date [Tue Sep 10 06:41:29 IST 2019]; root of context hierarchy
-2019-09-10 06:41:30.862  INFO 13044 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d5a35eb0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-10 06:41:31.162  INFO 13044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2019-09-10 06:41:31.532  INFO 13044 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-10 06:41:31.532  INFO 13044 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2019-09-10 06:41:31.572  INFO 13044 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
-2019-09-10 06:41:31.702  INFO 13044 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-09-10 06:41:31.702  INFO 13044 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2608 ms
-2019-09-10 06:41:31.912  INFO 13044 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-09-10 06:41:31.914  INFO 13044 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-09-10 06:41:31.914  INFO 13044 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-09-10 06:41:31.914  INFO 13044 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-09-10 06:41:31.914  INFO 13044 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
-2019-09-10 06:41:31.914  INFO 13044 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-09-10 06:41:31.915  INFO 13044 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
-2019-09-10 06:41:32.062  INFO 13044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-10 06:41:32.146  INFO 13044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-09-10 06:41:32.232  INFO 13044 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-09-10 06:41:32.342  INFO 13044 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-09-13 00:34:14.993  INFO 644 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 644 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2019-09-13 00:34:14.993  INFO 644 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2019-09-13 00:34:15.071  INFO 644 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6c19310: startup date [Fri Sep 13 00:34:15 IST 2019]; root of context hierarchy
+2019-09-13 00:34:16.854  INFO 644 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$798ade21] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-13 00:34:17.291  INFO 644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-09-13 00:34:17.319  INFO 644 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-13 00:34:17.319  INFO 644 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-13 00:34:17.355  INFO 644 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
+2019-09-13 00:34:17.495  INFO 644 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-13 00:34:17.495  INFO 644 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2439 ms
+2019-09-13 00:34:17.758  INFO 644 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-13 00:34:17.758  INFO 644 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-13 00:34:17.758  INFO 644 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-13 00:34:17.758  INFO 644 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-13 00:34:17.758  INFO 644 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-09-13 00:34:17.773  INFO 644 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-13 00:34:17.773  INFO 644 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2019-09-13 00:34:17.993  INFO 644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-13 00:34:18.133  INFO 644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-13 00:34:18.196  INFO 644 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-09-13 00:34:18.329  INFO 644 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-09-10 06:41:32.413  INFO 13044 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
-2019-09-10 06:41:32.413  INFO 13044 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-09-10 06:41:32.466  INFO 13044 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-09-10 06:41:32.572  INFO 13044 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-09-10 06:41:33.502  INFO 13044 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-09-10 06:41:33.632  INFO 13044 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-10 06:41:34.312  INFO 13044 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 06:41:34.496  INFO 13044 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@59767e69: startup date [Tue Sep 10 06:41:29 IST 2019]; root of context hierarchy
-2019-09-10 06:41:34.522  WARN 13044 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-10 06:41:34.557  INFO 13044 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.schoolmonitor.controller.LoginController.Login(com.schoolmonitor.model.LoginCredentials)
-2019-09-10 06:41:34.557  INFO 13044 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
-2019-09-10 06:41:34.561  INFO 13044 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-09-10 06:41:34.561  INFO 13044 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-09-10 06:41:34.602  INFO 13044 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Mapped URL path [/schoolmonitor] onto handler '/schoolmonitor'
-2019-09-10 06:41:34.607  INFO 13044 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 06:41:34.607  INFO 13044 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 06:41:35.009  INFO 13044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39ee1227, org.springframework.security.web.context.SecurityContextPersistenceFilter@330d258, org.springframework.security.web.header.HeaderWriterFilter@2214cc3f, org.springframework.security.web.authentication.logout.LogoutFilter@31c1a23f, com.schoolmonitor.security.JwtTokenFilter@36f04b1e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ed5c63f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@111e378b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f0bd2f9, org.springframework.security.web.session.SessionManagementFilter@22df1d4d, org.springframework.security.web.access.ExceptionTranslationFilter@7da17cd9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55e095ff]
-2019-09-10 06:41:35.088  INFO 13044 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-10 06:41:35.112  INFO 13044 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-09-10 06:41:35.112  INFO 13044 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'firstTenantDataSource' has been autodetected for JMX exposure
-2019-09-10 06:41:35.112  INFO 13044 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'secondTenantDataSource' has been autodetected for JMX exposure
-2019-09-10 06:41:35.112  INFO 13044 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'catalogueDataSource' has been autodetected for JMX exposure
-2019-09-10 06:41:35.116  INFO 13044 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'secondTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=secondTenantDataSource,type=HikariDataSource]
-2019-09-10 06:41:35.120  INFO 13044 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'firstTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=firstTenantDataSource,type=HikariDataSource]
-2019-09-10 06:41:35.120  INFO 13044 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'catalogueDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=catalogueDataSource,type=HikariDataSource]
-2019-09-10 06:41:35.242  INFO 13044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2019-09-10 06:41:35.242  INFO 13044 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 6.84 seconds (JVM running for 11.846)
-2019-09-10 06:41:59.551  INFO 13044 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2019-09-10 06:41:59.551  INFO 13044 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2019-09-10 06:41:59.572  INFO 13044 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
-2019-09-10 06:44:52.188  INFO 12036 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 12036 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
-2019-09-10 06:44:52.188  INFO 12036 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
-2019-09-10 06:44:52.262  INFO 12036 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6148b39c: startup date [Tue Sep 10 06:44:52 IST 2019]; root of context hierarchy
-2019-09-10 06:44:54.019  INFO 12036 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f1b11472] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-10 06:44:54.430  INFO 12036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2019-09-10 06:44:54.454  INFO 12036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-10 06:44:54.454  INFO 12036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2019-09-10 06:44:54.462  INFO 12036 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
-2019-09-10 06:44:54.629  INFO 12036 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-09-10 06:44:54.629  INFO 12036 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2367 ms
-2019-09-10 06:44:54.863  INFO 12036 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-09-10 06:44:54.863  INFO 12036 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-09-10 06:44:54.863  INFO 12036 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-09-10 06:44:54.863  INFO 12036 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-09-10 06:44:54.867  INFO 12036 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
-2019-09-10 06:44:54.867  INFO 12036 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-09-10 06:44:54.867  INFO 12036 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
-2019-09-10 06:44:55.040  INFO 12036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-10 06:44:55.180  INFO 12036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-09-10 06:44:55.242  INFO 12036 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-09-10 06:44:55.415  INFO 12036 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-09-13 00:34:18.415  INFO 644 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2019-09-13 00:34:18.415  INFO 644 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-13 00:34:18.509  INFO 644 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-09-13 00:34:18.650  INFO 644 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-09-13 00:34:19.601  INFO 644 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-13 00:34:19.694  INFO 644 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-13 00:34:20.446  WARN 644 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.schoolmonitor.service.AuthService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-09-13 00:34:20.446  INFO 644 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-13 00:34:20.446  INFO 644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-09-13 00:34:20.446  INFO 644 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-09-13 00:34:20.446  INFO 644 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-09-13 00:34:20.493  INFO 644 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-09-13 00:34:20.728 ERROR 644 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field authService in com.schoolmonitor.security.AuthController required a bean of type 'com.schoolmonitor.service.AuthService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.schoolmonitor.service.AuthService' in your configuration.
+
+2019-09-13 00:43:28.126  INFO 13028 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 13028 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2019-09-13 00:43:28.126  INFO 13028 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2019-09-13 00:43:28.188  INFO 13028 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@53da523e: startup date [Fri Sep 13 00:43:28 IST 2019]; root of context hierarchy
+2019-09-13 00:43:29.903  INFO 13028 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dbb59d3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-13 00:43:30.333  INFO 13028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-09-13 00:43:30.352  INFO 13028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-13 00:43:30.352  INFO 13028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-13 00:43:30.352  INFO 13028 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
+2019-09-13 00:43:30.509  INFO 13028 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-13 00:43:30.509  INFO 13028 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2321 ms
+2019-09-13 00:43:30.759  INFO 13028 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-13 00:43:30.759  INFO 13028 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-13 00:43:30.759  INFO 13028 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-13 00:43:30.759  INFO 13028 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-13 00:43:30.759  INFO 13028 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-09-13 00:43:30.759  INFO 13028 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-13 00:43:30.759  INFO 13028 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2019-09-13 00:43:30.948  INFO 13028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-13 00:43:31.080  INFO 13028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-13 00:43:31.135  INFO 13028 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-09-13 00:43:31.151  INFO 13028 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-09-10 06:44:55.525  INFO 12036 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
-2019-09-10 06:44:55.532  INFO 12036 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-09-10 06:44:55.582  INFO 12036 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-09-10 06:44:55.722  INFO 12036 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-09-10 06:44:56.744  INFO 12036 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-09-10 06:44:56.822  INFO 12036 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-10 06:44:57.612  INFO 12036 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 06:44:57.862  INFO 12036 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6148b39c: startup date [Tue Sep 10 06:44:52 IST 2019]; root of context hierarchy
-2019-09-10 06:44:57.892  WARN 12036 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-10 06:44:57.942  INFO 12036 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.schoolmonitor.controller.LoginController.Login(com.schoolmonitor.model.LoginCredentials)
-2019-09-10 06:44:57.942  INFO 12036 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
-2019-09-10 06:44:57.952  INFO 12036 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-09-10 06:44:57.952  INFO 12036 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-09-10 06:44:57.986  INFO 12036 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Mapped URL path [/schoolmonitor] onto handler '/schoolmonitor'
-2019-09-10 06:44:57.994  INFO 12036 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 06:44:57.994  INFO 12036 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 06:44:58.546  INFO 12036 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ee560d8, org.springframework.security.web.context.SecurityContextPersistenceFilter@483a8c3f, org.springframework.security.web.header.HeaderWriterFilter@565fcb76, org.springframework.security.web.authentication.logout.LogoutFilter@7668b272, com.schoolmonitor.security.JwtTokenFilter@59ca5b84, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46fd8f78, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f7c14ea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79340ee, org.springframework.security.web.session.SessionManagementFilter@3b335f7f, org.springframework.security.web.access.ExceptionTranslationFilter@3ed885f9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@637e4136]
-2019-09-10 06:44:58.693  INFO 12036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-10 06:44:58.734  INFO 12036 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-09-10 06:44:58.734  INFO 12036 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'firstTenantDataSource' has been autodetected for JMX exposure
-2019-09-10 06:44:58.734  INFO 12036 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'secondTenantDataSource' has been autodetected for JMX exposure
-2019-09-10 06:44:58.734  INFO 12036 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'catalogueDataSource' has been autodetected for JMX exposure
-2019-09-10 06:44:58.742  INFO 12036 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'secondTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=secondTenantDataSource,type=HikariDataSource]
-2019-09-10 06:44:58.742  INFO 12036 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'firstTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=firstTenantDataSource,type=HikariDataSource]
-2019-09-10 06:44:58.742  INFO 12036 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'catalogueDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=catalogueDataSource,type=HikariDataSource]
-2019-09-10 06:44:58.788  INFO 12036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2019-09-10 06:44:58.792  INFO 12036 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 6.993 seconds (JVM running for 8.325)
-2019-09-10 06:45:12.288  INFO 12036 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2019-09-10 06:45:12.292  INFO 12036 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2019-09-10 06:45:12.330  INFO 12036 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
-2019-09-10 06:57:30.261  INFO 7920 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 7920 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
-2019-09-10 06:57:30.261  INFO 7920 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
-2019-09-10 06:57:30.299  INFO 7920 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1c738e8a: startup date [Tue Sep 10 06:57:30 IST 2019]; root of context hierarchy
-2019-09-10 06:57:31.856  INFO 7920 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$38ac5462] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-10 06:57:32.168  INFO 7920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2019-09-10 06:57:32.184  INFO 7920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-10 06:57:32.184  INFO 7920 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2019-09-10 06:57:32.188  INFO 7920 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
-2019-09-10 06:57:32.286  INFO 7920 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-09-10 06:57:32.286  INFO 7920 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1987 ms
-2019-09-10 06:57:32.443  INFO 7920 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-09-10 06:57:32.444  INFO 7920 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-09-10 06:57:32.444  INFO 7920 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-09-10 06:57:32.444  INFO 7920 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-09-10 06:57:32.445  INFO 7920 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
-2019-09-10 06:57:32.445  INFO 7920 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-09-10 06:57:32.446  INFO 7920 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
-2019-09-10 06:57:32.570  INFO 7920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-10 06:57:32.657  INFO 7920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-09-10 06:57:32.755  INFO 7920 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-09-10 06:57:32.768  INFO 7920 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-09-13 00:43:31.335  INFO 13028 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2019-09-13 00:43:31.339  INFO 13028 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-13 00:43:31.386  INFO 13028 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-09-13 00:43:31.543  INFO 13028 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-09-13 00:43:32.524  INFO 13028 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-13 00:43:32.618  INFO 13028 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-13 00:43:33.417  INFO 13028 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 00:43:33.695  INFO 13028 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@53da523e: startup date [Fri Sep 13 00:43:28 IST 2019]; root of context hierarchy
+2019-09-13 00:43:33.736  WARN 13028 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-13 00:43:33.815  INFO 13028 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.schoolmonitor.controller.LoginController.Login(com.schoolmonitor.security.AuthenticationRequest)
+2019-09-13 00:43:33.815  INFO 13028 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.Object, java.lang.Object>> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2019-09-13 00:43:33.819  INFO 13028 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-13 00:43:33.819  INFO 13028 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-13 00:43:33.855  INFO 13028 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Mapped URL path [/schoolmonitor] onto handler '/schoolmonitor'
+2019-09-13 00:43:33.855  INFO 13028 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 00:43:33.855  INFO 13028 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 00:43:34.384  INFO 13028 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4447fbb8, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d4c95e5, org.springframework.security.web.header.HeaderWriterFilter@54ba7015, org.springframework.security.web.authentication.logout.LogoutFilter@28427fc0, com.schoolmonitor.security.JwtTokenFilter@42f996c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@642c3129, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1267887a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d5ac89a, org.springframework.security.web.session.SessionManagementFilter@218e8e2d, org.springframework.security.web.access.ExceptionTranslationFilter@407d535e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13fb903f]
+2019-09-13 00:43:34.525  INFO 13028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-13 00:43:34.556  INFO 13028 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-13 00:43:34.556  INFO 13028 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'firstTenantDataSource' has been autodetected for JMX exposure
+2019-09-13 00:43:34.556  INFO 13028 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'secondTenantDataSource' has been autodetected for JMX exposure
+2019-09-13 00:43:34.556  INFO 13028 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'catalogueDataSource' has been autodetected for JMX exposure
+2019-09-13 00:43:34.576  INFO 13028 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'secondTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=secondTenantDataSource,type=HikariDataSource]
+2019-09-13 00:43:34.576  INFO 13028 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'firstTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=firstTenantDataSource,type=HikariDataSource]
+2019-09-13 00:43:34.576  INFO 13028 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'catalogueDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=catalogueDataSource,type=HikariDataSource]
+2019-09-13 00:43:34.744  INFO 13028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2019-09-13 00:43:34.762  INFO 13028 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 7.005 seconds (JVM running for 8.287)
+2019-09-13 00:45:04.968  INFO 13028 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-13 00:45:04.968  INFO 13028 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-13 00:45:04.987  INFO 13028 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2019-09-13 00:45:05.241 ERROR 13028 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class com.schoolmonitor.security.AuthenticationRequest]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.schoolmonitor.security.AuthenticationRequest`, problem: Cannot pass a null GrantedAuthority collection
+ at [Source: (PushbackInputStream); line: 4, column: 1]] with root cause
+
+java.lang.IllegalArgumentException: Cannot pass a null GrantedAuthority collection
+	at org.springframework.util.Assert.notNull(Assert.java:193) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.security.core.userdetails.User.sortAuthorities(User.java:163) ~[spring-security-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.core.userdetails.User.<init>(User.java:123) ~[spring-security-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.core.userdetails.User.<init>(User.java:86) ~[spring-security-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at com.schoolmonitor.security.AuthenticationRequest.<init>(AuthenticationRequest.java:21) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_144]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_144]
+	at com.fasterxml.jackson.databind.introspect.AnnotatedConstructor.call(AnnotatedConstructor.java:124) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.std.StdValueInstantiator.createFromObjectWith(StdValueInstantiator.java:283) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.ValueInstantiator.createFromObjectWith(ValueInstantiator.java:229) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.impl.PropertyBasedCreator.build(PropertyBasedCreator.java:195) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:488) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1280) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4001) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3072) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:235) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:223) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:206) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:157) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:130) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:131) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at com.schoolmonitor.security.JwtTokenFilter.doFilter(JwtTokenFilter.java:32) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+
+2019-09-13 00:46:21.374 ERROR 13028 --- [http-nio-8088-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class com.schoolmonitor.security.AuthenticationRequest]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `com.schoolmonitor.security.AuthenticationRequest`, problem: Cannot pass a null GrantedAuthority collection
+ at [Source: (PushbackInputStream); line: 4, column: 1]] with root cause
+
+java.lang.IllegalArgumentException: Cannot pass a null GrantedAuthority collection
+	at org.springframework.util.Assert.notNull(Assert.java:193) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.security.core.userdetails.User.sortAuthorities(User.java:163) ~[spring-security-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.core.userdetails.User.<init>(User.java:123) ~[spring-security-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.core.userdetails.User.<init>(User.java:86) ~[spring-security-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at com.schoolmonitor.security.AuthenticationRequest.<init>(AuthenticationRequest.java:21) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_144]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_144]
+	at com.fasterxml.jackson.databind.introspect.AnnotatedConstructor.call(AnnotatedConstructor.java:124) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.std.StdValueInstantiator.createFromObjectWith(StdValueInstantiator.java:283) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.ValueInstantiator.createFromObjectWith(ValueInstantiator.java:229) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.impl.PropertyBasedCreator.build(PropertyBasedCreator.java:195) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:488) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1280) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4001) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3072) ~[jackson-databind-2.9.5.jar:2.9.5]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:235) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:223) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:206) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:157) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:130) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:124) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:161) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:131) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at com.schoolmonitor.security.JwtTokenFilter.doFilter(JwtTokenFilter.java:32) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+
+2019-09-13 00:50:27.563  WARN 13028 --- [http-nio-8088-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token
+ at [Source: (PushbackInputStream); line: 3, column: 58] (through reference chain: com.schoolmonitor.security.AuthenticationRequest["authorities"])
+2019-09-13 00:50:27.577  WARN 13028 --- [http-nio-8088-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token
+ at [Source: (PushbackInputStream); line: 3, column: 58] (through reference chain: com.schoolmonitor.security.AuthenticationRequest["authorities"])
+2019-09-13 00:54:54.678  WARN 13028 --- [http-nio-8088-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token
+ at [Source: (PushbackInputStream); line: 5, column: 16] (through reference chain: com.schoolmonitor.security.AuthenticationRequest["authorities"])
+2019-09-13 00:54:54.685  WARN 13028 --- [http-nio-8088-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token
+ at [Source: (PushbackInputStream); line: 5, column: 16] (through reference chain: com.schoolmonitor.security.AuthenticationRequest["authorities"])
+2019-09-13 01:11:13.927  WARN 13028 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s376ms471µs665ns).
+2019-09-13 01:12:07.096  INFO 13028 --- [RMI TCP Connection(38)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-09-13 01:12:07.111  INFO 13028 --- [RMI TCP Connection(38)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@53da523e: startup date [Fri Sep 13 00:43:28 IST 2019]; root of context hierarchy
+2019-09-13 01:12:07.113  INFO 13028 --- [RMI TCP Connection(38)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-09-13 01:12:07.113  INFO 13028 --- [RMI TCP Connection(38)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-09-13 01:12:07.113  INFO 13028 --- [RMI TCP Connection(38)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:12:07.113  INFO 13028 --- [RMI TCP Connection(38)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-09-13 01:12:07.113  INFO 13028 --- [RMI TCP Connection(38)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-09-13 01:12:19.050  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 7968 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2019-09-13 01:12:19.050  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2019-09-13 01:12:19.110  INFO 7968 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1dfa39f4: startup date [Fri Sep 13 01:12:19 IST 2019]; root of context hierarchy
+2019-09-13 01:12:20.846  INFO 7968 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73578653] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-13 01:12:21.267  INFO 7968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-09-13 01:12:21.283  INFO 7968 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-13 01:12:21.298  INFO 7968 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-13 01:12:21.302  INFO 7968 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
+2019-09-13 01:12:21.455  INFO 7968 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-13 01:12:21.455  INFO 7968 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2345 ms
+2019-09-13 01:12:21.722  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-13 01:12:21.722  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-13 01:12:21.722  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-13 01:12:21.722  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-13 01:12:21.722  INFO 7968 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-09-13 01:12:21.722  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-13 01:12:21.722  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2019-09-13 01:12:21.895  INFO 7968 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-13 01:12:22.035  INFO 7968 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-13 01:12:22.094  INFO 7968 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:12:22.109  INFO 7968 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-09-10 06:57:32.822  INFO 7920 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
-2019-09-10 06:57:32.824  INFO 7920 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-09-10 06:57:32.857  INFO 7920 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-09-10 06:57:32.949  INFO 7920 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-09-10 06:57:33.530  INFO 7920 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-09-10 06:57:33.584  INFO 7920 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-10 06:57:34.089  INFO 7920 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 06:57:34.261  INFO 7920 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1c738e8a: startup date [Tue Sep 10 06:57:30 IST 2019]; root of context hierarchy
-2019-09-10 06:57:34.285  WARN 7920 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-10 06:57:34.336  INFO 7920 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.schoolmonitor.controller.LoginController.Login(com.schoolmonitor.model.LoginCredentials)
-2019-09-10 06:57:34.337  INFO 7920 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
-2019-09-10 06:57:34.339  INFO 7920 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-09-10 06:57:34.339  INFO 7920 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-09-10 06:57:34.361  INFO 7920 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Mapped URL path [/schoolmonitor] onto handler '/schoolmonitor'
-2019-09-10 06:57:34.366  INFO 7920 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 06:57:34.367  INFO 7920 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 06:57:34.713  INFO 7920 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@735d10c0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e782b5, org.springframework.security.web.header.HeaderWriterFilter@5d619ecb, org.springframework.security.web.authentication.logout.LogoutFilter@623679f, com.schoolmonitor.security.JwtTokenFilter@22f45b49, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3fa6b1d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59029d2f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67e917ff, org.springframework.security.web.session.SessionManagementFilter@59495fc1, org.springframework.security.web.access.ExceptionTranslationFilter@3204607a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74d1c99b]
-2019-09-10 06:57:34.798  INFO 7920 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-10 06:57:34.827  INFO 7920 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-09-10 06:57:34.828  INFO 7920 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'firstTenantDataSource' has been autodetected for JMX exposure
-2019-09-10 06:57:34.828  INFO 7920 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'secondTenantDataSource' has been autodetected for JMX exposure
-2019-09-10 06:57:34.829  INFO 7920 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'catalogueDataSource' has been autodetected for JMX exposure
-2019-09-10 06:57:34.833  INFO 7920 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'secondTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=secondTenantDataSource,type=HikariDataSource]
-2019-09-10 06:57:34.834  INFO 7920 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'firstTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=firstTenantDataSource,type=HikariDataSource]
-2019-09-10 06:57:34.834  INFO 7920 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'catalogueDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=catalogueDataSource,type=HikariDataSource]
-2019-09-10 06:57:34.865  INFO 7920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2019-09-10 06:57:34.869  INFO 7920 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 4.852 seconds (JVM running for 5.719)
-2019-09-10 06:57:43.798  INFO 7920 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2019-09-10 06:57:43.798  INFO 7920 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2019-09-10 06:57:43.818  INFO 7920 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
-2019-09-10 07:05:08.404  INFO 432 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 432 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
-2019-09-10 07:05:08.405  INFO 432 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
-2019-09-10 07:05:08.450  INFO 432 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1f674f46: startup date [Tue Sep 10 07:05:08 IST 2019]; root of context hierarchy
-2019-09-10 07:05:09.484  INFO 432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d928fa15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-10 07:05:09.763  INFO 432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2019-09-10 07:05:09.784  INFO 432 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-10 07:05:09.784  INFO 432 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2019-09-10 07:05:09.784  INFO 432 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
-2019-09-10 07:05:09.883  INFO 432 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-09-10 07:05:09.883  INFO 432 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1433 ms
-2019-09-10 07:05:10.043  INFO 432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-09-10 07:05:10.043  INFO 432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-09-10 07:05:10.043  INFO 432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-09-10 07:05:10.043  INFO 432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-09-10 07:05:10.043  INFO 432 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
-2019-09-10 07:05:10.043  INFO 432 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-09-10 07:05:10.053  INFO 432 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
-2019-09-10 07:05:10.171  INFO 432 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-10 07:05:10.253  INFO 432 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-09-10 07:05:10.303  INFO 432 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-09-10 07:05:10.383  INFO 432 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-09-13 01:12:22.313  INFO 7968 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2019-09-13 01:12:22.313  INFO 7968 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-13 01:12:22.349  INFO 7968 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-09-13 01:12:22.505  INFO 7968 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-09-13 01:12:23.580  INFO 7968 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-13 01:12:23.673  INFO 7968 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:12:24.474  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:12:24.736  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1dfa39f4: startup date [Fri Sep 13 01:12:19 IST 2019]; root of context hierarchy
+2019-09-13 01:12:24.783  WARN 7968 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-13 01:12:24.831  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.schoolmonitor.controller.LoginController.Login(com.schoolmonitor.security.AuthenticationRequest)
+2019-09-13 01:12:24.831  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.Object, java.lang.Object>> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2019-09-13 01:12:24.831  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-13 01:12:24.831  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-13 01:12:24.862  INFO 7968 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Mapped URL path [/schoolmonitor] onto handler '/schoolmonitor'
+2019-09-13 01:12:24.878  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:12:24.878  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:12:25.411  INFO 7968 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5be5ea95, org.springframework.security.web.context.SecurityContextPersistenceFilter@fef6be0, org.springframework.security.web.header.HeaderWriterFilter@3162bf78, org.springframework.security.web.authentication.logout.LogoutFilter@c7a6a3a, com.schoolmonitor.security.JwtTokenFilter@52c2e5c9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1cde6c26, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44641f09, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b6213f6, org.springframework.security.web.session.SessionManagementFilter@1039e41a, org.springframework.security.web.access.ExceptionTranslationFilter@4e024ddf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67596777]
+2019-09-13 01:12:25.536  INFO 7968 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-13 01:12:25.579  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-13 01:12:25.579  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'firstTenantDataSource' has been autodetected for JMX exposure
+2019-09-13 01:12:25.579  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'secondTenantDataSource' has been autodetected for JMX exposure
+2019-09-13 01:12:25.579  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'catalogueDataSource' has been autodetected for JMX exposure
+2019-09-13 01:12:25.595  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'secondTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=secondTenantDataSource,type=HikariDataSource]
+2019-09-13 01:12:25.595  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'firstTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=firstTenantDataSource,type=HikariDataSource]
+2019-09-13 01:12:25.595  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'catalogueDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=catalogueDataSource,type=HikariDataSource]
+2019-09-13 01:12:25.642  INFO 7968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2019-09-13 01:12:25.642  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 6.967 seconds (JVM running for 8.23)
+2019-09-13 01:12:48.687  INFO 7968 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-13 01:12:48.687  INFO 7968 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-13 01:12:48.710  INFO 7968 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2019-09-13 01:12:48.846  WARN 7968 --- [http-nio-8088-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token
+ at [Source: (PushbackInputStream); line: 5, column: 16] (through reference chain: com.schoolmonitor.security.AuthenticationRequest["authorities"])
+2019-09-13 01:12:48.846  WARN 7968 --- [http-nio-8088-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList` out of VALUE_STRING token
+ at [Source: (PushbackInputStream); line: 5, column: 16] (through reference chain: com.schoolmonitor.security.AuthenticationRequest["authorities"])
+2019-09-13 01:31:45.570  WARN 7968 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m23s292ms531µs740ns).
+2019-09-13 01:32:11.386  INFO 7968 --- [Thread-7] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1dfa39f4: startup date [Fri Sep 13 01:12:19 IST 2019]; root of context hierarchy
+2019-09-13 01:32:11.395  INFO 7968 --- [Thread-7] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-09-13 01:32:11.395  INFO 7968 --- [Thread-7] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-09-13 01:32:11.395  INFO 7968 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:32:11.395  INFO 7968 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-09-13 01:32:11.395  INFO 7968 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-09-13 01:32:11.980  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 7968 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2019-09-13 01:32:11.980  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2019-09-13 01:32:11.996  INFO 7968 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@312ae41: startup date [Fri Sep 13 01:32:11 IST 2019]; root of context hierarchy
+2019-09-13 01:32:12.776  INFO 7968 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73578653] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-13 01:32:12.933  INFO 7968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-09-13 01:32:12.933  INFO 7968 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-13 01:32:12.933  INFO 7968 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-13 01:32:13.011  INFO 7968 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-13 01:32:13.011  INFO 7968 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1015 ms
+2019-09-13 01:32:13.062  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-13 01:32:13.066  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-13 01:32:13.066  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-13 01:32:13.066  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-13 01:32:13.066  INFO 7968 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-09-13 01:32:13.066  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-13 01:32:13.066  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2019-09-13 01:32:13.121  INFO 7968 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-09-13 01:32:13.121  INFO 7968 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-09-13 01:32:13.137  INFO 7968 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:32:13.137  INFO 7968 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-09-10 07:05:10.437  INFO 432 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
-2019-09-10 07:05:10.437  INFO 432 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-09-10 07:05:10.472  INFO 432 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-09-10 07:05:10.570  INFO 432 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-09-10 07:05:11.169  INFO 432 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-09-10 07:05:11.225  INFO 432 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-10 07:05:11.744  INFO 432 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 07:05:11.936  INFO 432 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1f674f46: startup date [Tue Sep 10 07:05:08 IST 2019]; root of context hierarchy
-2019-09-10 07:05:11.961  WARN 432 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-10 07:05:11.997  INFO 432 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.schoolmonitor.controller.LoginController.Login(com.schoolmonitor.model.LoginCredentials)
-2019-09-10 07:05:11.999  INFO 432 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
-2019-09-10 07:05:11.999  INFO 432 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-09-10 07:05:11.999  INFO 432 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-09-10 07:05:12.023  INFO 432 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Mapped URL path [/schoolmonitor] onto handler '/schoolmonitor'
-2019-09-10 07:05:12.023  INFO 432 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 07:05:12.023  INFO 432 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 07:05:12.363  INFO 432 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b361b2b, org.springframework.security.web.context.SecurityContextPersistenceFilter@42e25afa, org.springframework.security.web.header.HeaderWriterFilter@2b8301df, org.springframework.security.web.authentication.logout.LogoutFilter@7e6f1a02, com.schoolmonitor.security.JwtTokenFilter@1fc3698d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f288a3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@190c8c51, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4aad3d9f, org.springframework.security.web.session.SessionManagementFilter@26faaa50, org.springframework.security.web.access.ExceptionTranslationFilter@47ae1f5c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@dd958c9]
-2019-09-10 07:05:12.444  INFO 432 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-10 07:05:12.480  INFO 432 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-09-10 07:05:12.481  INFO 432 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'firstTenantDataSource' has been autodetected for JMX exposure
-2019-09-10 07:05:12.481  INFO 432 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'secondTenantDataSource' has been autodetected for JMX exposure
-2019-09-10 07:05:12.481  INFO 432 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'catalogueDataSource' has been autodetected for JMX exposure
-2019-09-10 07:05:12.486  INFO 432 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'secondTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=secondTenantDataSource,type=HikariDataSource]
-2019-09-10 07:05:12.487  INFO 432 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'firstTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=firstTenantDataSource,type=HikariDataSource]
-2019-09-10 07:05:12.487  INFO 432 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'catalogueDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=catalogueDataSource,type=HikariDataSource]
-2019-09-10 07:05:12.514  INFO 432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2019-09-10 07:05:12.514  INFO 432 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 4.359 seconds (JVM running for 5.228)
-2019-09-10 07:05:17.753  INFO 432 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2019-09-10 07:05:17.753  INFO 432 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2019-09-10 07:05:17.788  INFO 432 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
-2019-09-10 07:50:44.453  INFO 9684 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 9684 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
-2019-09-10 07:50:44.454  INFO 9684 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
-2019-09-10 07:50:44.497  INFO 9684 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d42f23c: startup date [Tue Sep 10 07:50:44 IST 2019]; root of context hierarchy
-2019-09-10 07:50:45.561  INFO 9684 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a9e1f381] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-10 07:50:45.821  INFO 9684 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2019-09-10 07:50:45.837  INFO 9684 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-10 07:50:45.837  INFO 9684 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2019-09-10 07:50:45.837  INFO 9684 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
-2019-09-10 07:50:45.915  INFO 9684 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-09-10 07:50:45.915  INFO 9684 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1419 ms
-2019-09-10 07:50:46.067  INFO 9684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-09-10 07:50:46.067  INFO 9684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-09-10 07:50:46.068  INFO 9684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-09-10 07:50:46.068  INFO 9684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-09-10 07:50:46.068  INFO 9684 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
-2019-09-10 07:50:46.068  INFO 9684 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-09-10 07:50:46.069  INFO 9684 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
-2019-09-10 07:50:46.194  INFO 9684 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-10 07:50:46.272  INFO 9684 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-09-10 07:50:46.320  INFO 9684 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-09-10 07:50:46.394  INFO 9684 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-09-13 01:32:13.152  INFO 7968 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-09-13 01:32:13.589  INFO 7968 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-13 01:32:13.589  INFO 7968 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:32:13.855  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:32:13.909  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@312ae41: startup date [Fri Sep 13 01:32:11 IST 2019]; root of context hierarchy
+2019-09-13 01:32:13.909  WARN 7968 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-13 01:32:13.925  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.schoolmonitor.controller.LoginController.Login(com.schoolmonitor.model.LoginCredentials)
+2019-09-13 01:32:13.925  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2019-09-13 01:32:13.925  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-13 01:32:13.925  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-13 01:32:13.940  INFO 7968 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Mapped URL path [/schoolmonitor] onto handler '/schoolmonitor'
+2019-09-13 01:32:13.940  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:32:13.940  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:32:14.034  INFO 7968 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fc3dac4, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b4cd180, org.springframework.security.web.header.HeaderWriterFilter@40baea47, org.springframework.security.web.authentication.logout.LogoutFilter@7185efa7, com.schoolmonitor.security.JwtTokenFilter@2e1633cb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a4c8d32, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d33acee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1868a50c, org.springframework.security.web.session.SessionManagementFilter@45cf38af, org.springframework.security.web.access.ExceptionTranslationFilter@7472b261, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7162bde]
+2019-09-13 01:32:14.050  INFO 7968 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-13 01:32:14.089  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-13 01:32:14.089  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'firstTenantDataSource' has been autodetected for JMX exposure
+2019-09-13 01:32:14.089  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'secondTenantDataSource' has been autodetected for JMX exposure
+2019-09-13 01:32:14.089  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'catalogueDataSource' has been autodetected for JMX exposure
+2019-09-13 01:32:14.089  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'secondTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=secondTenantDataSource,type=HikariDataSource]
+2019-09-13 01:32:14.089  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'firstTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=firstTenantDataSource,type=HikariDataSource]
+2019-09-13 01:32:14.089  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'catalogueDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=catalogueDataSource,type=HikariDataSource]
+2019-09-13 01:32:14.105  INFO 7968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2019-09-13 01:32:14.105  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 2.172 seconds (JVM running for 1196.703)
+2019-09-13 01:32:14.120  INFO 7968 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-13 01:32:30.746  INFO 7968 --- [Thread-15] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@312ae41: startup date [Fri Sep 13 01:32:11 IST 2019]; root of context hierarchy
+2019-09-13 01:32:30.756  INFO 7968 --- [Thread-15] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-09-13 01:32:30.756  INFO 7968 --- [Thread-15] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-09-13 01:32:30.756  INFO 7968 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:32:30.756  INFO 7968 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-09-13 01:32:30.756  INFO 7968 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-09-13 01:32:31.274  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 7968 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2019-09-13 01:32:31.274  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2019-09-13 01:32:31.274  INFO 7968 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@687c637c: startup date [Fri Sep 13 01:32:31 IST 2019]; root of context hierarchy
+2019-09-13 01:32:31.981  INFO 7968 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73578653] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-13 01:32:32.151  INFO 7968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-09-13 01:32:32.151  INFO 7968 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-13 01:32:32.151  INFO 7968 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-13 01:32:32.182  INFO 7968 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-13 01:32:32.182  INFO 7968 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 908 ms
+2019-09-13 01:32:32.229  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-13 01:32:32.229  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-13 01:32:32.229  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-13 01:32:32.229  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-13 01:32:32.229  INFO 7968 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-09-13 01:32:32.229  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-13 01:32:32.229  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2019-09-13 01:32:32.276  INFO 7968 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-09-13 01:32:32.276  INFO 7968 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-09-13 01:32:32.296  INFO 7968 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:32:32.296  INFO 7968 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-09-10 07:50:46.444  INFO 9684 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
-2019-09-10 07:50:46.445  INFO 9684 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-09-10 07:50:46.473  INFO 9684 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-09-10 07:50:46.562  INFO 9684 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-09-10 07:50:47.124  INFO 9684 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-09-10 07:50:47.171  INFO 9684 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-10 07:50:47.646  INFO 9684 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 07:50:47.807  INFO 9684 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d42f23c: startup date [Tue Sep 10 07:50:44 IST 2019]; root of context hierarchy
-2019-09-10 07:50:47.831  WARN 9684 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-10 07:50:47.851  INFO 9684 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.schoolmonitor.controller.LoginController.Login(com.schoolmonitor.model.LoginCredentials)
-2019-09-10 07:50:47.851  INFO 9684 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
-2019-09-10 07:50:47.851  INFO 9684 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-09-10 07:50:47.851  INFO 9684 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-09-10 07:50:47.882  INFO 9684 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Mapped URL path [/schoolmonitor] onto handler '/schoolmonitor'
-2019-09-10 07:50:47.882  INFO 9684 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 07:50:47.882  INFO 9684 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-09-10 07:50:48.257  INFO 9684 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@425a0a1f, org.springframework.security.web.context.SecurityContextPersistenceFilter@632f6e23, org.springframework.security.web.header.HeaderWriterFilter@6d51e1d, org.springframework.security.web.authentication.logout.LogoutFilter@564cdfe8, com.schoolmonitor.security.JwtTokenFilter@79358990, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@563c18c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14834be9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3334c92, org.springframework.security.web.session.SessionManagementFilter@4012b80e, org.springframework.security.web.access.ExceptionTranslationFilter@4a26a748, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@88a8757]
-2019-09-10 07:50:48.333  INFO 9684 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-10 07:50:48.362  INFO 9684 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-09-10 07:50:48.362  INFO 9684 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'firstTenantDataSource' has been autodetected for JMX exposure
-2019-09-10 07:50:48.362  INFO 9684 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'secondTenantDataSource' has been autodetected for JMX exposure
-2019-09-10 07:50:48.362  INFO 9684 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'catalogueDataSource' has been autodetected for JMX exposure
-2019-09-10 07:50:48.367  INFO 9684 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'secondTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=secondTenantDataSource,type=HikariDataSource]
-2019-09-10 07:50:48.368  INFO 9684 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'firstTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=firstTenantDataSource,type=HikariDataSource]
-2019-09-10 07:50:48.368  INFO 9684 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'catalogueDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=catalogueDataSource,type=HikariDataSource]
-2019-09-10 07:50:48.398  INFO 9684 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2019-09-10 07:50:48.402  INFO 9684 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 4.169 seconds (JVM running for 14.978)
-2019-09-10 07:50:58.537  INFO 9684 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2019-09-10 07:50:58.537  INFO 9684 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2019-09-10 07:50:58.553  INFO 9684 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
-2019-09-10 07:53:18.708  INFO 9684 --- [Thread-7] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d42f23c: startup date [Tue Sep 10 07:50:44 IST 2019]; root of context hierarchy
-2019-09-10 07:53:18.714  INFO 9684 --- [Thread-7] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2019-09-10 07:53:18.715  INFO 9684 --- [Thread-7] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2019-09-10 07:53:18.717  INFO 9684 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-09-10 07:53:18.719  INFO 9684 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-09-10 07:53:18.822  INFO 9684 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-09-13 01:32:32.312  INFO 7968 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-09-13 01:32:32.774  INFO 7968 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-13 01:32:32.789  INFO 7968 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:32:33.029  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:32:33.086  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@687c637c: startup date [Fri Sep 13 01:32:31 IST 2019]; root of context hierarchy
+2019-09-13 01:32:33.086  WARN 7968 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-13 01:32:33.102  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.schoolmonitor.controller.LoginController.Login(com.schoolmonitor.model.LoginCredentials)
+2019-09-13 01:32:33.102  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2019-09-13 01:32:33.102  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-13 01:32:33.102  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-13 01:32:33.117  INFO 7968 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Mapped URL path [/schoolmonitor] onto handler '/schoolmonitor'
+2019-09-13 01:32:33.117  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:32:33.117  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:32:33.211  INFO 7968 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74b6cb5b, org.springframework.security.web.context.SecurityContextPersistenceFilter@694525ec, org.springframework.security.web.header.HeaderWriterFilter@4011c699, org.springframework.security.web.authentication.logout.LogoutFilter@20f9e58a, com.schoolmonitor.security.JwtTokenFilter@691ae68a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b90bf79, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@557b979c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bfbb354, org.springframework.security.web.session.SessionManagementFilter@8eaf26, org.springframework.security.web.access.ExceptionTranslationFilter@6863588d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15defbb6]
+2019-09-13 01:32:33.227  INFO 7968 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-13 01:32:33.258  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-13 01:32:33.258  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'firstTenantDataSource' has been autodetected for JMX exposure
+2019-09-13 01:32:33.258  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'secondTenantDataSource' has been autodetected for JMX exposure
+2019-09-13 01:32:33.258  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'catalogueDataSource' has been autodetected for JMX exposure
+2019-09-13 01:32:33.258  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'secondTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=secondTenantDataSource,type=HikariDataSource]
+2019-09-13 01:32:33.258  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'firstTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=firstTenantDataSource,type=HikariDataSource]
+2019-09-13 01:32:33.258  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'catalogueDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=catalogueDataSource,type=HikariDataSource]
+2019-09-13 01:32:33.273  INFO 7968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2019-09-13 01:32:33.273  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 2.031 seconds (JVM running for 1215.875)
+2019-09-13 01:32:33.289  INFO 7968 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-13 01:33:08.180  INFO 7968 --- [Thread-25] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@687c637c: startup date [Fri Sep 13 01:32:31 IST 2019]; root of context hierarchy
+2019-09-13 01:33:08.188  INFO 7968 --- [Thread-25] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-09-13 01:33:08.189  INFO 7968 --- [Thread-25] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-09-13 01:33:08.189  INFO 7968 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:33:08.189  INFO 7968 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-09-13 01:33:08.189  INFO 7968 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-09-13 01:33:08.810  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 7968 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2019-09-13 01:33:08.814  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2019-09-13 01:33:08.818  INFO 7968 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@26524da3: startup date [Fri Sep 13 01:33:08 IST 2019]; root of context hierarchy
+2019-09-13 01:33:09.543  INFO 7968 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73578653] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-13 01:33:09.699  INFO 7968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-09-13 01:33:09.699  INFO 7968 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-13 01:33:09.699  INFO 7968 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-13 01:33:09.745  INFO 7968 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-13 01:33:09.745  INFO 7968 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 927 ms
+2019-09-13 01:33:09.777  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-13 01:33:09.777  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-13 01:33:09.777  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-13 01:33:09.777  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-13 01:33:09.777  INFO 7968 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-09-13 01:33:09.777  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-13 01:33:09.777  INFO 7968 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2019-09-13 01:33:09.825  INFO 7968 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2019-09-13 01:33:09.825  INFO 7968 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2019-09-13 01:33:09.840  INFO 7968 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:33:09.840  INFO 7968 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-13 01:33:09.856  INFO 7968 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-09-13 01:33:10.165  INFO 7968 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-13 01:33:10.181  INFO 7968 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-13 01:33:10.400  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:33:10.463  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@26524da3: startup date [Fri Sep 13 01:33:08 IST 2019]; root of context hierarchy
+2019-09-13 01:33:10.463  WARN 7968 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-13 01:33:10.463  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/Login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> com.schoolmonitor.controller.LoginController.Login(com.schoolmonitor.model.LoginCredentials)
+2019-09-13 01:33:10.463  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2019-09-13 01:33:10.479  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-13 01:33:10.479  INFO 7968 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-13 01:33:10.479  INFO 7968 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Mapped URL path [/schoolmonitor] onto handler '/schoolmonitor'
+2019-09-13 01:33:10.479  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:33:10.479  INFO 7968 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-13 01:33:10.573  INFO 7968 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32f17e89, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b0913a3, org.springframework.security.web.header.HeaderWriterFilter@1f3ed49a, org.springframework.security.web.authentication.logout.LogoutFilter@4b2a9a77, com.schoolmonitor.security.JwtTokenFilter@51a86050, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@174c039b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ebf9fec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2582e40f, org.springframework.security.web.session.SessionManagementFilter@9779ae6, org.springframework.security.web.access.ExceptionTranslationFilter@165b4a4b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c5b00ba]
+2019-09-13 01:33:10.598  INFO 7968 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-13 01:33:10.629  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-13 01:33:10.629  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'firstTenantDataSource' has been autodetected for JMX exposure
+2019-09-13 01:33:10.629  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'secondTenantDataSource' has been autodetected for JMX exposure
+2019-09-13 01:33:10.629  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'catalogueDataSource' has been autodetected for JMX exposure
+2019-09-13 01:33:10.629  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'secondTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=secondTenantDataSource,type=HikariDataSource]
+2019-09-13 01:33:10.629  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'firstTenantDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=firstTenantDataSource,type=HikariDataSource]
+2019-09-13 01:33:10.629  INFO 7968 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'catalogueDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=catalogueDataSource,type=HikariDataSource]
+2019-09-13 01:33:10.645  INFO 7968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2019-09-13 01:33:10.645  INFO 7968 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 1.871 seconds (JVM running for 1253.243)
+2019-09-13 01:33:10.645  INFO 7968 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
