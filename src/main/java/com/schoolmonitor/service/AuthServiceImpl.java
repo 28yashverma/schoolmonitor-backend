@@ -55,7 +55,7 @@ public class AuthServiceImpl  implements AuthService{
 		return roles;
 	}
 
-	public Map<Object, Object> signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
+	public Object signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
 		Credential credential = this.credentialsRepository.findByUserNameAndPassword(data.getUsername(),
 				data.getPassword());
 		credentialDTO.setIsStudent(null != credential.getLinkedStudentId() ? true : false);

@@ -37,7 +37,7 @@ public class AuthController {
 	AuthService authService;
 
 	@PostMapping("/signin")
-	public ResponseEntity<Map<Object, Object>> signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
+	public ResponseEntity signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
 
 		try {
 			// tenantContext.setCurrentTenant(data.getDomain());
