@@ -43,28 +43,19 @@ public class AuthServiceImpl  implements AuthService{
 		return authorities;
 	}
 
-	public List<String> getUserRoles(CredentialDTO credentialDTO) {
+	
+	public List<String> getUserRoles() {
 
 		List<String> roles = new ArrayList<String>();
-		if (credentialDTO.isStudent())
-			roles.add("Student User");
-		else
-			roles.add("Teacher User");
-		if (credentialDTO.getIsAdmin() == 1)
-			roles.add("Administrator");
+			roles.add("Guset User");
 		return roles;
 	}
+	
 
 	public Object signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
-		Credential credential = this.credentialsRepository.findByUserNameAndPassword(data.getUsername(),
-				data.getPassword());
-		credentialDTO.setIsStudent(null != credential.getLinkedStudentId() ? true : false);
-		List<String> roles = this.getUserRoles(credentialDTO);
-        credentialDTO.setAuthorities(this.getAuthorities(roles));
-		BeanUtils.copyProperties(credential, credentialDTO);
-
+		List<String>roles=this.getUserRoles();
 		UsernamePasswordAuthenticationToken authtoken = new UsernamePasswordAuthenticationToken(
-				credentialDTO.getUsername(), credentialDTO.getPassword(), credentialDTO.getAuthorities());
+				data.getUsername(), data.getPassword(), this.getAuthorities(roles));
 		authtoken.setDetails(new WebAuthenticationDetails(request));
 
 		String token = jwtTokenProvider.createToken(data.getUsername(), roles);
