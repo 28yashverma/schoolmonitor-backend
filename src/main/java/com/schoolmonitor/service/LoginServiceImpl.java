@@ -28,7 +28,7 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public boolean Login(AuthenticationRequest authenticationRequest) {
-		try {
+		/*try {
 			Date currentDate = new Date();
 			School school = schoolRepository.findByDomainForLogin(authenticationRequest.getDomain());
 			Subscription subscription = subscriptionRepository.findById(school.getSubscriptionId()).get();
@@ -39,7 +39,7 @@ public class LoginServiceImpl implements LoginService {
 		} catch (SchoolMonitorException e) {
 			
 			e.getLocalizedMessage();
-		}
+		}*/
 
 		return true;
 	}

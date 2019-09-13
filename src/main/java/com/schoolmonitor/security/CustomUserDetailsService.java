@@ -1,7 +1,6 @@
 package com.schoolmonitor.security;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.springframework.beans.BeanUtils;
@@ -31,28 +30,17 @@ public class CustomUserDetailsService implements UserDetailsService {
 
 	@Autowired
 	AuthService authService;
+	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Credential credential = this.credentialsRepository.findByUserName(username);
 		credentialDTO.setIsStudent(null != credential.getLinkedStudentId() ? true : false);
-		List<String> roles = this.getUserRoles(credentialDTO);
+		List<String> roles = authService.getUserRoles(credentialDTO);
         credentialDTO.setAuthorities(authService.getAuthorities(roles));
 		BeanUtils.copyProperties(credentialsRepository.findByUserName(username),credentialDTO);
 		return credentialDTO;
 	}
 
-	public List<String> getUserRoles(CredentialDTO credentialDTO) {
-
-		List<String> roles = new ArrayList<String>();
-		if (credentialDTO.isStudent())
-			roles.add("Student User");
-		else
-			roles.add("Teacher User");
-		if (credentialDTO.getIsAdmin() == 1)
-			roles.add("Administrator");
-		return roles;
-	}
-	
 	public CustomUserDetailsService() {
 		super();
 	}

@@ -14,6 +14,6 @@ import com.schoolmonitor.security.AuthenticationRequest;
 @Service
 public interface AuthService {
 	Collection<? extends GrantedAuthority> getAuthorities(Collection<String> roles);
-	List<String> getUserRoles();
+	List<String> getUserRoles(CredentialDTO credentialDTO);
 	Object signin(AuthenticationRequest data, HttpServletRequest request);
 }
