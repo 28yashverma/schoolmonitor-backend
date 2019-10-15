@@ -1,115 +1,69 @@
 package com.schoolmonitor.entities.schoolmonitor;
 
+import java.io.Serializable;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 /**
  * The persistent class for the credentials database table.
  * 
  */
-// TODO : linkedStudentId and linkedTeacherId could be removed from table and entity
 @Entity
-@Table(name = "credentials")
-@NamedQuery(name = "Credential.findAll", query = "SELECT c FROM Credential c")
-public class Credential  {
+@Table(name="credentials")
+@NamedQuery(name="Credential.findAll", query="SELECT c FROM Credential c")
+public class Credential implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Column(nullable = false)
-	private byte isAdmin;
-
-	@Column(nullable = false, length = 255)
-	private String password;
-	@Id
-	@Column(nullable = false)
-	private int userId;
-
-	@Column(nullable = false, length = 255)
-	private String userName;
-
-	@Column(length = 45)
-	private String linkedStudentId;
-
-	@Column(length = 45)
-	private String linkedTeacherId;
-	
+	@Temporal(TemporalType.DATE)
 	@Column(nullable=false)
 	private Date accountCreationDate;
-	
-	@Column(nullable=true)
-	private Date passwordLastChangedDate;
-	
-	@Column
-	private int numberOfRetry;
-	
+
 	@Column(nullable=false)
-    private byte isActive;
-	
-	
+	private byte isActive;
+
+	@Column(nullable=false)
+	private byte isAdmin;
+
+	@Column(length=255)
+	private String linkedStudentId;
+
+	@Column(length=255)
+	private String linkedTeacherId;
+
+	private int numberOfRetry;
+
+	@Column(nullable=false, length=255)
+	private String password;
+
+	@Temporal(TemporalType.DATE)
+	private Date passwordLastChangedDate;
+
+	@Column(nullable=false, length=255)
+	private String userName;
+
+	//bi-directional many-to-one association to Rolesmapping
+	@OneToMany(mappedBy="credential")
+	private List<Rolesmapping> rolesmappings;
+
+	public Credential() {
+	}
+
 	public Date getAccountCreationDate() {
-		return accountCreationDate;
+		return this.accountCreationDate;
 	}
 
 	public void setAccountCreationDate(Date accountCreationDate) {
 		this.accountCreationDate = accountCreationDate;
 	}
 
-	public Date getPasswordLastChangedDate() {
-		return passwordLastChangedDate;
-	}
-
-	public void setPasswordLastChangedDate(Date passwordLastChangedDate) {
-		this.passwordLastChangedDate = passwordLastChangedDate;
-	}
-
-	public int getNumberOfRetry() {
-		return numberOfRetry;
-	}
-
-	public void setNumberOfRetry(int numberOfRetry) {
-		this.numberOfRetry = numberOfRetry;
-	}
-
 	public byte getIsActive() {
-		return isActive;
+		return this.isActive;
 	}
 
 	public void setIsActive(byte isActive) {
 		this.isActive = isActive;
-	}
-
-	
-	public String getLinkedStudentId() {
-		return linkedStudentId;
-	}
-
-	public void setLinkedStudentId(String linkedStudentId) {
-		this.linkedStudentId = linkedStudentId;
-	}
-
-	public String getLinkedTeacherId() {
-		return linkedTeacherId;
-	}
-
-	public void setLinkedTeacherId(String linkedTeacherId) {
-		this.linkedTeacherId = linkedTeacherId;
-	}
-
-	// bi-directional one-to-one association to Student
-	@OneToOne(mappedBy = "credential", fetch = FetchType.LAZY)
-	private Student student;
-
-	// bi-directional one-to-one association to Teacher
-	@OneToOne(mappedBy = "credential", fetch = FetchType.LAZY)
-	private Teacher teacher;
-
-	public Credential() {
 	}
 
 	public byte getIsAdmin() {
@@ -120,6 +74,30 @@ public class Credential  {
 		this.isAdmin = isAdmin;
 	}
 
+	public String getLinkedStudentId() {
+		return this.linkedStudentId;
+	}
+
+	public void setLinkedStudentId(String linkedStudentId) {
+		this.linkedStudentId = linkedStudentId;
+	}
+
+	public String getLinkedTeacherId() {
+		return this.linkedTeacherId;
+	}
+
+	public void setLinkedTeacherId(String linkedTeacherId) {
+		this.linkedTeacherId = linkedTeacherId;
+	}
+
+	public int getNumberOfRetry() {
+		return this.numberOfRetry;
+	}
+
+	public void setNumberOfRetry(int numberOfRetry) {
+		this.numberOfRetry = numberOfRetry;
+	}
+
 	public String getPassword() {
 		return this.password;
 	}
@@ -128,12 +106,12 @@ public class Credential  {
 		this.password = password;
 	}
 
-	public int getUserId() {
-		return this.userId;
+	public Date getPasswordLastChangedDate() {
+		return this.passwordLastChangedDate;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setPasswordLastChangedDate(Date passwordLastChangedDate) {
+		this.passwordLastChangedDate = passwordLastChangedDate;
 	}
 
 	public String getUserName() {
@@ -144,21 +122,26 @@ public class Credential  {
 		this.userName = userName;
 	}
 
-	public Student getStudent() {
-		return this.student;
+	public List<Rolesmapping> getRolesmappings() {
+		return this.rolesmappings;
 	}
 
-	public void setStudent(Student student) {
-		this.student = student;
+	public void setRolesmappings(List<Rolesmapping> rolesmappings) {
+		this.rolesmappings = rolesmappings;
 	}
 
-	public Teacher getTeacher() {
-		return this.teacher;
+	public Rolesmapping addRolesmapping(Rolesmapping rolesmapping) {
+		getRolesmappings().add(rolesmapping);
+		rolesmapping.setCredential(this);
+
+		return rolesmapping;
 	}
 
-	public void setTeacher(Teacher teacher) {
-		this.teacher = teacher;
+	public Rolesmapping removeRolesmapping(Rolesmapping rolesmapping) {
+		getRolesmappings().remove(rolesmapping);
+		rolesmapping.setCredential(null);
+
+		return rolesmapping;
 	}
 
-	
 }

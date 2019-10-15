@@ -25,7 +25,7 @@ import com.schoolmonitor.security.JwtTokenProvider;
  * @version 1.0
  */
 @Service
-public class AuthServiceImpl  implements AuthService{
+public class AuthServiceImpl implements AuthService {
 	@Autowired
 	CredentialsRepository credentialsRepository;
 	@Autowired
@@ -33,7 +33,7 @@ public class AuthServiceImpl  implements AuthService{
 	@Autowired
 	CredentialDTO credentialDTO;
 
-	 public Collection<? extends GrantedAuthority> getAuthorities(Collection<String> roles) {
+	public Collection<? extends GrantedAuthority> getAuthorities(Collection<String> roles) {
 		List<GrantedAuthority> authorities = new ArrayList<>();
 		for (String role : roles) {
 			authorities.add(new SimpleGrantedAuthority(role));
@@ -41,26 +41,25 @@ public class AuthServiceImpl  implements AuthService{
 		return authorities;
 	}
 
-	 public List<String> getUserRoles(CredentialDTO credentialDTO) {
+	public List<String> getUserRoles(CredentialDTO credentialDTO) {
 
-			List<String> roles = new ArrayList<String>();
-			if(null!=credentialDTO) {
+		List<String> roles = new ArrayList<String>();
+		if (null != credentialDTO) {
 			if (credentialDTO.isStudent())
 				roles.add("Student User");
 			else
 				roles.add("Teacher User");
 			if (credentialDTO.getIsAdmin() == 1)
 				roles.add("Administrator");
-			}
-			else roles.add("Guset User");
-			return roles;
-		}
-	
+		} else
+			roles.add("Guest User");
+		return roles;
+	}
 
 	public Object signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
-		List<String>roles=this.getUserRoles(null);
-		UsernamePasswordAuthenticationToken authtoken = new UsernamePasswordAuthenticationToken(
-				data.getUsername(), data.getPassword(), this.getAuthorities(roles));
+		List<String> roles = this.getUserRoles(credentialDTO);
+		UsernamePasswordAuthenticationToken authtoken = new UsernamePasswordAuthenticationToken(data.getUsername(),
+				data.getPassword(), this.getAuthorities(roles));
 		authtoken.setDetails(new WebAuthenticationDetails(request));
 
 		String token = jwtTokenProvider.createToken(data.getUsername(), roles);
@@ -71,7 +70,4 @@ public class AuthServiceImpl  implements AuthService{
 		return model;
 	}
 
-	
-
-	
 }
