@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.schoolmonitor.model.CredentialDTO;
 import com.schoolmonitor.repositories.schoolmonitor.CredentialsRepository;
 import com.schoolmonitor.security.AuthenticationRequest;
+import com.schoolmonitor.security.CustomUserDetailsService;
 import com.schoolmonitor.security.JwtTokenProvider;
 
 /**
@@ -31,7 +32,9 @@ public class AuthServiceImpl  implements AuthService{
 	@Autowired
 	JwtTokenProvider jwtTokenProvider;
 	@Autowired
-	CredentialDTO credentialDTO;
+	 CredentialDTO credentialDTO;
+	@Autowired
+	CustomUserDetailsService customUserDetailsService;
 
 	 public Collection<? extends GrantedAuthority> getAuthorities(Collection<String> roles) {
 		List<GrantedAuthority> authorities = new ArrayList<>();
@@ -58,13 +61,12 @@ public class AuthServiceImpl  implements AuthService{
 	
 
 	public Object signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
-		List<String>roles=this.getUserRoles(null);
+		 credentialDTO=(CredentialDTO) customUserDetailsService.loadUserByUsername(data.getUsername());
 		UsernamePasswordAuthenticationToken authtoken = new UsernamePasswordAuthenticationToken(
-				data.getUsername(), data.getPassword(), this.getAuthorities(roles));
+				data.getUsername(), data.getPassword(), credentialDTO.getAuthorities());
 		authtoken.setDetails(new WebAuthenticationDetails(request));
 
-		String token = jwtTokenProvider.createToken(data.getUsername(), roles);
-
+		String token = jwtTokenProvider.createToken(data.getUsername(), this.getUserRoles(credentialDTO));
 		Map<Object, Object> model = new HashMap<>();
 		model.put("username", data.getUsername());
 		model.put("token", token);

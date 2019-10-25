@@ -12,6 +12,16 @@ import org.springframework.stereotype.Component;
 public class CredentialDTO  implements UserDetails{
 	
 	private static final long serialVersionUID = 8048896219224374881L;
+	private String domain;
+	public String getDomain() {
+		return domain;
+	}
+	public void setDomain(String domain) {
+		this.domain = domain;
+	}
+	public void setStudent(boolean isStudent) {
+		this.isStudent = isStudent;
+	}
 	private byte isAdmin;
 	private String password;
 	private int userId;

@@ -1,7 +1,6 @@
 package com.schoolmonitor.repositories.schoolmonitor;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.schoolmonitor.entities.schoolmonitor.Teacher;
@@ -10,6 +9,6 @@ import com.schoolmonitor.entities.schoolmonitor.Teacher;
  * @version 1.0
  */
 @Repository
-public interface TeachersRepository extends JpaRepository<Teacher, String> {
+public interface TeachersRepository extends CrudRepository<Teacher, String> {
 
 }

@@ -1,6 +1,5 @@
 package com.schoolmonitor.security;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.BeanUtils;
@@ -36,8 +35,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 		Credential credential = this.credentialsRepository.findByUserName(username);
 		credentialDTO.setIsStudent(null != credential.getLinkedStudentId() ? true : false);
 		List<String> roles = authService.getUserRoles(credentialDTO);
-        credentialDTO.setAuthorities(authService.getAuthorities(roles));
 		BeanUtils.copyProperties(credentialsRepository.findByUserName(username),credentialDTO);
+        credentialDTO.setAuthorities(authService.getAuthorities(roles));
 		return credentialDTO;
 	}
 

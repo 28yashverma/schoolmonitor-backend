@@ -1,7 +1,6 @@
 package com.schoolmonitor.repositories.schoolmonitor;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.schoolmonitor.entities.schoolmonitor.Address;
@@ -11,6 +10,6 @@ import com.schoolmonitor.entities.schoolmonitor.Address;
  */
 
 @Repository
-public interface AddressRepository extends JpaRepository<Address, Integer> {
+public interface AddressRepository extends CrudRepository<Address, Integer> {
 
 }

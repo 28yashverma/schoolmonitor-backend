@@ -37,6 +37,7 @@ public class AuthController {
 	public ResponseEntity<?> signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
 
 		try {
+			//TODO: set Domain
 			// tenantContext.setCurrentTenant(data.getDomain());
 			return ok(authService.signin(data,request));
 		} catch (AuthenticationException e) {

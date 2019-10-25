@@ -1,7 +1,6 @@
 package com.schoolmonitor.repositories.schoolmonitor;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.schoolmonitor.entities.schoolmonitor.Schoolspecific;
@@ -10,6 +9,6 @@ import com.schoolmonitor.entities.schoolmonitor.Schoolspecific;
  * @version 1.0
  */
 @Repository
-public interface SchoolSpecificesRepository extends JpaRepository<Schoolspecific, Integer> {
+public interface SchoolSpecificesRepository extends CrudRepository<Schoolspecific, Integer> {
 
 }
