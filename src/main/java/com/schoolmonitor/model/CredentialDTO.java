@@ -4,13 +4,17 @@ import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 import java.util.Date;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
+import com.schoolmonitor.exception.SchoolMonitorException;
+
 @Component
 public class CredentialDTO  implements UserDetails{
-	
+	private static final Logger logger = LoggerFactory.getLogger(CredentialDTO.class);
 	private static final long serialVersionUID = 8048896219224374881L;
 	private String domain;
 	public String getDomain() {

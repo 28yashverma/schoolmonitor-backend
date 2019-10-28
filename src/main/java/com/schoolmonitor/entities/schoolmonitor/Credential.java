@@ -1,51 +1,62 @@
 package com.schoolmonitor.entities.schoolmonitor;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  * The persistent class for the credentials database table.
  * 
  */
 @Entity
-@Table(name="credentials")
-@NamedQuery(name="Credential.findAll", query="SELECT c FROM Credential c")
+@Table(name = "credentials")
+@NamedQuery(name = "Credential.findAll", query = "SELECT c FROM Credential c")
 public class Credential implements Serializable {
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	@Temporal(TemporalType.DATE)
-	@Column(nullable=false)
+	@Column(nullable = false)
 	private Date accountCreationDate;
-
-	@Column(nullable=false)
+	@Id
+	@Column
+	private Integer userId;
+	@Column(nullable = false)
 	private byte isActive;
 
-	@Column(nullable=false)
+	@Column(nullable = false)
 	private byte isAdmin;
 
-	@Column(length=255)
+	@Column(length = 255)
 	private String linkedStudentId;
 
-	@Column(length=255)
+	@Column(length = 255)
 	private String linkedTeacherId;
 
 	private int numberOfRetry;
 
-	@Column(nullable=false, length=255)
+	@Column(nullable = false, length = 255)
 	private String password;
 
 	@Temporal(TemporalType.DATE)
 	private Date passwordLastChangedDate;
 
-	@Column(nullable=false, length=255)
+	@Column(nullable = false, length = 255)
 	private String userName;
-
-	//bi-directional many-to-one association to Rolesmapping
-	@OneToMany(mappedBy="credential")
-	private List<Rolesmapping> rolesmappings;
 
 	public Credential() {
 	}
@@ -120,28 +131,6 @@ public class Credential implements Serializable {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
-	}
-
-	public List<Rolesmapping> getRolesmappings() {
-		return this.rolesmappings;
-	}
-
-	public void setRolesmappings(List<Rolesmapping> rolesmappings) {
-		this.rolesmappings = rolesmappings;
-	}
-
-	public Rolesmapping addRolesmapping(Rolesmapping rolesmapping) {
-		getRolesmappings().add(rolesmapping);
-		rolesmapping.setCredential(this);
-
-		return rolesmapping;
-	}
-
-	public Rolesmapping removeRolesmapping(Rolesmapping rolesmapping) {
-		getRolesmappings().remove(rolesmapping);
-		rolesmapping.setCredential(null);
-
-		return rolesmapping;
 	}
 
 }
