@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import com.schoolmonitor.entities.schoolmonitor.Credential;
+import com.schoolmonitor.exception.SchoolMonitorException;
 import com.schoolmonitor.model.CredentialDTO;
 import com.schoolmonitor.repositories.schoolmonitor.CredentialsRepository;
 import com.schoolmonitor.service.AuthService;
@@ -32,12 +33,15 @@ public class CustomUserDetailsService implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Credential credential = this.credentialsRepository.findByUserName(username);
+		try{Credential credential = this.credentialsRepository.findByUserName(username);
 		credentialDTO.setIsStudent(null != credential.getLinkedStudentId() ? true : false);
 		List<String> roles = authService.getUserRoles(credentialDTO);
 		BeanUtils.copyProperties(credentialsRepository.findByUserName(username),credentialDTO);
         credentialDTO.setAuthorities(authService.getAuthorities(roles));
-		return credentialDTO;
+		return credentialDTO;}
+		catch(Exception ex) {
+			throw new SchoolMonitorException(ex);
+		}
 	}
 
 	public CustomUserDetailsService() {

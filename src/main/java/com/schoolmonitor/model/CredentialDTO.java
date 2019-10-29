@@ -10,8 +10,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import com.schoolmonitor.exception.SchoolMonitorException;
-
 @Component
 public class CredentialDTO  implements UserDetails{
 	private static final Logger logger = LoggerFactory.getLogger(CredentialDTO.class);

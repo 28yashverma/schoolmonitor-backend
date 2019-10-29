@@ -39,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
 		configuration.setAllowedOrigins(Arrays.asList("https://localhost:8088"));
-		configuration.setAllowedMethods(Arrays.asList("GET", "POST","PUT","DELETE"));
+		configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		source.registerCorsConfiguration("/**", configuration);
 		return source;
@@ -48,16 +48,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-		http.cors().configurationSource(corsConfigurationSource()).and().csrf().disable().headers().frameOptions()
-				.disable().and().httpBasic().disable().authorizeRequests().antMatchers("/auth/**").permitAll()
-				.antMatchers("/schoolmonitor/FeesManagment/**").hasAuthority("Student User")
-				.antMatchers("/schoolmonitor/TeacherConsole/**").hasAuthority("Teacher User")
-				.antMatchers("/schoolmonitor/AdminConsole/**").hasAuthority("Administrator")
-				.antMatchers("/schoolmonitor/AttendanceManagment/**").permitAll()
+		http.cors().configurationSource(corsConfigurationSource())
+
+				.and().csrf().disable().headers().frameOptions().disable().and().httpBasic().disable()
+				.authorizeRequests().antMatchers("/auth/**").permitAll().antMatchers("/schoolmonitor/FeesManagment/**")
+				.hasAuthority("Student User").antMatchers("/schoolmonitor/TeacherConsole/**")
+				.hasAuthority("Teacher User").antMatchers("/schoolmonitor/AdminConsole/**")
+				.hasAuthority("Administrator").antMatchers("/schoolmonitor/AttendanceManagment/**").permitAll()
 				.antMatchers("/schoolmonitor/CourseManagment/**").permitAll()
 				.antMatchers("/schoolmonitor/ResultManagment/**").hasAuthority("Student User").anyRequest()
-				.authenticated().and().logout().logoutUrl("/auth/signout").invalidateHttpSession(true).and().formLogin()
-				.loginPage("/auth/signin").and().apply(new JwtConfigurer(jwtTokenProvider));
+				.authenticated().and().apply(new JwtConfigurer(jwtTokenProvider));
 
 	}
 }
