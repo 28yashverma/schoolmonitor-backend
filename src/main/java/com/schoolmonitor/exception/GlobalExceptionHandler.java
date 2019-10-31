@@ -38,6 +38,7 @@ public class GlobalExceptionHandler {
 		   apiError.setHttpStatusCode(status.name());
 		   apiError.setExceptionMessage(exception.toString());
 		   apiError.setWebRequest(request.toString());
+		   apiError.setParameterMap(request.getParameterMap());
 		return new ResponseEntity<>(apiError, headers, status);
 	}
 
