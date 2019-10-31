@@ -1,4 +1,4 @@
-package com.schoolmonitor.multitenacy;
+package com.schoolmonitor.model;
 
 import org.slf4j.Logger;
 

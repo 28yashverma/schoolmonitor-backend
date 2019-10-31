@@ -8,12 +8,13 @@ import java.util.Set;
  * @version 1.0
  */
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.WebRequest;
 @Component
 public class ApiError {
 private int httpStatusValue;
 private String httpStatusCode;
 private Set<Entry<String,List<String>>> headerMappings;
-private String requestDescription;
+private String webRequest;
 private String exceptionMessage;
 public int getHttpStatusValue() {
 	return httpStatusValue;
@@ -33,11 +34,13 @@ public Set<Entry<String, List<String>>> getHeaderMappings() {
 public void setHeaderMappings(Set<Entry<String, List<String>>> headerMappings) {
 	this.headerMappings = headerMappings;
 }
-public String getRequestDescription() {
-	return requestDescription;
+
+
+public String getWebRequest() {
+	return webRequest;
 }
-public void setRequestDescription(String requestDescription) {
-	this.requestDescription = requestDescription;
+public void setWebRequest(String webRequest) {
+	this.webRequest = webRequest;
 }
 public String getExceptionMessage() {
 	return exceptionMessage;

@@ -23,21 +23,21 @@ public class GlobalExceptionHandler {
 	ApiError apiError;
 
 	@ExceptionHandler({ BadCredentialsException.class, UsernameNotFoundException.class, SchoolMonitorException.class })
-	public final ResponseEntity<?> handleException(Exception ex, WebRequest request) {
+	public final ResponseEntity<?> handleException(Throwable ex, WebRequest request) {
 		HttpHeaders headers = new HttpHeaders();
-		HttpStatus status = HttpStatus.NOT_FOUND;
+		HttpStatus status = HttpStatus.BAD_REQUEST;
 		GenericExceptionContainer<?> genericExceptionContainer = new GenericExceptionContainer<>(ex);
+		genericExceptionContainer.toString();
 		return handleException(headers, genericExceptionContainer, status, request);
 
 	}
 
 	private ResponseEntity<ApiError> handleException(HttpHeaders headers, GenericExceptionContainer<?> exception,
 			HttpStatus status, WebRequest request) {
-		apiError.setHttpStatusValue(status.value());
-		apiError.setHttpStatusCode(status.name());
-		apiError.setHeaderMappings(headers.entrySet());
-		apiError.setRequestDescription(request.getDescription(false));
-		apiError.setRequestDescription(((Throwable) exception.getExceptionObject()).getMessage());
+		   apiError.setHttpStatusValue(status.value());
+		   apiError.setHttpStatusCode(status.name());
+		   apiError.setExceptionMessage(exception.toString());
+		   apiError.setWebRequest(request.toString());
 		return new ResponseEntity<>(apiError, headers, status);
 	}
 

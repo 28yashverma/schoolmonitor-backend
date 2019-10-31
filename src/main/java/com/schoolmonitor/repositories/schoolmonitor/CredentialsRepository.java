@@ -9,7 +9,7 @@ import com.schoolmonitor.repositories.BaseRepository;
  * @author PrabhjeetS
  * @version 1.0
  */
-@Scope("prototype")
+//@Scope("prototype")
 @Repository
 public interface CredentialsRepository extends BaseRepository<Credential, Integer> {
 

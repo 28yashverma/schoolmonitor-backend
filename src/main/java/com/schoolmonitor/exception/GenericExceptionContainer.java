@@ -10,6 +10,20 @@ public class GenericExceptionContainer<T> {
 		this.exceptionObject = exceptionObject;
 	}
 
+	@Override
+	public String toString() {
+
+		Class<?> exceptionClass = exceptionObject.getClass();
+		if (exceptionObject instanceof SchoolMonitorException) {
+			try {
+				return exceptionClass.getDeclaredFields()[1].get((T) exceptionObject).toString();
+			} catch (IllegalArgumentException | IllegalAccessException | SecurityException e) {
+				e.printStackTrace();
+			}
+		}
+		return exceptionClass.getName();
+	}
+
 	private T exceptionObject;
 
 	public T getExceptionObject() {
