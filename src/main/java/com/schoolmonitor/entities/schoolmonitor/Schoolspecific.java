@@ -9,7 +9,7 @@ import java.util.List;
  * 
  */
 @Entity
-@Table(name = "schoolspecifics")
+@Table(schema="schoolmonitor",name = "schoolspecifics")
 @NamedQuery(name = "Schoolspecific.findAll", query = "SELECT s FROM Schoolspecific s")
 public class Schoolspecific implements Serializable {
 	private static final long serialVersionUID = 1L;

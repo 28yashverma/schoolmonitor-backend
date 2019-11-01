@@ -18,7 +18,7 @@ import javax.persistence.Table;
 
 //TODO : linkedStudentId and linkedTeacherId could be removed from table and entity
 @Entity
-@Table(name = "address")
+@Table(schema="schoolmonitor",name = "address")
 @NamedQuery(name = "Address.findAll", query = "SELECT a FROM Address a")
 public class Address implements Serializable {
 	private static final long serialVersionUID = 1L;

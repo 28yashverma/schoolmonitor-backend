@@ -10,7 +10,7 @@ import java.util.Date;
  * 
  */
 @Entity
-@Table(name="subscription")
+@Table(schema="schools",name="subscription")
 @NamedQuery(name="Subscription.findAll", query="SELECT s FROM Subscription s")
 public class Subscription implements Serializable {
 	private static final long serialVersionUID = 1L;

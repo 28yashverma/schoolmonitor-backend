@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
  * 
  */
 @Entity
-@Table(name = "credentials")
+@Table(schema="schoolmonitor",name = "credentials")
 @NamedQuery(name = "Credential.findAll", query = "SELECT c FROM Credential c")
 public class Credential implements Serializable {
 	public Integer getUserId() {

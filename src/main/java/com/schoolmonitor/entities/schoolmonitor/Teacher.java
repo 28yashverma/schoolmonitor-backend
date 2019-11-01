@@ -8,7 +8,7 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@Table(name = "teacher")
+@Table(schema="schoolmonitor",name = "teacher")
 @NamedQuery(name = "Teacher.findAll", query = "SELECT t FROM Teacher t")
 public class Teacher implements Serializable {
 	private static final long serialVersionUID = 1L;
