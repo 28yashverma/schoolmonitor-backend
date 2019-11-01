@@ -1,6 +1,5 @@
 package com.schoolmonitor.repositories.schoolmonitor;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
 import com.schoolmonitor.entities.schoolmonitor.Credential;
@@ -16,4 +15,6 @@ public interface CredentialsRepository extends BaseRepository<Credential, Intege
 	Credential findByUserNameAndPassword(String userName, String password);
 
 	Credential findByUserName(String UserName);
+
+	String findUserNameByStudentId(Integer studentId);
 }

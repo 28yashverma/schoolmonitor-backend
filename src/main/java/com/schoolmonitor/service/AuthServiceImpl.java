@@ -6,9 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -21,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.schoolmonitor.model.CredentialDTO;
 import com.schoolmonitor.repositories.schoolmonitor.CredentialsRepository;
 import com.schoolmonitor.security.AuthenticationRequest;
-import com.schoolmonitor.security.CustomUserDetailsService;
+import com.schoolmonitor.security.CustomUserDetailsServiceImpl;
 import com.schoolmonitor.security.JwtTokenProvider;
 
 /**
@@ -37,7 +34,7 @@ public class AuthServiceImpl implements AuthService {
 	@Autowired
 	CredentialDTO credentialDTO;
 	@Autowired
-	CustomUserDetailsService customUserDetailsService;
+	CustomUserDetailsServiceImpl customUserDetailsServiceImpl;
 
 	public Collection<? extends GrantedAuthority> getAuthorities(Collection<String> roles) {
 		List<GrantedAuthority> authorities = new ArrayList<>();
@@ -63,7 +60,7 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 	public Object signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
-		credentialDTO = (CredentialDTO) customUserDetailsService.loadUserByUsername(data.getUsername());
+		credentialDTO = (CredentialDTO) customUserDetailsServiceImpl.loadUserByDomainAndUserName(data.getDomain(),data.getUsername());
 		List<String> roles = this.getUserRoles(credentialDTO);
 		UsernamePasswordAuthenticationToken authtoken = new UsernamePasswordAuthenticationToken(data.getUsername(),
 				data.getPassword(), this.getAuthorities(roles));

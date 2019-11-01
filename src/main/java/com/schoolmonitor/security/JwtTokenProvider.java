@@ -20,7 +20,7 @@ import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 /**
- * @author PrabhjeetS
+ *
  * @version 1.0
  */
 @Component
@@ -30,7 +30,7 @@ public class JwtTokenProvider {
     @Value("${security.jwt.token.expire-length:3600000}")
     private long validityInMilliseconds = 3600000; // 1h
     @Autowired
-     private CustomUserDetailsService customUserDetailsService;
+     private CustomUserDetailsServiceImpl customUserDetailsServiceImpl;
     @PostConstruct
     protected void init() {
         secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
@@ -48,7 +48,7 @@ public class JwtTokenProvider {
             .compact();
     }
     public Authentication getAuthentication(String token) {
-        UserDetails userDetails = this.customUserDetailsService.loadUserByUsername(getUsername(token));
+        UserDetails userDetails = this.customUserDetailsServiceImpl.loadUserByUsername(getUsername(token));
         return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
     }
     public String getUsername(String token) {
