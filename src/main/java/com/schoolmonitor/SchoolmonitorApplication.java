@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import com.schoolmonitor.config.DatasourceConfig;
 import com.schoolmonitor.repositories.BaseRepositoryImpl;
 
 /**
@@ -13,7 +12,7 @@ import com.schoolmonitor.repositories.BaseRepositoryImpl;
  * @version 1.0
  */
 @EnableJpaRepositories(repositoryBaseClass=BaseRepositoryImpl.class)
-@SpringBootApplication(exclude = { DatasourceConfig.class })
+@SpringBootApplication()
 @EnableAutoConfiguration // for spring 2 explicit @EnableAutoConfiguration is needed
 public class SchoolmonitorApplication {
 
