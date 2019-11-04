@@ -16,5 +16,6 @@ public interface CredentialsRepository extends BaseRepository<Credential, Intege
 
 	Credential findByUserName(String UserName);
 
-	String findUserNameByStudentId(Integer studentId);
+	String findUserNameByLinkedStudentId(Integer studentId);
+
 }

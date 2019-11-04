@@ -38,30 +38,34 @@ public class CustomUserDetailsServiceImpl implements CustomUserDetailsService {
 
 	@Autowired
 	private SchoolRepository schoolRepository;
-	
-	
+
 	@Autowired
 	private SubscriptionRepository subscriptionRepository;
 
 	@Autowired
 	private StudentRepository studentRepository;
-	
+
 	@Autowired
 	AuthService authService;
 
 	@Override
-	public UserDetails loadUserByDomainAndUserName(String domain,String username) throws UsernameNotFoundException,SchoolMonitorException {
-		School school=schoolRepository.findByDomainForLogin(domain);
-		Subscription subscription=subscriptionRepository.findById(school.getSubscriptionId()).get();
-		Date subscriptionEndDate=subscription.getSubscribedTo();
-		if(subscriptionEndDate.compareTo(java.sql.Date.valueOf(LocalDate.now()))>1) {
-			Integer studentId=studentRepository.findStudentIdBySchoolId( school.getSchoolId());
-			if(username.equalsIgnoreCase(credentialsRepository.findUserNameByStudentId(studentId))) {
-				credentialDTO.setDomain(domain);
-				return this.loadUserByUsername(username);
+	public UserDetails loadUserByDomainAndUserName(String domain, String username)
+			throws UsernameNotFoundException, SchoolMonitorException {
+		try {
+			School school = schoolRepository.findByDomainForLogin(domain);
+			Subscription subscription = subscriptionRepository.findById(school.getSubscriptionId()).get();
+			Date subscriptionEndDate = subscription.getSubscribedTo();
+			if (subscriptionEndDate.compareTo(java.sql.Date.valueOf(LocalDate.now())) > 1) {
+				Integer studentId = studentRepository.findStudentIdBySchoolId(school.getSchoolId());
+				if (username.equalsIgnoreCase(credentialsRepository.findUserNameByLinkedStudentId(studentId))) {
+					credentialDTO.setDomain(domain);
+					return this.loadUserByUsername(username);
+				}
 			}
+		} catch (Throwable ex) {
+			throw new SchoolMonitorException(ex);
 		}
-        
+
 		return null;
 
 	}
@@ -84,7 +88,5 @@ public class CustomUserDetailsServiceImpl implements CustomUserDetailsService {
 			throw new SchoolMonitorException(ex);
 		}
 	}
-
-	
 
 }

@@ -81,6 +81,17 @@ public class Student implements Serializable {
 	@JoinColumn(name = "linkedAddressId", referencedColumnName = "addressId")
 	private Address address;
 
+	@Column
+	private int schoolId;
+	
+	public int getSchoolId() {
+		return schoolId;
+	}
+
+	public void setSchoolId(int schoolId) {
+		this.schoolId = schoolId;
+	}
+
 	public Student() {
 	}
 

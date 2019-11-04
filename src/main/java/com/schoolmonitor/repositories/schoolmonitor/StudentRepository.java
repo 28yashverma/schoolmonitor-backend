@@ -10,5 +10,7 @@ import com.schoolmonitor.repositories.BaseRepository;
  */
 @Repository
 public interface StudentRepository extends BaseRepository<Student, String> {
-	Integer findStudentIdBySchoolId( Integer schoolId);
+	Integer findLinkedStudentIdBySchoolId( Integer schoolId);
+
+	Integer findStudentIdBySchoolId(int schoolId);
 }
