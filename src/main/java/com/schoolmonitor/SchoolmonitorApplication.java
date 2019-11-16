@@ -11,7 +11,7 @@ import com.schoolmonitor.repositories.BaseRepositoryImpl;
  * @author PrabhjeetS
  * @version 1.0
  */
-@EnableJpaRepositories(repositoryBaseClass=BaseRepositoryImpl.class)
+//@EnableJpaRepositories(repositoryBaseClass=BaseRepositoryImpl.class)
 @SpringBootApplication()
 @EnableAutoConfiguration // for spring 2 explicit @EnableAutoConfiguration is needed
 public class SchoolmonitorApplication {

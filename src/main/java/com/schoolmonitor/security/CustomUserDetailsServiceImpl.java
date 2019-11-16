@@ -56,9 +56,9 @@ public class CustomUserDetailsServiceImpl implements CustomUserDetailsService {
 			School school = schoolRepository.findByDomainForLogin(domain);
 			Subscription subscription = subscriptionRepository.findById(school.getSubscriptionId()).get();
 			Date subscriptionEndDate = subscription.getSubscribedTo();
-			if (subscriptionEndDate.compareTo(java.sql.Date.valueOf(LocalDate.now())) > 1) {
+			if (subscriptionEndDate.compareTo(java.sql.Date.valueOf(LocalDate.now())) > 0) {
 				Integer studentId = studentRepository.findStudentIdBySchoolId(school.getSchoolId());
-				if (username.equalsIgnoreCase(credentialsRepository.findUserNameByLinkedStudentId(studentId))) {
+				if (username.equalsIgnoreCase(credentialsRepository.findUserNameByLinkedStudentId(studentId.toString()))) {
 					credentialDTO.setDomain(domain);
 					return this.loadUserByUsername(username);
 				}

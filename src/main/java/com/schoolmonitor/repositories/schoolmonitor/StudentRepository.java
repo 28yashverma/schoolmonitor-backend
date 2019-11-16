@@ -1,5 +1,6 @@
 package com.schoolmonitor.repositories.schoolmonitor;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.schoolmonitor.entities.schoolmonitor.Student;
@@ -10,7 +11,8 @@ import com.schoolmonitor.repositories.BaseRepository;
  */
 @Repository
 public interface StudentRepository extends BaseRepository<Student, String> {
-	Integer findLinkedStudentIdBySchoolId( Integer schoolId);
+	@Query("select s.studentId from Student s where s.schoolId=?1")
+	Integer findStudentIdBySchoolId( Integer schoolId);
 
-	Integer findStudentIdBySchoolId(int schoolId);
+	
 }

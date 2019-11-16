@@ -1,4 +1,4 @@
-package com.schoolmonitor.exception;
+ package com.schoolmonitor.exception;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
