@@ -16,16 +16,9 @@ import javax.persistence.TemporalType;
  * 
  */
 @Entity
-@Table(schema="schoolmonitor",name = "credentials")
+@Table(schema = "schoolmonitor", name = "credentials")
 @NamedQuery(name = "Credential.findAll", query = "SELECT c FROM Credential c")
 public class Credential implements Serializable {
-	public Integer getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
 
 	private static final long serialVersionUID = 1L;
 
@@ -33,7 +26,7 @@ public class Credential implements Serializable {
 	@Column(nullable = false)
 	private Date accountCreationDate;
 	@Id
-	@Column
+	@Column(nullable = false)
 	private Integer userId;
 	@Column(nullable = false)
 	private byte isActive;
@@ -59,6 +52,14 @@ public class Credential implements Serializable {
 	private String userName;
 
 	public Credential() {
+	}
+
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 
 	public Date getAccountCreationDate() {

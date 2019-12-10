@@ -1,13 +1,11 @@
 package com.schoolmonitor.config;
 
-import java.util.Properties;
-
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -20,6 +18,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.schoolmonitor.repositories.BaseRepositoryImpl;
+import com.schoolmonitor.utils.JpaPropertiesUtils;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -29,18 +28,19 @@ import com.zaxxer.hikari.HikariDataSource;
  */
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(repositoryBaseClass=BaseRepositoryImpl.class,entityManagerFactoryRef = "schoolmonitorEntityManagerFactory", transactionManagerRef = "schoolmonitorTransactionManager", basePackages = {
+@EnableJpaRepositories(repositoryBaseClass = BaseRepositoryImpl.class, entityManagerFactoryRef = "schoolmonitorEntityManagerFactory", transactionManagerRef = "schoolmonitorTransactionManager", basePackages = {
 		"com.schoolmonitor.repositories.schoolmonitor" })
 
 public class SchoolMonitorPersistenceContextConfig {
-
-	@Value("${spring.schoolmonitor.tenant1.datasource.username}")
+	@Autowired
+	JpaPropertiesUtils jpaPropertiesUtils;
+	@Value("${spring.schoolmonitor.datasource.username}")
 	String dataUsername;
-	@Value("${spring.schoolmonitor.tenant1.datasource.password}")
+	@Value("${spring.schoolmonitor.datasource.password}")
 	String password;
-	@Value("${spring.schoolmonitor.tenant1.datasource.url}")
+	@Value("${spring.schoolmonitor.datasource.url}")
 	String url;
-	@Value("${spring.schoolmonitor.tenant1.datasource.driver-class-name}")
+	@Value("${spring.schoolmonitor.datasource.driver-class-name}")
 	String driverClassName;
 
 	@Bean(name = "schoolmonitorDataSource")
@@ -63,16 +63,7 @@ public class SchoolMonitorPersistenceContextConfig {
 			final @Qualifier("schoolmonitorDataSource") DataSource schoolmonitorDataSource, Environment environment) {
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-
-		Properties jpaProperties = new Properties();
-		jpaProperties.put("hibernate.dialect",
-				environment.getRequiredProperty("spring.jpa.properties.hibernate.dialect"));
-		jpaProperties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("spring.jpa.hibernate.ddl-auto"));
-		jpaProperties.put("hibernate.ejb.naming_strategy",
-				environment.getRequiredProperty("spring.jpa.hibernate.naming.physical-strategy"));
-		jpaProperties.put("hibernate.show_sql", environment.getRequiredProperty("spring.jpa.show-sql"));
-
-		factory.setJpaProperties(jpaProperties);
+		factory.setJpaProperties(jpaPropertiesUtils.setEnvironment(environment).getJpaProperties());
 		factory.setJpaVendorAdapter(vendorAdapter);
 		factory.setPackagesToScan("com.schoolmonitor.entities.schoolmonitor");
 		factory.setDataSource(schoolmonitorDataSource);
@@ -87,4 +78,5 @@ public class SchoolMonitorPersistenceContextConfig {
 		txManager.setEntityManagerFactory(schoolmonitorEntityManagerFactory);
 		return txManager;
 	}
+
 }

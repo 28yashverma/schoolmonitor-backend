@@ -83,7 +83,18 @@ public class Student implements Serializable {
 
 	@Column
 	private int schoolId;
+//'/' Separated  values
+	@Column(unique=true)
+	private String classRollnumberSectionInformation;
 	
+	public String getClassRolenumberSectionInformation() {
+		return classRollnumberSectionInformation;
+	}
+
+	public void setClassRolenumberSectionInformation(String classRollnumberSectionInformation) {
+		this.classRollnumberSectionInformation = classRollnumberSectionInformation;
+	}
+
 	public int getSchoolId() {
 		return schoolId;
 	}
