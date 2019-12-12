@@ -1,82 +1,174 @@
-2019-12-10 08:51:14.686  WARN 2696 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1d1h34m35s854ms564µs953ns).
-2019-12-10 08:51:15.334  WARN 2696 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1d1h34m35s855ms71µs176ns).
-2019-12-10 09:08:15.878  INFO 2696 --- [RMI TCP Connection(31)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-12-10 09:08:15.879  INFO 2696 --- [RMI TCP Connection(31)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f1b944d: startup date [Mon Dec 09 04:13:22 IST 2019]; root of context hierarchy
-2019-12-10 09:08:15.883  INFO 2696 --- [RMI TCP Connection(31)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2019-12-10 09:08:15.883  INFO 2696 --- [RMI TCP Connection(31)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2019-12-10 09:08:15.885  INFO 2696 --- [RMI TCP Connection(31)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-12-10 09:08:15.886  INFO 2696 --- [RMI TCP Connection(31)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2019-12-10 09:08:15.894  INFO 2696 --- [RMI TCP Connection(31)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2019-12-10 09:08:15.894  INFO 2696 --- [RMI TCP Connection(31)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-12-10 09:08:15.894  INFO 2696 --- [RMI TCP Connection(31)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-12-10 09:08:15.896  INFO 2696 --- [RMI TCP Connection(31)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-12-10 09:08:55.103  INFO 13884 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 13884 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
-2019-12-10 09:08:55.104  INFO 13884 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
-2019-12-10 09:08:55.216  INFO 13884 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7158f9c9: startup date [Tue Dec 10 09:08:55 IST 2019]; root of context hierarchy
-2019-12-10 09:08:56.747  INFO 13884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$80d9bb4d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-10 09:08:57.134  INFO 13884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2019-12-10 09:08:57.156  INFO 13884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-10 09:08:57.157  INFO 13884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
-2019-12-10 09:08:57.164  INFO 13884 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\apache-maven-3.3.9\bin;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
-2019-12-10 09:08:57.316  INFO 13884 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-12-10 09:08:57.316  INFO 13884 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2101 ms
-2019-12-10 09:08:57.513  INFO 13884 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-12-10 09:08:57.514  INFO 13884 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-12-10 09:08:57.514  INFO 13884 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-12-10 09:08:57.514  INFO 13884 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-12-10 09:08:57.515  INFO 13884 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
-2019-12-10 09:08:57.515  INFO 13884 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-12-10 09:08:57.517  INFO 13884 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
-2019-12-10 09:08:57.574  INFO 13884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-12-10 09:08:57.692  INFO 13884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-12-10 09:08:57.746  INFO 13884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-12-10 09:08:57.760  INFO 13884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-12-12 23:49:49.325  INFO 7848 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 7848 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2019-12-12 23:49:49.329  INFO 7848 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2019-12-12 23:49:49.605  INFO 7848 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@52f42d43: startup date [Thu Dec 12 23:49:49 IST 2019]; root of context hierarchy
+2019-12-12 23:49:51.274  INFO 7848 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$380f15c2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-12 23:49:51.516  INFO 7848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-12-12 23:49:51.532  INFO 7848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-12 23:49:51.532  INFO 7848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-12-12 23:49:51.536  INFO 7848 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\apache-maven-3.3.9\bin;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
+2019-12-12 23:49:51.624  INFO 7848 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-12 23:49:51.624  INFO 7848 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2019 ms
+2019-12-12 23:49:51.736  INFO 7848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-12-12 23:49:51.736  INFO 7848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-12-12 23:49:51.736  INFO 7848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-12-12 23:49:51.736  INFO 7848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-12-12 23:49:51.736  INFO 7848 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-12-12 23:49:51.736  INFO 7848 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-12-12 23:49:51.740  INFO 7848 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2019-12-12 23:49:51.788  INFO 7848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-12 23:49:51.880  INFO 7848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-12 23:49:51.917  INFO 7848 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:49:51.925  INFO 7848 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-12-10 09:08:57.924  INFO 13884 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
-2019-12-10 09:08:57.925  INFO 13884 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-12-10 09:08:57.963  INFO 13884 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2019-12-10 09:08:58.084  INFO 13884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-12-10 09:08:58.600  INFO 13884 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-12-10 09:08:58.672  INFO 13884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-12-10 09:08:58.684  INFO 13884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2019-12-10 09:08:58.689  INFO 13884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2019-12-10 09:08:58.693  INFO 13884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2019-12-10 09:08:58.694  INFO 13884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-12-12 23:49:52.033  INFO 7848 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2019-12-12 23:49:52.033  INFO 7848 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-12 23:49:52.073  INFO 7848 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-12-12 23:49:52.149  INFO 7848 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-12-12 23:49:52.488  INFO 7848 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-12 23:49:52.528  INFO 7848 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:49:52.536  INFO 7848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-12-12 23:49:52.540  INFO 7848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-12-12 23:49:52.544  INFO 7848 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:49:52.544  INFO 7848 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-12-10 09:08:58.722  INFO 13884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-12-10 09:08:58.756  INFO 13884 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-12-10 09:08:58.758  INFO 13884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-12-10 09:08:59.755  INFO 13884 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5845f439, org.springframework.security.web.context.SecurityContextPersistenceFilter@110810b7, org.springframework.security.web.header.HeaderWriterFilter@2a268ce9, org.springframework.web.filter.CorsFilter@747e9625, org.springframework.security.web.authentication.logout.LogoutFilter@13c13213, com.schoolmonitor.security.JwtTokenFilter@70cbb89a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b038b64, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7144a5c9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@232e6451, org.springframework.security.web.session.SessionManagementFilter@30044a34, org.springframework.security.web.access.ExceptionTranslationFilter@7b3fa936, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19efae97]
-2019-12-10 09:08:59.829  INFO 13884 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-12-10 09:09:00.010  INFO 13884 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7158f9c9: startup date [Tue Dec 10 09:08:55 IST 2019]; root of context hierarchy
-2019-12-10 09:09:00.042  WARN 13884 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-12-10 09:09:00.076  INFO 13884 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
-2019-12-10 09:09:00.080  INFO 13884 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-12-10 09:09:00.081  INFO 13884 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-12-10 09:09:00.106  INFO 13884 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-12-10 09:09:00.106  INFO 13884 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-12-10 09:09:00.121  INFO 13884 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
-2019-12-10 09:09:00.367  INFO 13884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-12-10 09:09:00.400  INFO 13884 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-12-10 09:09:00.401  INFO 13884 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'schoolmonitorDataSource' has been autodetected for JMX exposure
-2019-12-10 09:09:00.401  INFO 13884 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'schoolsDataSource' has been autodetected for JMX exposure
-2019-12-10 09:09:00.408  INFO 13884 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'schoolsDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=schoolsDataSource,type=HikariDataSource]
-2019-12-10 09:09:00.409  INFO 13884 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'schoolmonitorDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=schoolmonitorDataSource,type=HikariDataSource]
-2019-12-10 09:09:00.457  INFO 13884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2019-12-10 09:09:00.460  INFO 13884 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 5.931 seconds (JVM running for 8.181)
-2019-12-10 09:09:12.521  INFO 13884 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2019-12-10 09:09:12.525  INFO 13884 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2019-12-10 09:09:12.554  INFO 13884 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
-2019-12-10 09:09:12.960  WARN 13884 --- [http-nio-8088-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: com.schoolmonitor.exception.SchoolMonitorException
-2019-12-10 09:12:05.707  INFO 13884 --- [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-12-10 09:12:05.708  INFO 13884 --- [RMI TCP Connection(11)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7158f9c9: startup date [Tue Dec 10 09:08:55 IST 2019]; root of context hierarchy
-2019-12-10 09:12:05.711  INFO 13884 --- [RMI TCP Connection(11)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2019-12-10 09:12:05.713  INFO 13884 --- [RMI TCP Connection(11)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2019-12-10 09:12:05.715  INFO 13884 --- [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-12-10 09:12:05.716  INFO 13884 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2019-12-10 09:12:05.727  INFO 13884 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2019-12-10 09:12:05.727  INFO 13884 --- [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-12-10 09:12:05.728  INFO 13884 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-12-10 09:12:05.729  INFO 13884 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-12 23:49:52.568  INFO 7848 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-12-12 23:49:52.588  INFO 7848 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-12 23:49:52.588  INFO 7848 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:49:52.600  WARN 7848 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'multitenancyPropertiesContainer': Unsatisfied dependency expressed through field 'multitenancyProperties'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.schoolmonitor.config.MultitanentConfigurationProperties' available: expected single matching bean but found 2: multitanentConfigurationProperties,spring.schoolmonitor-com.schoolmonitor.config.MultitanentConfigurationProperties
+2019-12-12 23:49:52.600  INFO 7848 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:49:52.600  INFO 7848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-12-12 23:49:52.604  INFO 7848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-12-12 23:49:52.604  INFO 7848 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:49:52.604  INFO 7848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-12 23:49:52.604  INFO 7848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-12 23:49:52.608  INFO 7848 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-12 23:49:52.616  INFO 7848 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-12 23:49:52.620 ERROR 7848 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field multitenancyProperties in com.schoolmonitor.multitenacy.MultitenancyPropertiesContainer required a single bean, but 2 were found:
+	- multitanentConfigurationProperties: defined in file [D:\schoolmonitor-backend\target\classes\com\schoolmonitor\config\MultitanentConfigurationProperties.class]
+	- spring.schoolmonitor-com.schoolmonitor.config.MultitanentConfigurationProperties: defined in null
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2019-12-12 23:50:41.984  INFO 4756 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 4756 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2019-12-12 23:50:41.984  INFO 4756 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2019-12-12 23:50:42.016  INFO 4756 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e311ac9: startup date [Thu Dec 12 23:50:42 IST 2019]; root of context hierarchy
+2019-12-12 23:50:42.770  INFO 4756 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1c15e09] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-12 23:50:42.975  INFO 4756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-12-12 23:50:42.987  INFO 4756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-12 23:50:42.987  INFO 4756 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-12-12 23:50:42.991  INFO 4756 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\apache-maven-3.3.9\bin;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
+2019-12-12 23:50:43.079  INFO 4756 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-12 23:50:43.079  INFO 4756 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1063 ms
+2019-12-12 23:50:43.195  INFO 4756 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-12-12 23:50:43.195  INFO 4756 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-12-12 23:50:43.195  INFO 4756 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-12-12 23:50:43.195  INFO 4756 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-12-12 23:50:43.199  INFO 4756 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-12-12 23:50:43.199  INFO 4756 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-12-12 23:50:43.199  INFO 4756 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2019-12-12 23:50:43.227  INFO 4756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-12 23:50:43.299  INFO 4756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-12 23:50:43.331  INFO 4756 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:50:43.339  INFO 4756 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-12 23:50:43.446  INFO 4756 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2019-12-12 23:50:43.446  INFO 4756 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-12 23:50:43.470  INFO 4756 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-12-12 23:50:43.542  INFO 4756 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-12-12 23:50:43.802  INFO 4756 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-12 23:50:43.835  INFO 4756 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:50:43.847  WARN 4756 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'multitenancyPropertiesContainer': Unsatisfied dependency expressed through field 'multitenancyProperties'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.schoolmonitor.config.MultitanentConfigurationProperties' available: expected single matching bean but found 2: multitanentConfigurationProperties,spring.schoolmonitor-com.schoolmonitor.config.MultitanentConfigurationProperties
+2019-12-12 23:50:43.847  INFO 4756 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:50:43.847  INFO 4756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-12 23:50:43.851  INFO 4756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-12 23:50:43.851  INFO 4756 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-12 23:50:43.863  INFO 4756 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-12 23:50:43.863 ERROR 4756 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field multitenancyProperties in com.schoolmonitor.multitenacy.MultitenancyPropertiesContainer required a single bean, but 2 were found:
+	- multitanentConfigurationProperties: defined in file [D:\schoolmonitor-backend\target\classes\com\schoolmonitor\config\MultitanentConfigurationProperties.class]
+	- spring.schoolmonitor-com.schoolmonitor.config.MultitanentConfigurationProperties: defined in null
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2019-12-12 23:57:06.668  INFO 5424 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 5424 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2019-12-12 23:57:06.669  INFO 5424 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2019-12-12 23:57:06.705  INFO 5424 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@43eb7869: startup date [Thu Dec 12 23:57:06 IST 2019]; root of context hierarchy
+2019-12-12 23:57:07.573  INFO 5424 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$92388a04] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-12 23:57:07.793  INFO 5424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2019-12-12 23:57:07.805  INFO 5424 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-12 23:57:07.805  INFO 5424 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-12-12 23:57:07.808  INFO 5424 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\apache-maven-3.3.9\bin;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
+2019-12-12 23:57:07.900  INFO 5424 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-12 23:57:07.900  INFO 5424 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1195 ms
+2019-12-12 23:57:08.025  INFO 5424 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-12-12 23:57:08.025  INFO 5424 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-12-12 23:57:08.025  INFO 5424 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-12-12 23:57:08.025  INFO 5424 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-12-12 23:57:08.026  INFO 5424 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-12-12 23:57:08.026  INFO 5424 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-12-12 23:57:08.027  INFO 5424 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2019-12-12 23:57:08.057  INFO 5424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-12 23:57:08.153  INFO 5424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-12 23:57:08.187  INFO 5424 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:57:08.195  INFO 5424 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-12 23:57:08.300  INFO 5424 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2019-12-12 23:57:08.301  INFO 5424 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-12 23:57:08.323  INFO 5424 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-12-12 23:57:08.397  INFO 5424 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-12-12 23:57:08.661  INFO 5424 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-12 23:57:08.700  INFO 5424 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:57:08.711  WARN 5424 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'multitenancyPropertiesContainer': Unsatisfied dependency expressed through field 'multitenancyProperties'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.schoolmonitor.config.MultitanentConfigurationProperties' available: expected single matching bean but found 2: multitanentConfigurationProperties,spring.schoolmonitor-com.schoolmonitor.config.MultitanentConfigurationProperties
+2019-12-12 23:57:08.711  INFO 5424 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-12 23:57:08.711  INFO 5424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-12 23:57:08.714  INFO 5424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-12 23:57:08.716  INFO 5424 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-12 23:57:08.724  INFO 5424 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-12 23:57:08.728 ERROR 5424 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field multitenancyProperties in com.schoolmonitor.multitenacy.MultitenancyPropertiesContainer required a single bean, but 2 were found:
+	- multitanentConfigurationProperties: defined in file [D:\schoolmonitor-backend\target\classes\com\schoolmonitor\config\MultitanentConfigurationProperties.class]
+	- spring.schoolmonitor-com.schoolmonitor.config.MultitanentConfigurationProperties: defined in null
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+

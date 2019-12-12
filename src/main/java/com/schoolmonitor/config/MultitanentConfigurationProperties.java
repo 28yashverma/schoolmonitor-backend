@@ -19,23 +19,28 @@ import  org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 @ConfigurationProperties(prefix="spring.schoolmonitor")
 public class MultitanentConfigurationProperties {
 
-	private List<ConfigurationPropertiesList> configurationPropertiesList=new ArrayList<ConfigurationPropertiesList>();
-    public List<ConfigurationPropertiesList> getConfigurationPropertiesList() {
-		return configurationPropertiesList;
+	private List<CustomDataSourceProperties> customDataSourceProperties=new ArrayList<CustomDataSourceProperties>();
+    
+	public List<CustomDataSourceProperties> getCustomDataSourceProperties() {
+		return customDataSourceProperties;
 	}
-	public void setConfigurationPropertiesList(List<ConfigurationPropertiesList> configurationPropertiesList) {
-		this.configurationPropertiesList = configurationPropertiesList;
-	}
-	public static class ConfigurationPropertiesList extends  DataSourceProperties{
-    	private String Identifier;
 
-		public String getIdentifier() {
-			return Identifier;
+	public void setCustomDataSourceProperties(List<CustomDataSourceProperties> customDataSourceProperties) {
+		this.customDataSourceProperties = customDataSourceProperties;
+	}
+
+	public static class CustomDataSourceProperties extends  DataSourceProperties{
+    	private String tenantIdentifier;
+
+		public String getTenantIdentifier() {
+			return tenantIdentifier;
 		}
 
-		public void setIdentifier(String identifier) {
-			Identifier = identifier;
+		public void setTenantIdentifier(String tenantIdentifier) {
+			this.tenantIdentifier = tenantIdentifier;
 		}
+
+		
     	
     }
 }

@@ -1,9 +1,12 @@
 
 package com.schoolmonitor.multitenacy;
 
+import java.util.Map;
+
 import javax.sql.DataSource;
 
 import org.hibernate.engine.jdbc.connections.spi.AbstractDataSourceBasedMultiTenantConnectionProviderImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @author PrabhjeetS
@@ -13,7 +16,8 @@ import org.hibernate.engine.jdbc.connections.spi.AbstractDataSourceBasedMultiTen
 public class DataSourceBasedMultiTenantConnectionProviderImpl extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl{
 
 	
-	
+	@Autowired
+    private Map<String, DataSource> multitanencyDataSourceMap;
 	private static final long serialVersionUID = 1L;
 
 
@@ -23,15 +27,13 @@ public class DataSourceBasedMultiTenantConnectionProviderImpl extends AbstractDa
 	
 	@Override
 	protected DataSource selectAnyDataSource() {
-		//TODO:
-		return null;
+		return this.multitanencyDataSourceMap.values().iterator().next();
 	}
 
 	
 	@Override
 	protected DataSource selectDataSource(String tenantIdentifier) {
-		//TODO:
-		return null;
+		return this.multitanencyDataSourceMap.get(tenantIdentifier);
 	}
 
 }

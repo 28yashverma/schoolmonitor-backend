@@ -1,4 +1,4 @@
-package com.schoolmonitor.config;
+/*package com.schoolmonitor.config;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -22,10 +22,10 @@ import com.schoolmonitor.utils.JpaPropertiesUtils;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-/**
+*//**
  * @author PrabhjeetS
  * @version 1.0
- */
+ *//*
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(repositoryBaseClass = BaseRepositoryImpl.class, entityManagerFactoryRef = "schoolmonitorEntityManagerFactory", transactionManagerRef = "schoolmonitorTransactionManager", basePackages = {
@@ -80,3 +80,4 @@ public class SchoolMonitorPersistenceContextConfig {
 	}
 
 }
+*/
