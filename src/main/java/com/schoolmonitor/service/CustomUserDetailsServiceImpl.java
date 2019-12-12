@@ -15,6 +15,7 @@ import com.schoolmonitor.entities.schools.School;
 import com.schoolmonitor.entities.schools.Subscription;
 import com.schoolmonitor.exception.SchoolMonitorException;
 import com.schoolmonitor.model.CredentialDTO;
+import com.schoolmonitor.model.TenantContext;
 import com.schoolmonitor.repositories.schoolmonitor.CredentialsRepository;
 import com.schoolmonitor.repositories.schoolmonitor.StudentRepository;
 import com.schoolmonitor.repositories.schools.SchoolRepository;
@@ -57,6 +58,7 @@ public class CustomUserDetailsServiceImpl implements CustomUserDetailsService {
 				Integer studentId = studentRepository.findStudentIdBySchoolId(school.getSchoolId());
 				if (username.equalsIgnoreCase(credentialsRepository.findUserNameByLinkedStudentId(studentId.toString()))) {
 					credentialDTO.setDomain(domain);
+					TenantContext.setCurrentTenant(domain);
 					return this.loadUserByUsername(username);
 				}
 			}

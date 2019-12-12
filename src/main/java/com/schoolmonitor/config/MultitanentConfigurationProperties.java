@@ -8,6 +8,9 @@ import java.util.List;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Qualifier;
 import  org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 
 /**
@@ -15,7 +18,8 @@ import  org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
  * @version 1.0
    Dec 9, 2019
  */
-@Configuration
+//@Configuration
+@Component(value="MultitanentConfigurationProperties")
 @ConfigurationProperties(prefix="spring.schoolmonitor")
 public class MultitanentConfigurationProperties {
 

@@ -1,5 +1,5 @@
 
-package com.schoolmonitor.multitenacy;
+package com.schoolmonitor.config;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -20,14 +20,17 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.schoolmonitor.config.MultitanentConfigurationProperties;
 import com.schoolmonitor.config.MultitanentConfigurationProperties.CustomDataSourceProperties;
+import com.schoolmonitor.multitenacy.CurrentTenantIdentifierResolverImpl;
+import com.schoolmonitor.multitenacy.DataSourceBasedMultiTenantConnectionProviderImpl;
+import com.schoolmonitor.repositories.BaseRepositoryImpl;
 
 /**
  * @author PrabhjeetS
@@ -37,14 +40,18 @@ import com.schoolmonitor.config.MultitanentConfigurationProperties.CustomDataSou
 @Configuration
 @EnableConfigurationProperties({ MultitanentConfigurationProperties.class, JpaProperties.class })
 @EnableTransactionManagement
+@EnableJpaRepositories(repositoryBaseClass = BaseRepositoryImpl.class, entityManagerFactoryRef = "multitanencyEntityManager", transactionManagerRef = "multitenancyTransactionManager", basePackages = {
+"com.schoolmonitor.repositories.schoolmonitor" })
 public class MultitenancyPropertiesContainer {
 
 	@Autowired
 	private JpaProperties jpaProperties;
 
+	
 	@Autowired
+	@Qualifier("MultitanentConfigurationProperties")
 	private MultitanentConfigurationProperties multitenancyProperties;
-
+	
 	@Primary
 	@Bean(name = "multitanencyDataSourceMap")
 	public Map<String, DataSource> multitanencyDataSourceMap() {
@@ -95,8 +102,8 @@ public class MultitenancyPropertiesContainer {
 	 * @param currentTenantIdentifierResolver
 	 * @return
 	 */
-	@Bean
-	@Primary
+	@Bean(name = "multitanencyEntityManagerFactoryBean")
+	
 	public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(
 			MultiTenantConnectionProvider multiTenantConnectionProvider,
 			CurrentTenantIdentifierResolver currentTenantIdentifierResolver) {
@@ -115,16 +122,16 @@ public class MultitenancyPropertiesContainer {
 		return result;
 	}
 
-	@Bean
+	@Bean(name="multitanencyEntityManager")
 	@Primary
-	public EntityManagerFactory entityManagerFactory(@Qualifier("MultitenancyPropertiesContainerEntityManagerFactoryBean")LocalContainerEntityManagerFactoryBean entityManagerFactoryBean) {
+	public EntityManagerFactory entityManagerFactory(@Qualifier("multitanencyEntityManagerFactoryBean")LocalContainerEntityManagerFactoryBean entityManagerFactoryBean) {
 		
 		return entityManagerFactoryBean.getObject();
 	}
 
-	@Bean
+	@Bean(name="multitenancyTransactionManager")
 	@Primary
-	public PlatformTransactionManager transactionManager(@Qualifier("MultitenancyPropertiesContainerTransactionManager")EntityManagerFactory entityManagerFactory) {
+	public PlatformTransactionManager transactionManager(@Qualifier("multitanencyEntityManager")EntityManagerFactory entityManagerFactory) {
 		return new JpaTransactionManager(entityManagerFactory);
 	}
 }

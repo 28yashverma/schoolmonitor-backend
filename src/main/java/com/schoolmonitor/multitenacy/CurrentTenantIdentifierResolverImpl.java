@@ -2,6 +2,7 @@
 package com.schoolmonitor.multitenacy;
 
 import org.hibernate.context.spi.CurrentTenantIdentifierResolver;
+import org.springframework.util.StringUtils;
 
 import com.schoolmonitor.model.TenantContext;
 
@@ -11,9 +12,11 @@ import com.schoolmonitor.model.TenantContext;
  */
 public class CurrentTenantIdentifierResolverImpl implements CurrentTenantIdentifierResolver {
 
+	private static final String DEFAULT_TENANT_ID = "defaultTenantOnAppStartUp";
 	@Override
 	public String resolveCurrentTenantIdentifier() {
-		return TenantContext.getCurrentTenant();
+		String tenant= TenantContext.getCurrentTenant();
+		return StringUtils.isEmpty(tenant) ?  DEFAULT_TENANT_ID:tenant;
 	}
 
 	@Override
