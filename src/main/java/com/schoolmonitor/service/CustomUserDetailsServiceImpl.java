@@ -58,7 +58,6 @@ public class CustomUserDetailsServiceImpl implements CustomUserDetailsService {
 				Integer studentId = studentRepository.findStudentIdBySchoolId(school.getSchoolId());
 				if (username.equalsIgnoreCase(credentialsRepository.findUserNameByLinkedStudentId(studentId.toString()))) {
 					credentialDTO.setDomain(domain);
-					TenantContext.setCurrentTenant(domain);
 					return this.loadUserByUsername(username);
 				}
 			}

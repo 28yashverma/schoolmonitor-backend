@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.schoolmonitor.exception.SchoolMonitorException;
 import com.schoolmonitor.model.CredentialDTO;
+import com.schoolmonitor.model.TenantContext;
 import com.schoolmonitor.repositories.schoolmonitor.CredentialsRepository;
 import com.schoolmonitor.security.AuthenticationRequest;
 import com.schoolmonitor.security.JwtTokenProvider;
@@ -81,6 +82,7 @@ public class AuthServiceImpl implements AuthService {
 				Map<Object, Object> model = new HashMap<>();
 				model.put("username", data.getUsername());
 				model.put("token", token);
+				//TenantContext.setCurrentTenant(data.getDomain());
 				return model;
 			/*} else {
 				throw new BadCredentialsException("Credentials do not match with the expected User");

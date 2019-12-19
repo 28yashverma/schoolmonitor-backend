@@ -24,8 +24,7 @@ import com.schoolmonitor.service.AuthService;
 @RequestMapping("/auth")
 public class AuthController {
 
-	@Autowired
-	TenantContext tenantContext;
+	
 
 	@Autowired
 	AuthenticationManager authenticationManager;
@@ -37,9 +36,8 @@ public class AuthController {
 	public ResponseEntity<?> signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
 
 		try {
-			//TODO: set Domain
-			// tenantContext.setCurrentTenant(data.getDomain());
-			return ok(authService.signin(data,request));
+			TenantContext.setCurrentTenant(data.getDomain());
+			return ok(authService.signin(data, request));
 		} catch (AuthenticationException e) {
 			throw new BadCredentialsException("Invalid username/password supplied");
 		}

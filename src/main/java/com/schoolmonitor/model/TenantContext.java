@@ -1,16 +1,14 @@
 package com.schoolmonitor.model;
 
 import org.slf4j.Logger;
-
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * @author PrabhjeetS
  * @version 1.0
  */
 
-@Component
+
 public class TenantContext {
     private static Logger logger = LoggerFactory.getLogger(TenantContext.class.getName());
     private static ThreadLocal<String> currentTenant = new ThreadLocal<>();
