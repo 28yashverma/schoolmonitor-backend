@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -41,7 +42,8 @@ public class SchoolsPersistenceContextConfig {
 	String url;
 	@Value("${spring.shools.datasource.driver-class-name}")
 	String driverClassName;
-
+    
+	@Primary
 	@Bean(name = "schoolsDataSource")
 	public DataSource schoolmonitorDataSource() {
 
@@ -54,7 +56,7 @@ public class SchoolsPersistenceContextConfig {
 		return new HikariDataSource(dataSourceConfig);
 
 	}
-
+   @Primary
 	@Bean(name = "schoolsEntityManagerFactory")
 	public LocalContainerEntityManagerFactoryBean schoolsEntityManagerFactory(
 			final @Qualifier("schoolsDataSource") DataSource schoolsDataSource, Environment environment) {
@@ -69,7 +71,7 @@ public class SchoolsPersistenceContextConfig {
 		factory.setDataSource(schoolsDataSource);
 		return factory;
 	}
-
+@Primary
 	@Bean(name = "schoolsTransactionManager")
 	public PlatformTransactionManager schoolsTransactionManager(
 			@Qualifier("schoolsEntityManagerFactory") EntityManagerFactory schoolsEntityManagerFactory) {

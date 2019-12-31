@@ -16,6 +16,26 @@ public class ApiError {
 
 	private String webRequest;
 	private String exceptionMessage;
+	private StackTraceElement [] stacktrace;
+	private Throwable cause;
+
+	
+
+	public StackTraceElement[] getStacktrace() {
+		return stacktrace;
+	}
+
+	public void setStacktrace(StackTraceElement[] stacktrace) {
+		this.stacktrace = stacktrace;
+	}
+
+	public Throwable getCause() {
+		return cause;
+	}
+
+	public void setCause(Throwable cause) {
+		this.cause = cause;
+	}
 
 	public int getHttpStatusValue() {
 		return httpStatusValue;

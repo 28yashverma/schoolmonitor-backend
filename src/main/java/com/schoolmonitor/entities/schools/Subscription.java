@@ -36,6 +36,18 @@ public void setSubscriptionId(int subscriptionId) {
 	@Column(nullable=false, length=255)
 	private String subscriptionMode;
 
+	//flag to manage subscriber's  dataUploads
+	@Column(nullable=false)
+	private String subscriptionStatus;
+	
+	public String getSubscriptionStatus() {
+		return subscriptionStatus;
+	}
+
+	public void setSubscriptionStatus(String subscriptionStatus) {
+		this.subscriptionStatus = subscriptionStatus;
+	}
+
 	//bi-directional one-to-one association to School
 	@OneToOne(mappedBy="subscription", fetch=FetchType.LAZY)
 	private School school;

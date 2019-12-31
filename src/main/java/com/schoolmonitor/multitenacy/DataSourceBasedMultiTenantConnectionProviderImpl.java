@@ -7,7 +7,12 @@ import javax.sql.DataSource;
 
 import org.hibernate.engine.jdbc.connections.spi.AbstractDataSourceBasedMultiTenantConnectionProviderImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariConfigMXBean;
+import com.zaxxer.hikari.HikariDataSource;
 
 /**
  * @author PrabhjeetS
@@ -22,21 +27,38 @@ import org.springframework.stereotype.Component;
 public class DataSourceBasedMultiTenantConnectionProviderImpl
 		extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl {
 
+	@Qualifier("multitenancyDataSourceMap")
 	@Autowired
 	private Map<String, DataSource> multitanencyDataSourceMap;
+	public Map<String, DataSource> getMultitanencyDataSourceMap() {
+		return multitanencyDataSourceMap;
+	}
+
+	public void setMultitanencyDataSourceMap(Map<String, DataSource> multitanencyDataSourceMap) {
+		this.multitanencyDataSourceMap = multitanencyDataSourceMap;
+	}
+
 	private static final long serialVersionUID = 1L;
 
-	public DataSourceBasedMultiTenantConnectionProviderImpl() {
-	}
+	
+
+	
 
 	@Override
 	protected DataSource selectAnyDataSource() {
-		return this.multitanencyDataSourceMap.values().iterator().next();
+
+		DataSource dataSource = this.multitanencyDataSourceMap.values().iterator().next();
+
+		return dataSource;
+
 	}
 
 	@Override
 	protected DataSource selectDataSource(String tenantIdentifier) {
-		return this.multitanencyDataSourceMap.get(tenantIdentifier);
+		DataSource dataSource = this.multitanencyDataSourceMap.get(tenantIdentifier);
+
+		return dataSource;
+
 	}
 
 }

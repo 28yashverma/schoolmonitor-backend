@@ -1,6 +1,4 @@
-/**
- * 
- *//*
+
 package com.schoolmonitor.config;
 
 import java.util.ArrayList;
@@ -9,21 +7,21 @@ import java.util.List;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-*//**
+/**
  * @author PrabhjeetS
  * @version 1.0 Dec 9, 2019
- *//*
+ */
 @Configuration
 @ConfigurationProperties(prefix = "schoolmonitor")
 public class MultitanentConfigurationProperties {
 
-	private List<DataSourceProperties> customDataSourceProperties = new ArrayList<DataSourceProperties>();
+	private List<DataSourceProperties> customDataSourceProperties;
 
 	public List<DataSourceProperties> getDataSources() {
 		return customDataSourceProperties;
 	}
 
-	// #TODO: CustomDataSourceProperties is empty  
+	// #TODO: CustomDataSourceProperties is empty
 	public void setDataSources(List<DataSourceProperties> customDataSourceProperties) {
 		this.customDataSourceProperties = customDataSourceProperties;
 	}
@@ -78,4 +76,3 @@ public class MultitanentConfigurationProperties {
 
 	}
 }
-*/

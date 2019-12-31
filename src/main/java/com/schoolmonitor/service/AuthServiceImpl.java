@@ -67,7 +67,8 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 	public Object signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
-		try {
+		//try {
+		TenantContext.setCurrentTenant(data.getDomain());
 			credentialDTO = (CredentialDTO) customUserDetailsServiceImpl.loadUserByDomainAndUsername(data.getDomain(),
 					data.getUsername());
 			List<String> roles = this.getUserRoles(credentialDTO);
@@ -82,14 +83,14 @@ public class AuthServiceImpl implements AuthService {
 				Map<Object, Object> model = new HashMap<>();
 				model.put("username", data.getUsername());
 				model.put("token", token);
-				//TenantContext.setCurrentTenant(data.getDomain());
+				
 				return model;
 			/*} else {
 				throw new BadCredentialsException("Credentials do not match with the expected User");
 			}*/
-		} catch (Exception ex) {
+		/*} catch (Exception ex) {
 			throw new SchoolMonitorException(ex);
-		}
+		}*/
 	}
 
 }

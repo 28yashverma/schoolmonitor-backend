@@ -1,4 +1,4 @@
-/*
+
 package com.schoolmonitor.config;
 
 import java.util.HashMap;
@@ -14,11 +14,12 @@ import org.hibernate.context.spi.CurrentTenantIdentifierResolver;
 import org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -32,15 +33,14 @@ import com.schoolmonitor.multitenacy.CurrentTenantIdentifierResolverImpl;
 import com.schoolmonitor.multitenacy.DataSourceBasedMultiTenantConnectionProviderImpl;
 import com.schoolmonitor.repositories.BaseRepositoryImpl;
 
-*//**
+/**
  * @author PrabhjeetS
  * @version 1.0 November 21, 2019
- *//*
+ */
 
 @Configuration
 @EnableTransactionManagement
- @EnableConfigurationProperties({ MultitanentConfigurationProperties.class,
- JpaProperties.class })
+//@EnableConfigurationProperties({ MultitanentConfigurationProperties.class, JpaProperties.class })
 @EnableJpaRepositories(repositoryBaseClass = BaseRepositoryImpl.class, entityManagerFactoryRef = "multitenancyEntityManager", transactionManagerRef = "multitenancyTransactionManager", basePackages = {
 		"com.schoolmonitor.repositories.schoolmonitor" })
 public class MultitenantPersistenceContextConfig {
@@ -51,7 +51,9 @@ public class MultitenantPersistenceContextConfig {
 	@Autowired
 	private MultitanentConfigurationProperties multitenancyProperties;
 
-	@Primary
+
+	
+	
 	@Bean(name = "multitenancyDataSourceMap")
 	public Map<String, DataSource> multitenancyDataSourceMap() {
 		Map<String, DataSource> result = new HashMap<>();
@@ -64,30 +66,26 @@ public class MultitenantPersistenceContextConfig {
 		return result;
 	}
 
-	*//**
-	 * Autowires the data sources so that they can be used by the Spring JPA to
-	 * access the database using Hibernate's API.
-	 *//*
-	@Bean
-	public MultiTenantConnectionProvider multiTenantConnectionProvider() {
-		return new DataSourceBasedMultiTenantConnectionProviderImpl();
+
+   @DependsOn("multitenancyDataSourceMap")
+	@Bean("DataSourceBasedMultiTenantConnectionProvider")
+	public MultiTenantConnectionProvider multiTenantConnectionProvider(@Qualifier("multitenancyDataSourceMap") Map<String, DataSource> multitanencyDataSourceMap) {
+		 DataSourceBasedMultiTenantConnectionProviderImpl connectionProvider=new DataSourceBasedMultiTenantConnectionProviderImpl();
+		 connectionProvider.setMultitanencyDataSourceMap(multitanencyDataSourceMap);
+		 return connectionProvider;
 	}
 
-	*//**
-	 * Since this is a multi-tenant application, Hibernate requires that the current
-	 * tenant identifier is resolved for use
-	 * 
-	 * @return
-	 *//*
-	@Bean
+	
+
+	@Bean("CurrentTenantIdentifierResolverImpl")
 	public CurrentTenantIdentifierResolver currentTenantIdentifierResolver() {
 		return new CurrentTenantIdentifierResolverImpl();
 	}
 
 	@Bean(name = "multitenancyEntityManagerFactoryBean")
 	public LocalContainerEntityManagerFactoryBean multitenancyEntityManagerFactoryBean(
-			MultiTenantConnectionProvider multiTenantConnectionProvider,
-			CurrentTenantIdentifierResolver currentTenantIdentifierResolver) {
+			@Qualifier("DataSourceBasedMultiTenantConnectionProvider")MultiTenantConnectionProvider multiTenantConnectionProvider,
+			@Qualifier("CurrentTenantIdentifierResolverImpl")CurrentTenantIdentifierResolver currentTenantIdentifierResolver) {
 
 		Map<String, Object> hibernateProps = new LinkedHashMap<>();
 		hibernateProps.putAll(this.jpaProperties.getProperties());
@@ -97,26 +95,27 @@ public class MultitenantPersistenceContextConfig {
 		hibernateProps.put(Environment.MULTI_TENANT_IDENTIFIER_RESOLVER, currentTenantIdentifierResolver);
 
 		LocalContainerEntityManagerFactoryBean result = new LocalContainerEntityManagerFactoryBean();
-
+        
 		result.setPackagesToScan("com.schoolmonitor.entities.schoolmonitor");
 		result.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 		result.setJpaPropertyMap(hibernateProps);
 
 		return result;
 	}
-	@Primary
-	@Bean(name = "multitenancyEntityManager")
-	public EntityManagerFactory multitenancyEntityManager(
-			@Qualifier("multitenancyEntityManagerFactoryBean") LocalContainerEntityManagerFactoryBean multitanencyEntityManagerFactoryBean) {
+
+	
+	@Bean( name = "multitenancyEntityManager")
+	public EntityManagerFactory multitenancyEntityManager(@Qualifier("multitenancyEntityManagerFactoryBean") LocalContainerEntityManagerFactoryBean multitanencyEntityManagerFactoryBean) {
 		return multitanencyEntityManagerFactoryBean.getObject();
 	}
-	@Primary
+
+	
 	@Bean(name = "multitenancyTransactionManager")
 	public PlatformTransactionManager multitenancyTransactionManager(
 			@Qualifier("multitenancyEntityManager") EntityManagerFactory multitenancyEntityManager) {
 		JpaTransactionManager txManager = new JpaTransactionManager();
 		txManager.setEntityManagerFactory(multitenancyEntityManager);
+		
 		return txManager;
 	}
 }
-*/

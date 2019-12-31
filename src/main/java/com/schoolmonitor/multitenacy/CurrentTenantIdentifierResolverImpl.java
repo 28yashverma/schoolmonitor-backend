@@ -11,7 +11,7 @@ import com.schoolmonitor.model.TenantContext;
  * @author PrabhjeetS
  * @version 1.0 November 21, 2019
  */
-@Component
+
 public class CurrentTenantIdentifierResolverImpl implements CurrentTenantIdentifierResolver {
 
 	private static final String DEFAULT_TENANT_ID = "defaultTenantOnAppStartUp";

@@ -27,7 +27,6 @@ public class GlobalExceptionHandler {
 		HttpHeaders headers = new HttpHeaders();
 		HttpStatus status = HttpStatus.BAD_REQUEST;
 		GenericExceptionContainer<?> genericExceptionContainer = new GenericExceptionContainer<>(ex);
-		genericExceptionContainer.toString();
 		return handleException(headers, genericExceptionContainer, status, request);
 
 	}
@@ -39,6 +38,9 @@ public class GlobalExceptionHandler {
 		   apiError.setExceptionMessage(exception.toString());
 		   apiError.setWebRequest(request.toString());
 		   apiError.setParameterMap(request.getParameterMap());
+		   apiError.setCause(((Throwable)exception.getExceptionObject()).getCause());
+		   apiError.setStacktrace(((Throwable)exception.getExceptionObject()).getStackTrace());
+		   
 		return new ResponseEntity<>(apiError, headers, status);
 	}
 

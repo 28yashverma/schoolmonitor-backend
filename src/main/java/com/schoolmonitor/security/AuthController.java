@@ -36,7 +36,6 @@ public class AuthController {
 	public ResponseEntity<?> signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
 
 		try {
-			TenantContext.setCurrentTenant(data.getDomain());
 			return ok(authService.signin(data, request));
 		} catch (AuthenticationException e) {
 			throw new BadCredentialsException("Invalid username/password supplied");
