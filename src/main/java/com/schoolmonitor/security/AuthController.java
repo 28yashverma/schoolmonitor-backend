@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.schoolmonitor.model.TenantContext;
 import com.schoolmonitor.service.AuthService;
 
 /**
@@ -23,8 +22,6 @@ import com.schoolmonitor.service.AuthService;
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
-
-	
 
 	@Autowired
 	AuthenticationManager authenticationManager;

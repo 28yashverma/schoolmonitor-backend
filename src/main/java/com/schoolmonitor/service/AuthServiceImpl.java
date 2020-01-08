@@ -67,7 +67,7 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 	public Object signin(@RequestBody AuthenticationRequest data, HttpServletRequest request) {
-		//try {
+		
 		TenantContext.setCurrentTenant(data.getDomain());
 			credentialDTO = (CredentialDTO) customUserDetailsServiceImpl.loadUserByDomainAndUsername(data.getDomain(),
 					data.getUsername());
@@ -88,9 +88,7 @@ public class AuthServiceImpl implements AuthService {
 			/*} else {
 				throw new BadCredentialsException("Credentials do not match with the expected User");
 			}*/
-		/*} catch (Exception ex) {
-			throw new SchoolMonitorException(ex);
-		}*/
+		
 	}
 
 }
