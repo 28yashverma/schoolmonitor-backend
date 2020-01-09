@@ -1,10 +1,510 @@
-2019-12-31 06:13:35.568  WARN 6976 --- [HikariPool-18 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Thread starvation or clock leap detected (housekeeper delta=2d17h43m13s775ms507µs310ns).
-2019-12-31 06:13:35.640  WARN 6976 --- [HikariPool-16 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Thread starvation or clock leap detected (housekeeper delta=2d17h43m13s773ms76µs202ns).
-2019-12-31 06:13:37.727  WARN 6976 --- [HikariPool-14 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Thread starvation or clock leap detected (housekeeper delta=2d17h43m13s773ms155µs757ns).
-2019-12-31 06:13:40.735  WARN 6976 --- [HikariPool-12 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Thread starvation or clock leap detected (housekeeper delta=2d17h43m13s773ms172µs646ns).
-2019-12-31 06:13:47.270  WARN 6976 --- [HikariPool-6 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=2d17h43m13s772ms542µs869ns).
-2019-12-31 06:13:47.919  WARN 6976 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2d17h43m13s773ms225µs534ns).
-2019-12-31 06:13:47.997  WARN 6976 --- [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=2d17h43m13s772ms610µs869ns).
-2019-12-31 06:13:53.826  WARN 6976 --- [HikariPool-8 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Thread starvation or clock leap detected (housekeeper delta=2d14h43m14s493ms603µs117ns).
-2019-12-31 06:13:59.213  WARN 6976 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=2d14h43m14s495ms531µs559ns).
-2019-12-31 06:14:00.092  WARN 6976 --- [HikariPool-10 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Thread starvation or clock leap detected (housekeeper delta=2d14h43m14s493ms834µs672ns).
+2020-01-09 00:57:09.033  WARN 11556 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h34m12s351ms395µs688ns).
+2020-01-09 00:57:09.596  WARN 11556 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=9h34m12s353ms935µs685ns).
+2020-01-09 01:08:56.515  INFO 11556 --- [RMI TCP Connection(50)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-01-09 01:08:56.519  INFO 11556 --- [RMI TCP Connection(50)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@23ebfbd: startup date [Wed Jan 08 00:25:34 IST 2020]; root of context hierarchy
+2020-01-09 01:08:56.540  INFO 11556 --- [RMI TCP Connection(50)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-01-09 01:08:56.540  INFO 11556 --- [RMI TCP Connection(50)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-01-09 01:08:56.552  INFO 11556 --- [RMI TCP Connection(50)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:08:56.552  INFO 11556 --- [RMI TCP Connection(50)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-01-09 01:08:56.564  INFO 11556 --- [RMI TCP Connection(50)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-01-09 01:08:56.564  INFO 11556 --- [RMI TCP Connection(50)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:17:24.703  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 15464 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2020-01-09 01:17:24.703  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2020-01-09 01:17:24.747  INFO 15464 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e5ab235: startup date [Thu Jan 09 01:17:24 IST 2020]; root of context hierarchy
+2020-01-09 01:17:25.987  INFO 15464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff1fd0cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 01:17:26.335  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-09 01:17:26.355  INFO 15464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-09 01:17:26.359  INFO 15464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-01-09 01:17:26.363  INFO 15464 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\apache-maven-3.3.9\bin;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
+2020-01-09 01:17:26.511  INFO 15464 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-09 01:17:26.511  INFO 15464 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1764 ms
+2020-01-09 01:17:26.675  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-09 01:17:26.679  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-01-09 01:17:26.679  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-01-09 01:17:26.679  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-01-09 01:17:26.679  INFO 15464 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-01-09 01:17:26.679  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-01-09 01:17:26.679  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2020-01-09 01:17:26.811  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:17:26.823  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:17:26.883  INFO 15464 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2020-01-09 01:17:26.887  INFO 15464 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-01-09 01:17:26.922  INFO 15464 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-01-09 01:17:27.126  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-09 01:17:27.242  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-09 01:17:27.254  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:17:27.754  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:17:27.818  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:17:27.838  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-01-09 01:17:27.842  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-01-09 01:17:27.866  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:17:27.866  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:17:27.890  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:17:27.922  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:17:27.926  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:17:28.701  INFO 15464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c6caebb, org.springframework.security.web.context.SecurityContextPersistenceFilter@45b61a5a, org.springframework.security.web.header.HeaderWriterFilter@57f95a7, org.springframework.web.filter.CorsFilter@f2b264e, org.springframework.security.web.authentication.logout.LogoutFilter@598418f9, com.schoolmonitor.security.JwtTokenFilter@121c19c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bf03bb7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c122c67, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28c4c45d, org.springframework.security.web.session.SessionManagementFilter@6d8d6a87, org.springframework.security.web.access.ExceptionTranslationFilter@a7a5628, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@29a4d054]
+2020-01-09 01:17:28.776  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:17:28.952  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e5ab235: startup date [Thu Jan 09 01:17:24 IST 2020]; root of context hierarchy
+2020-01-09 01:17:28.984  WARN 15464 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-09 01:17:29.016  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schoolmonitor/studentDataUpload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.controller.StudentDataUploadController.studentDataUpload(org.springframework.web.multipart.MultipartFile)
+2020-01-09 01:17:29.020  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2020-01-09 01:17:29.020  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-09 01:17:29.020  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-09 01:17:29.048  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:17:29.048  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:17:29.060  INFO 15464 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2020-01-09 01:17:29.296  INFO 15464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-01-09 01:17:29.328  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-01-09 01:17:29.332  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'schoolsDataSource' has been autodetected for JMX exposure
+2020-01-09 01:17:29.336  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'schoolsDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=schoolsDataSource,type=HikariDataSource]
+2020-01-09 01:17:29.376  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-09 01:17:29.380  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 5.013 seconds (JVM running for 6.096)
+2020-01-09 01:18:47.742  INFO 15464 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-01-09 01:18:47.742  INFO 15464 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-01-09 01:18:47.767  INFO 15464 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2020-01-09 01:21:12.290  INFO 15464 --- [Thread-7] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e5ab235: startup date [Thu Jan 09 01:17:24 IST 2020]; root of context hierarchy
+2020-01-09 01:21:12.294  INFO 15464 --- [Thread-7] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-01-09 01:21:12.294  INFO 15464 --- [Thread-7] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-01-09 01:21:12.298  INFO 15464 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:21:12.298  INFO 15464 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-01-09 01:21:12.302  INFO 15464 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-01-09 01:21:12.302  INFO 15464 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:21:12.791  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 15464 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2020-01-09 01:21:12.795  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2020-01-09 01:21:12.795  INFO 15464 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6269899e: startup date [Thu Jan 09 01:21:12 IST 2020]; root of context hierarchy
+2020-01-09 01:21:13.259  INFO 15464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff1fd0cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 01:21:13.430  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-09 01:21:13.435  INFO 15464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-09 01:21:13.435  INFO 15464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-01-09 01:21:13.484  INFO 15464 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-09 01:21:13.484  INFO 15464 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 689 ms
+2020-01-09 01:21:13.528  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-09 01:21:13.528  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-01-09 01:21:13.528  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-01-09 01:21:13.528  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-01-09 01:21:13.528  INFO 15464 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-01-09 01:21:13.528  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-01-09 01:21:13.528  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2020-01-09 01:21:13.580  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:21:13.580  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:21:13.596  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-01-09 01:21:13.600  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-01-09 01:21:13.600  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:21:13.679  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:21:13.683  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:21:13.695  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-01-09 01:21:13.699  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-01-09 01:21:13.715  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:21:13.715  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:21:13.751  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:21:13.787  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:21:13.787  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:21:14.008  INFO 15464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7726993e, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e9ec82b, org.springframework.security.web.header.HeaderWriterFilter@62a07bbf, org.springframework.web.filter.CorsFilter@1999aa13, org.springframework.security.web.authentication.logout.LogoutFilter@63b963a3, com.schoolmonitor.security.JwtTokenFilter@41b8092f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48060384, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@291af4b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@88e5286, org.springframework.security.web.session.SessionManagementFilter@7577e3c3, org.springframework.security.web.access.ExceptionTranslationFilter@3078c2ce, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c9eac22]
+2020-01-09 01:21:14.028  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:21:14.072  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6269899e: startup date [Thu Jan 09 01:21:12 IST 2020]; root of context hierarchy
+2020-01-09 01:21:14.080  WARN 15464 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-09 01:21:14.084  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schoolmonitor/studentDataUpload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.controller.StudentDataUploadController.studentDataUpload(org.springframework.web.multipart.MultipartFile)
+2020-01-09 01:21:14.084  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2020-01-09 01:21:14.088  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-09 01:21:14.088  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-09 01:21:14.096  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:21:14.096  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:21:14.104  INFO 15464 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2020-01-09 01:21:14.172  INFO 15464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-01-09 01:21:14.192  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-01-09 01:21:14.192  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'schoolsDataSource' has been autodetected for JMX exposure
+2020-01-09 01:21:14.196  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'schoolsDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=schoolsDataSource,type=HikariDataSource]
+2020-01-09 01:21:14.204  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-09 01:21:14.208  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 1.449 seconds (JVM running for 230.926)
+2020-01-09 01:21:14.212  INFO 15464 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-01-09 01:21:30.721  INFO 15464 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-01-09 01:21:30.721  INFO 15464 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-01-09 01:21:30.729  INFO 15464 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 8 ms
+2020-01-09 01:22:43.629  INFO 15464 --- [Thread-15] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6269899e: startup date [Thu Jan 09 01:21:12 IST 2020]; root of context hierarchy
+2020-01-09 01:22:43.631  INFO 15464 --- [Thread-15] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-01-09 01:22:43.631  INFO 15464 --- [Thread-15] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-01-09 01:22:43.635  INFO 15464 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:22:43.635  INFO 15464 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2020-01-09 01:22:43.643  INFO 15464 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2020-01-09 01:22:43.643  INFO 15464 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:22:44.136  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 15464 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2020-01-09 01:22:44.136  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2020-01-09 01:22:44.140  INFO 15464 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5bd35859: startup date [Thu Jan 09 01:22:44 IST 2020]; root of context hierarchy
+2020-01-09 01:22:44.583  INFO 15464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff1fd0cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 01:22:44.751  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-09 01:22:44.754  INFO 15464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-09 01:22:44.755  INFO 15464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-01-09 01:22:44.788  INFO 15464 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-09 01:22:44.792  INFO 15464 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 652 ms
+2020-01-09 01:22:44.828  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-09 01:22:44.828  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-01-09 01:22:44.828  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-01-09 01:22:44.828  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-01-09 01:22:44.828  INFO 15464 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-01-09 01:22:44.828  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-01-09 01:22:44.828  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2020-01-09 01:22:44.872  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:22:44.872  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:22:44.888  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2020-01-09 01:22:44.892  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2020-01-09 01:22:44.896  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:22:44.968  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:22:44.972  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:22:44.984  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2020-01-09 01:22:44.987  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2020-01-09 01:22:44.995  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:22:44.995  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:22:45.019  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:22:45.047  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:22:45.047  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:22:45.255  INFO 15464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e2b1705, org.springframework.security.web.context.SecurityContextPersistenceFilter@38c8034e, org.springframework.security.web.header.HeaderWriterFilter@2bec50, org.springframework.web.filter.CorsFilter@47c4e438, org.springframework.security.web.authentication.logout.LogoutFilter@1db35aae, com.schoolmonitor.security.JwtTokenFilter@4ffd6c81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@fb20a90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50a42e5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@140b903f, org.springframework.security.web.session.SessionManagementFilter@2d7c04c4, org.springframework.security.web.access.ExceptionTranslationFilter@1c557314, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@372d9019]
+2020-01-09 01:22:45.267  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:22:45.308  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5bd35859: startup date [Thu Jan 09 01:22:44 IST 2020]; root of context hierarchy
+2020-01-09 01:22:45.312  WARN 15464 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-09 01:22:45.320  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schoolmonitor/studentDataUpload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.controller.StudentDataUploadController.studentDataUpload(org.springframework.web.multipart.MultipartFile)
+2020-01-09 01:22:45.320  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2020-01-09 01:22:45.320  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-09 01:22:45.320  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-09 01:22:45.332  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:22:45.332  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:22:45.336  INFO 15464 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2020-01-09 01:22:45.400  INFO 15464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-01-09 01:22:45.420  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-01-09 01:22:45.420  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'schoolsDataSource' has been autodetected for JMX exposure
+2020-01-09 01:22:45.424  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'schoolsDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=schoolsDataSource,type=HikariDataSource]
+2020-01-09 01:22:45.436  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-09 01:22:45.436  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 1.328 seconds (JVM running for 322.154)
+2020-01-09 01:22:45.436  INFO 15464 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-01-09 01:24:20.885  INFO 15464 --- [Thread-23] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5bd35859: startup date [Thu Jan 09 01:22:44 IST 2020]; root of context hierarchy
+2020-01-09 01:24:20.887  INFO 15464 --- [Thread-23] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-01-09 01:24:20.888  INFO 15464 --- [Thread-23] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-01-09 01:24:20.888  INFO 15464 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:20.888  INFO 15464 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2020-01-09 01:24:20.896  INFO 15464 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2020-01-09 01:24:20.896  INFO 15464 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:21.416  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 15464 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2020-01-09 01:24:21.416  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2020-01-09 01:24:21.420  INFO 15464 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@10d31141: startup date [Thu Jan 09 01:24:21 IST 2020]; root of context hierarchy
+2020-01-09 01:24:21.852  INFO 15464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff1fd0cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 01:24:22.012  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-09 01:24:22.017  INFO 15464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-09 01:24:22.017  INFO 15464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-01-09 01:24:22.050  INFO 15464 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-09 01:24:22.054  INFO 15464 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 634 ms
+2020-01-09 01:24:22.086  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-09 01:24:22.086  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-01-09 01:24:22.086  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-01-09 01:24:22.086  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-01-09 01:24:22.086  INFO 15464 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-01-09 01:24:22.086  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-01-09 01:24:22.086  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2020-01-09 01:24:22.125  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:22.125  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:24:22.141  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2020-01-09 01:24:22.149  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2020-01-09 01:24:22.149  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:24:22.205  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:24:22.209  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:22.221  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2020-01-09 01:24:22.221  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2020-01-09 01:24:22.233  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:22.233  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:24:22.249  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:24:22.277  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:24:22.277  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:22.481  INFO 15464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20b58ace, org.springframework.security.web.context.SecurityContextPersistenceFilter@56965edf, org.springframework.security.web.header.HeaderWriterFilter@71593048, org.springframework.web.filter.CorsFilter@62984ab0, org.springframework.security.web.authentication.logout.LogoutFilter@148db93c, com.schoolmonitor.security.JwtTokenFilter@79651a1e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69114b15, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51f2fd0f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d8cec6d, org.springframework.security.web.session.SessionManagementFilter@c592c69, org.springframework.security.web.access.ExceptionTranslationFilter@11c5cfaf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@732aeceb]
+2020-01-09 01:24:22.497  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:24:22.537  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@10d31141: startup date [Thu Jan 09 01:24:21 IST 2020]; root of context hierarchy
+2020-01-09 01:24:22.541  WARN 15464 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-09 01:24:22.545  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schoolmonitor/studentDataUpload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.controller.StudentDataUploadController.studentDataUpload(org.springframework.web.multipart.MultipartFile)
+2020-01-09 01:24:22.549  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2020-01-09 01:24:22.549  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-09 01:24:22.549  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-09 01:24:22.557  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:24:22.557  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:24:22.565  INFO 15464 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2020-01-09 01:24:22.630  INFO 15464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-01-09 01:24:22.650  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-01-09 01:24:22.650  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'schoolsDataSource' has been autodetected for JMX exposure
+2020-01-09 01:24:22.654  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'schoolsDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=schoolsDataSource,type=HikariDataSource]
+2020-01-09 01:24:22.666  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-09 01:24:22.666  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 1.278 seconds (JVM running for 419.383)
+2020-01-09 01:24:22.670  INFO 15464 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-01-09 01:24:50.342  INFO 15464 --- [Thread-31] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@10d31141: startup date [Thu Jan 09 01:24:21 IST 2020]; root of context hierarchy
+2020-01-09 01:24:50.347  INFO 15464 --- [Thread-31] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-01-09 01:24:50.347  INFO 15464 --- [Thread-31] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-01-09 01:24:50.347  INFO 15464 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:50.347  INFO 15464 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2020-01-09 01:24:50.355  INFO 15464 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2020-01-09 01:24:50.355  INFO 15464 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:50.854  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 15464 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2020-01-09 01:24:50.854  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2020-01-09 01:24:50.858  INFO 15464 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@180a9288: startup date [Thu Jan 09 01:24:50 IST 2020]; root of context hierarchy
+2020-01-09 01:24:51.270  INFO 15464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff1fd0cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 01:24:51.433  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-09 01:24:51.436  INFO 15464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-09 01:24:51.436  INFO 15464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-01-09 01:24:51.469  INFO 15464 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-09 01:24:51.473  INFO 15464 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 615 ms
+2020-01-09 01:24:51.505  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-09 01:24:51.505  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-01-09 01:24:51.505  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-01-09 01:24:51.505  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-01-09 01:24:51.505  INFO 15464 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-01-09 01:24:51.505  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-01-09 01:24:51.505  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2020-01-09 01:24:51.545  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:51.545  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:24:51.565  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2020-01-09 01:24:51.565  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2020-01-09 01:24:51.569  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:24:51.620  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:24:51.624  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:51.636  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2020-01-09 01:24:51.636  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2020-01-09 01:24:51.648  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:51.648  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:24:51.664  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:24:51.700  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:24:51.700  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:24:51.908  INFO 15464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2aa1299a, org.springframework.security.web.context.SecurityContextPersistenceFilter@25a04acf, org.springframework.security.web.header.HeaderWriterFilter@6fae11a3, org.springframework.web.filter.CorsFilter@549f6662, org.springframework.security.web.authentication.logout.LogoutFilter@bbe916d, com.schoolmonitor.security.JwtTokenFilter@39e508c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74363c45, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b8a1869, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@155d90af, org.springframework.security.web.session.SessionManagementFilter@6b1168b5, org.springframework.security.web.access.ExceptionTranslationFilter@eabed8b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b0ef35f]
+2020-01-09 01:24:51.924  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:24:51.964  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@180a9288: startup date [Thu Jan 09 01:24:50 IST 2020]; root of context hierarchy
+2020-01-09 01:24:51.968  WARN 15464 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-09 01:24:51.972  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schoolmonitor/studentDataUpload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.controller.StudentDataUploadController.studentDataUpload(org.springframework.web.multipart.MultipartFile)
+2020-01-09 01:24:51.972  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2020-01-09 01:24:51.976  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-09 01:24:51.976  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-09 01:24:51.984  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:24:51.984  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:24:51.992  INFO 15464 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2020-01-09 01:24:52.048  INFO 15464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-01-09 01:24:52.068  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-01-09 01:24:52.068  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'schoolsDataSource' has been autodetected for JMX exposure
+2020-01-09 01:24:52.072  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'schoolsDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=schoolsDataSource,type=HikariDataSource]
+2020-01-09 01:24:52.084  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-09 01:24:52.084  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 1.258 seconds (JVM running for 448.801)
+2020-01-09 01:24:52.084  INFO 15464 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-01-09 01:24:59.065  INFO 15464 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-01-09 01:24:59.065  INFO 15464 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-01-09 01:24:59.071  INFO 15464 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2020-01-09 01:27:51.606  INFO 15464 --- [Thread-39] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@180a9288: startup date [Thu Jan 09 01:24:50 IST 2020]; root of context hierarchy
+2020-01-09 01:27:51.608  INFO 15464 --- [Thread-39] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-01-09 01:27:51.608  INFO 15464 --- [Thread-39] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-01-09 01:27:51.608  INFO 15464 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:27:51.608  INFO 15464 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2020-01-09 01:27:51.616  INFO 15464 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2020-01-09 01:27:51.616  INFO 15464 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:27:51.995  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 15464 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2020-01-09 01:27:51.999  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2020-01-09 01:27:51.999  INFO 15464 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@df9d8b1: startup date [Thu Jan 09 01:27:51 IST 2020]; root of context hierarchy
+2020-01-09 01:27:52.447  INFO 15464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff1fd0cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 01:27:52.618  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-09 01:27:52.623  INFO 15464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-09 01:27:52.623  INFO 15464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-01-09 01:27:52.660  INFO 15464 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-09 01:27:52.660  INFO 15464 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 661 ms
+2020-01-09 01:27:52.696  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-09 01:27:52.696  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-01-09 01:27:52.696  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-01-09 01:27:52.696  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-01-09 01:27:52.696  INFO 15464 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-01-09 01:27:52.696  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-01-09 01:27:52.696  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2020-01-09 01:27:52.736  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:27:52.736  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:27:52.752  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2020-01-09 01:27:52.756  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2020-01-09 01:27:52.756  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:27:52.808  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:27:52.812  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:27:52.820  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2020-01-09 01:27:52.824  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2020-01-09 01:27:52.832  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:27:52.836  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:27:52.852  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:27:52.876  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:27:52.876  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:27:53.079  INFO 15464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c2519b4, org.springframework.security.web.context.SecurityContextPersistenceFilter@79192687, org.springframework.security.web.header.HeaderWriterFilter@4828dcbb, org.springframework.web.filter.CorsFilter@48a02e82, org.springframework.security.web.authentication.logout.LogoutFilter@52fc0731, com.schoolmonitor.security.JwtTokenFilter@2c72504, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50c4ac2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b4f83dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d59c30d, org.springframework.security.web.session.SessionManagementFilter@74d5a7fb, org.springframework.security.web.access.ExceptionTranslationFilter@f3e7afc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6df37d6]
+2020-01-09 01:27:53.091  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:27:53.131  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@df9d8b1: startup date [Thu Jan 09 01:27:51 IST 2020]; root of context hierarchy
+2020-01-09 01:27:53.139  WARN 15464 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-09 01:27:53.143  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schoolmonitor/studentDataUpload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.controller.StudentDataUploadController.studentDataUpload(org.springframework.web.multipart.MultipartFile)
+2020-01-09 01:27:53.143  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2020-01-09 01:27:53.147  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-09 01:27:53.147  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-09 01:27:53.155  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:27:53.155  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:27:53.163  INFO 15464 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2020-01-09 01:27:53.223  INFO 15464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-01-09 01:27:53.243  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-01-09 01:27:53.243  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'schoolsDataSource' has been autodetected for JMX exposure
+2020-01-09 01:27:53.247  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'schoolsDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=schoolsDataSource,type=HikariDataSource]
+2020-01-09 01:27:53.259  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-09 01:27:53.259  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 1.292 seconds (JVM running for 629.976)
+2020-01-09 01:27:53.259  INFO 15464 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-01-09 01:28:26.490  INFO 15464 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-01-09 01:28:26.490  INFO 15464 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-01-09 01:28:26.495  INFO 15464 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 5 ms
+2020-01-09 01:28:58.411  INFO 15464 --- [Thread-47] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@df9d8b1: startup date [Thu Jan 09 01:27:51 IST 2020]; root of context hierarchy
+2020-01-09 01:28:58.416  INFO 15464 --- [Thread-47] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-01-09 01:28:58.416  INFO 15464 --- [Thread-47] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-01-09 01:28:58.416  INFO 15464 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:28:58.416  INFO 15464 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2020-01-09 01:28:58.424  INFO 15464 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2020-01-09 01:28:58.424  INFO 15464 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:28:58.935  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 15464 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2020-01-09 01:28:58.935  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2020-01-09 01:28:58.939  INFO 15464 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@796e42f9: startup date [Thu Jan 09 01:28:58 IST 2020]; root of context hierarchy
+2020-01-09 01:28:59.359  INFO 15464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff1fd0cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 01:28:59.527  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-09 01:28:59.527  INFO 15464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-09 01:28:59.527  INFO 15464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-01-09 01:28:59.561  INFO 15464 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-09 01:28:59.561  INFO 15464 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 622 ms
+2020-01-09 01:28:59.593  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-09 01:28:59.593  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-01-09 01:28:59.593  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-01-09 01:28:59.593  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-01-09 01:28:59.593  INFO 15464 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-01-09 01:28:59.593  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-01-09 01:28:59.593  INFO 15464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2020-01-09 01:28:59.633  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:28:59.633  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:28:59.653  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2020-01-09 01:28:59.657  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2020-01-09 01:28:59.657  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:28:59.709  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:28:59.709  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:28:59.721  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2020-01-09 01:28:59.725  INFO 15464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2020-01-09 01:28:59.733  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:28:59.733  INFO 15464 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 01:28:59.749  INFO 15464 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 01:28:59.773  INFO 15464 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 01:28:59.773  INFO 15464 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:28:59.960  INFO 15464 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c86e1ee, org.springframework.security.web.context.SecurityContextPersistenceFilter@525ffd89, org.springframework.security.web.header.HeaderWriterFilter@207a01b0, org.springframework.web.filter.CorsFilter@50ffd280, org.springframework.security.web.authentication.logout.LogoutFilter@7f7f4198, com.schoolmonitor.security.JwtTokenFilter@5d9b3c47, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d233f65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4da4cef0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48f760c4, org.springframework.security.web.session.SessionManagementFilter@3550e723, org.springframework.security.web.access.ExceptionTranslationFilter@2ec83b7c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5f094e0e]
+2020-01-09 01:28:59.976  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:29:00.012  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@796e42f9: startup date [Thu Jan 09 01:28:58 IST 2020]; root of context hierarchy
+2020-01-09 01:29:00.020  WARN 15464 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-09 01:29:00.024  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schoolmonitor/studentDataUpload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.controller.StudentDataUploadController.studentDataUpload(org.springframework.web.multipart.MultipartFile)
+2020-01-09 01:29:00.024  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2020-01-09 01:29:00.028  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-09 01:29:00.028  INFO 15464 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-09 01:29:00.036  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:29:00.036  INFO 15464 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 01:29:00.044  INFO 15464 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2020-01-09 01:29:00.100  INFO 15464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-01-09 01:29:00.120  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-01-09 01:29:00.120  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'schoolsDataSource' has been autodetected for JMX exposure
+2020-01-09 01:29:00.124  INFO 15464 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'schoolsDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=schoolsDataSource,type=HikariDataSource]
+2020-01-09 01:29:00.132  INFO 15464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-09 01:29:00.136  INFO 15464 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 1.229 seconds (JVM running for 696.853)
+2020-01-09 01:29:00.136  INFO 15464 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-01-09 01:44:49.303  WARN 15464 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=2m35s501ms126µs666ns).
+2020-01-09 01:44:50.575  WARN 15464 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=2m35s502ms392µs887ns).
+2020-01-09 01:44:57.243  WARN 15464 --- [HikariPool-9 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Thread starvation or clock leap detected (housekeeper delta=2m35s501ms707µs998ns).
+2020-01-09 01:44:57.824  WARN 15464 --- [HikariPool-7 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=2m35s501ms160µs443ns).
+2020-01-09 01:44:58.409  WARN 15464 --- [HikariPool-11 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Thread starvation or clock leap detected (housekeeper delta=2m35s501ms134µs666ns).
+2020-01-09 01:45:02.966  WARN 15464 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m35s501ms129µs776ns).
+2020-01-09 01:45:05.308  WARN 15464 --- [HikariPool-13 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Thread starvation or clock leap detected (housekeeper delta=2m35s500ms114µs667ns).
+2020-01-09 01:45:05.381  WARN 15464 --- [HikariPool-14 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Thread starvation or clock leap detected (housekeeper delta=2m35s500ms767µs555ns).
+2020-01-09 01:49:48.746  INFO 15464 --- [Thread-55] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@796e42f9: startup date [Thu Jan 09 01:28:58 IST 2020]; root of context hierarchy
+2020-01-09 01:49:48.750  INFO 15464 --- [Thread-55] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-01-09 01:49:48.751  INFO 15464 --- [Thread-55] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-01-09 01:49:48.751  INFO 15464 --- [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 01:49:48.753  INFO 15464 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2020-01-09 01:49:48.757  INFO 15464 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2020-01-09 01:49:48.757  INFO 15464 --- [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 02:14:06.229  INFO 11224 --- [restartedMain] c.s.SchoolmonitorApplication             : Starting SchoolmonitorApplication on LAPTOP-GDFRR80K with PID 11224 (D:\schoolmonitor-backend\target\classes started by Prabhjeet Singh in D:\schoolmonitor-backend)
+2020-01-09 02:14:06.229  INFO 11224 --- [restartedMain] c.s.SchoolmonitorApplication             : No active profile set, falling back to default profiles: default
+2020-01-09 02:14:06.265  INFO 11224 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7cfc3711: startup date [Thu Jan 09 02:14:06 IST 2020]; root of context hierarchy
+2020-01-09 02:14:07.096  INFO 11224 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b3fafcb3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 02:14:07.303  INFO 11224 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-09 02:14:07.315  INFO 11224 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-09 02:14:07.315  INFO 11224 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-01-09 02:14:07.319  INFO 11224 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\apache-maven-3.3.9\bin;C:\Users\Prabhjeet Singh\AppData\Local\Microsoft\WindowsApps;C:\Users\Prabhjeet Singh\AppData\Roaming\npm;D:\softwares\sts-bundle\sts-3.9.2.RELEASE;;.]
+2020-01-09 02:14:07.403  INFO 11224 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-09 02:14:07.403  INFO 11224 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1138 ms
+2020-01-09 02:14:07.515  INFO 11224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-09 02:14:07.515  INFO 11224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-01-09 02:14:07.515  INFO 11224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-01-09 02:14:07.515  INFO 11224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-01-09 02:14:07.515  INFO 11224 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-01-09 02:14:07.515  INFO 11224 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-01-09 02:14:07.515  INFO 11224 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2020-01-09 02:14:07.684  INFO 11224 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 02:14:07.692  INFO 11224 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 02:14:07.728  INFO 11224 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2020-01-09 02:14:07.732  INFO 11224 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-01-09 02:14:07.816  INFO 11224 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-01-09 02:14:07.884  INFO 11224 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-09 02:14:07.948  INFO 11224 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-09 02:14:07.952  INFO 11224 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 02:14:08.271  INFO 11224 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 02:14:08.311  INFO 11224 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 02:14:08.325  INFO 11224 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-01-09 02:14:08.329  INFO 11224 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-01-09 02:14:08.349  INFO 11224 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-01-09 02:14:08.349  INFO 11224 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-09 02:14:08.361  INFO 11224 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-01-09 02:14:08.385  INFO 11224 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-01-09 02:14:08.389  INFO 11224 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 02:14:08.872  INFO 11224 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7de0c90d, org.springframework.security.web.context.SecurityContextPersistenceFilter@bcdf14c, org.springframework.security.web.header.HeaderWriterFilter@4403fab0, org.springframework.web.filter.CorsFilter@690729e0, org.springframework.security.web.authentication.logout.LogoutFilter@472728fb, com.schoolmonitor.security.JwtTokenFilter@78a6f136, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e120ebb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a06a7f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@258cfca5, org.springframework.security.web.session.SessionManagementFilter@34090df8, org.springframework.security.web.access.ExceptionTranslationFilter@56411018, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@529e700e]
+2020-01-09 02:14:08.916  INFO 11224 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 02:14:09.020  INFO 11224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7cfc3711: startup date [Thu Jan 09 02:14:06 IST 2020]; root of context hierarchy
+2020-01-09 02:14:09.040  WARN 11224 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-09 02:14:09.060  INFO 11224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/schoolmonitor/studentDataUpload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.controller.StudentDataUploadController.studentDataUpload(org.springframework.web.multipart.MultipartFile)
+2020-01-09 02:14:09.060  INFO 11224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.schoolmonitor.security.AuthController.signin(com.schoolmonitor.security.AuthenticationRequest,org.apache.catalina.servlet4preview.http.HttpServletRequest)
+2020-01-09 02:14:09.064  INFO 11224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-09 02:14:09.064  INFO 11224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-09 02:14:09.084  INFO 11224 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 02:14:09.084  INFO 11224 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 02:14:09.096  INFO 11224 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2020-01-09 02:14:09.112  INFO 11224 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-01-09 02:14:09.244  INFO 11224 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-01-09 02:14:09.264  INFO 11224 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-01-09 02:14:09.264  INFO 11224 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'schoolsDataSource' has been autodetected for JMX exposure
+2020-01-09 02:14:09.272  INFO 11224 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'schoolsDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=schoolsDataSource,type=HikariDataSource]
+2020-01-09 02:14:09.296  INFO 11224 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-09 02:14:09.296  INFO 11224 --- [restartedMain] c.s.SchoolmonitorApplication             : Started SchoolmonitorApplication in 3.318 seconds (JVM running for 4.084)
+2020-01-09 02:14:30.020  INFO 11224 --- [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-01-09 02:14:30.024  INFO 11224 --- [RMI TCP Connection(8)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7cfc3711: startup date [Thu Jan 09 02:14:06 IST 2020]; root of context hierarchy
+2020-01-09 02:14:30.025  INFO 11224 --- [RMI TCP Connection(8)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-01-09 02:14:30.025  INFO 11224 --- [RMI TCP Connection(8)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-01-09 02:14:30.025  INFO 11224 --- [RMI TCP Connection(8)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-09 02:14:30.025  INFO 11224 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-01-09 02:14:30.033  INFO 11224 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-01-09 02:14:30.033  INFO 11224 --- [RMI TCP Connection(8)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
