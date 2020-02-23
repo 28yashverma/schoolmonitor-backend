@@ -19,6 +19,7 @@ server:
     port: 8088
     servlet:
         context-path: /
+        
 spring:
     devtools:
         restart:
@@ -40,3 +41,7 @@ spring:
             password: Rome!234
             url: jdbc:mysql://localhost:3306/schools
             username: root
+    servlet:
+     multipart:
+      enabled: true
+      

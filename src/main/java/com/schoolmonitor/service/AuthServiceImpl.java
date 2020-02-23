@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -83,12 +85,14 @@ public class AuthServiceImpl implements AuthService {
 				Map<Object, Object> model = new HashMap<>();
 				model.put("username", data.getUsername());
 				model.put("token", token);
-				
+	
 				return model;
 			/*} else {
 				throw new BadCredentialsException("Credentials do not match with the expected User");
 			}*/
 		
 	}
+
+	
 
 }

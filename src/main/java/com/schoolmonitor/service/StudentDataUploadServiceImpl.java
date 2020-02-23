@@ -1,7 +1,10 @@
 
 package com.schoolmonitor.service;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -30,7 +33,18 @@ public class StudentDataUploadServiceImpl implements StudentDataUploadService {
 	
 	@Override
 	public Void studentDataUpload(MultipartFile studentDataFile) throws IOException {
-				return null;
-	}
+		
+		InputStream inputStream=studentDataFile.getInputStream();
+		File currentDirectory=new File(".");
+		String currentDirectoryAbsolutePath=currentDirectory.getAbsolutePath();
+		String fileLocation = currentDirectoryAbsolutePath.substring(0, currentDirectoryAbsolutePath.length() - 1) + studentDataFile.getOriginalFilename();
+		FileOutputStream f = new FileOutputStream(fileLocation);
+	    int ch = 0;
+	    while ((ch = inputStream.read()) != -1) {
+	        f.write(ch);
+	    }
+	    f.flush();
+	    f.close();
+		return null;
 
-}
+}}

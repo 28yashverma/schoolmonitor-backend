@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import com.schoolmonitor.security.JwtConfigurer;
 import com.schoolmonitor.security.JwtTokenProvider;
@@ -36,12 +37,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		return super.authenticationManagerBean();
 	}
 
+	@Bean(name = "multipartResolver")
+	public CommonsMultipartResolver multipartResolver() {
+	    CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+	    multipartResolver.setMaxUploadSize(100000);
+	    return multipartResolver;
+	}
+	
 	@Bean
 	CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
-		configuration.setAllowedOrigins(Arrays.asList("https://localhost:8088"));
+		configuration.setAllowedOrigins(Arrays.asList("https://localhost:8088","http://localhost:4200"));
 		configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
-		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		
+		configuration.setAllowedHeaders(Arrays.asList("X-Requested-With", "Origin", "Content-Type", "Accept", "Authorization"));
+        configuration.setAllowCredentials(true);//using Spring Security
+		configuration.setMaxAge(3600L);
+		
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		source.registerCorsConfiguration("/**", configuration);
 		return source;
 	}
