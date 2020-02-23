@@ -30,7 +30,8 @@ public class StudentDataUploadController {
 
 	private final StudentDataUploadService studentDataUploadService;
 
-	@PostMapping("/studentDataUpload")
+	@PostMapping(value="/studentDataUpload", consumes = { "multipart/form-data" })
+	
 	public ResponseEntity<?> studentDataUpload(@RequestParam("studentDataFile") MultipartFile studentDataFile) {
 		try {
 			return ok(studentDataUploadService.studentDataUpload( studentDataFile));
