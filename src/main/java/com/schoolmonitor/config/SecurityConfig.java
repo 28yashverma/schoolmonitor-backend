@@ -37,12 +37,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		return super.authenticationManagerBean();
 	}
 
-	@Bean(name = "multipartResolver")
-	public CommonsMultipartResolver multipartResolver() {
-	    CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
-	    multipartResolver.setMaxUploadSize(100000);
-	    return multipartResolver;
-	}
+	/*
+	 * @Bean(name = "multipartResolver") public CommonsMultipartResolver
+	 * multipartResolver() { CommonsMultipartResolver multipartResolver = new
+	 * CommonsMultipartResolver(); multipartResolver.setMaxUploadSize(100000);
+	 * return multipartResolver; }
+	 */
 	
 	@Bean
 	CorsConfigurationSource corsConfigurationSource() {
@@ -69,7 +69,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.hasAuthority("Student User").antMatchers("/schoolmonitor/TeacherConsole/**")
 				.hasAuthority("Teacher User").antMatchers("/schoolmonitor/AdminConsole/**")
 				.hasAuthority("Administrator").antMatchers("/schoolmonitor/AttendanceManagment/**").permitAll()
-				.antMatchers("/schoolmonitor/CourseManagment/**").permitAll()
+				.antMatchers("/schoolmonitor/CourseManagment/**", "/schoolmonitor/studentDataUpload").permitAll()
 				.antMatchers("/schoolmonitor/ResultManagment/**").hasAuthority("Student User").anyRequest()
 				.authenticated().and().apply(new JwtConfigurer(jwtTokenProvider));
 
