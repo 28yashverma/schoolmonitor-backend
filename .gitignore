@@ -23,3 +23,10 @@ dist/
 nbdist/
 .nb-gradle/
 uploads
+
+#Compiled classes
+*.class
+.project
+.settings/
+.classpath
+.mvn/
